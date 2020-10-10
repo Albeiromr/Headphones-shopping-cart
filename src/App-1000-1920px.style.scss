@@ -115,5 +115,30 @@
     &__bag {
       display: none;
     }
+
+    &__point {
+      width: .8vw;  
+      height: .8vw;
+      border-radius: 50%;
+      background: #e91f1f;
+      z-index: 20;
+      position: absolute;
+      left: 39.3%;
+      top: 40%;
+      transition: all 1s ease;
+
+    }
+
+    &__point--modify {
+      width: .8vw;  
+      height: .8vw;
+      border-radius: 50%;
+      background: #ffffff00;
+      z-index: 20;
+      position: absolute;
+      left: 39.3%;
+      top: 40%;
+      transition: all 1s ease;
+    }
   }
 }

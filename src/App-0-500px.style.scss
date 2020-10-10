@@ -112,5 +112,30 @@
       top: 36%;
       cursor: pointer;
     }
+
+    &__point {
+      width: 2.5vw;
+      height: 2.5vw;
+      border-radius: 50%;
+      background: #e91f1f;
+      z-index: 20;
+      position: absolute;
+      left: 94%;
+      top: 35%;
+      transition: all 1s ease-in;
+
+    }
+
+    &__point--modify {
+      width: 2.5vw;
+      height: 2.5vw;
+      border-radius: 50%;
+      background: #ffffff00;
+      z-index: 20;
+      position: absolute;
+      left: 94%;
+      top: 35%;
+      transition: all 1s ease-in;
+    }
   }
 }

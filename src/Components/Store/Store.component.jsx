@@ -6,13 +6,13 @@ import './0-500px.style.scss';
 import ProductContainer from '../ProductContainer/ProductContainer.component';
 import BigPicture from '../BigPicture/BigPicture.component';
 import Text from '../Text/Text.component';
-import ButtonAdd from '../ButtonAdd/Buttons.component';
+import ButtonAdd from '../ButtonAdd/ButtonAdd.component';
 import ButtonBuy from '../ButtonBuy/ButtonBuy.component';
 import Price from '../Price/Price.component';
 import Thumbnails from '../Thumbnails/Thumbnails.component';
 import Balls from '../Balls/Balls.component';
 
-const Store = ({Products}) => {
+const Store = ({Products, changeShoppingCart, shoppingCart}) => {
 
     // this state is the bigest product image in the page
     const [picture, changePicture] = useState(Products[0].firstColor[0].img1)
@@ -46,7 +46,10 @@ const Store = ({Products}) => {
             picture={picture}
             
             />
-            <ButtonAdd 
+            <ButtonAdd
+            changeShoppingCart={changeShoppingCart}
+            productSelected={productSelected}
+            shoppingCart={shoppingCart}
             />
             <ButtonBuy 
             />
@@ -69,6 +72,8 @@ const Store = ({Products}) => {
 
 Store.propTypes = {
     Products: Proptypes.array.isRequired,
+    changeShoppingCart: Proptypes.func.isRequired,
+    shoppingCart: Proptypes.array.isRequired,
   };
 
 export default Store;
