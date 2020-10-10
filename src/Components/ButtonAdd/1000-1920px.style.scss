@@ -1,0 +1,35 @@
+@import "../../Assets/Sass/variables";
+
+@media only screen and (min-width: 1000px) {
+  .button-add {
+    width: 19.531vw;
+    max-width: 375px;
+    height: 4.635vw;
+    max-height: 89px;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    background: $brand-color;
+    color: white;
+    font-family: $ubuntu;
+    font-weight: 600;
+    font-size: 1.5vw;
+    border-radius: 0.8vw;
+    text-transform: uppercase;
+    position: absolute;
+    top: 60.5%;
+    left: 4.687%;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+
+    &:hover {
+      
+      -webkit-transform: scale(1.1);
+      -moz-transform: scale(1.1);
+      -o-transform: scale(1.1);
+      transform: scale(1.1);
+      transition: all 0.2s ease-in;
+    }
+  }
+}

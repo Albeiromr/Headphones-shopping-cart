@@ -1,0 +1,58 @@
+@import "../../Assets/Sass/variables";
+
+@media only screen and (min-width: 1000px) {
+  .product-container {
+    width: 81.822vw;
+    max-width: 1571px;
+    height: 15.676vw;
+    max-height: 301px;
+    position: absolute;
+    bottom: 1.574%;
+    left: 9.06%;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__subcontainer {
+      width: 73.333vw;
+      max-width: 1408px;
+      height: 10.312vw;
+      max-height: 198px;
+      position: absolute;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      overflow-x: hidden;
+    }
+
+    &__rightArrow {
+      z-index: 30;
+      color: $brand-color;
+      font-size: 3.352vw;
+      position: absolute;
+      right: 0;
+      cursor: pointer;
+    }
+
+    &__rightArrow:hover {
+      transform: scale(110%);
+      transition: all 0.2s ease-in;
+    }
+
+    &__leftArrow {
+      z-index: 30;
+      color: $brand-color;
+      font-size: 3.352vw;
+      position: absolute;
+      left: 0;
+      cursor: pointer;
+      display: var(--hidden);
+    }
+
+    &__leftArrow:hover {
+      transform: scale(110%);
+      transition: all 0.2s ease-in;
+    }
+  }
+}

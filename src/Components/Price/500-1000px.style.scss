@@ -1,0 +1,13 @@
+@import "../../Assets/Sass/variables";
+
+@media only screen and (min-width: 500px) and (max-width: 1000px) {
+  .price {
+    font-size: 3.5vw;
+    color: #565656;
+    font-family: $ubuntu;
+    font-weight: 500;
+    position: absolute;
+    top: 37.429%;
+    left: 5.078%;
+  }
+}

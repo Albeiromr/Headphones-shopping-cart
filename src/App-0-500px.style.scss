@@ -1,0 +1,116 @@
+@import "../src/Assets/Sass/variables";
+
+@media only screen and (max-width: 500px) {
+  .App {
+    width: 100vw;
+    height: 100vh;
+    min-height: 568px;
+    position: relative;
+    margin: 0 auto;
+  }
+
+  .header {
+    min-width: 100vw;
+    height: 11.594vw;
+    margin: 0;
+    overflow: auto;
+    position: absolute;
+    z-index: 20;
+
+    &__logo {
+      width: auto;
+      height: auto;
+      position: absolute;
+      bottom: 0;
+      left: 6.763%;
+      cursor: pointer;
+      z-index: 30;
+    }
+
+    &__logoImg {
+      width: 9.729vw;
+    }
+
+    &__nav {
+      min-width: 100vw;
+      height: 11.594vw;
+      margin: 0;
+      padding: 0;
+      overflow: auto;
+      position: absolute;
+      z-index: 20;
+    }
+
+    &__ul {
+      min-width: 100vw;
+      height: 11.594vw;
+      margin: 0;
+      padding: 0;
+      overflow: auto;
+      position: absolute;
+      z-index: 21;
+    }
+
+    &__purchases {
+      text-decoration: none;
+      text-transform: uppercase;
+      font-family: $ubuntu;
+      font-weight: 500;
+      font-size: 4.081vw;
+      list-style: none;
+      color: #565656;
+      position: absolute;
+      left: 25.14%;
+      top: 45%;
+      cursor: pointer;
+    }
+
+    &__purchasesText {
+      margin: 0;
+    }
+
+    &__store {
+      display: none;
+    }
+
+    &__storeText {
+      margin: 0;
+    }
+
+    &__bag {
+      width: auto;
+      height: auto;
+      list-style: none;
+      font-size: 6.589vw;
+      color: $brand-color;
+      position: absolute;
+      left: 75.985%;
+      top: 36%;
+      cursor: pointer;
+    }
+
+    &__cart {
+      width: auto;
+      height: auto;
+      list-style: none;
+      font-size: 6.589vw;
+      color: $brand-color;
+      position: absolute;
+      left: 87.821%;
+      top: 36%;
+      cursor: pointer;
+    }
+
+    &__search {
+      width: auto;
+      height: auto;
+      list-style: none;
+      font-size: 6.5896vw;
+      color: $brand-color;
+      position: absolute;
+      left: 63.425%;
+      top: 36%;
+      cursor: pointer;
+    }
+  }
+}

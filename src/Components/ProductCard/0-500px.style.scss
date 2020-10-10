@@ -1,0 +1,23 @@
+@import "../../Assets/Sass/variables";
+
+@media only screen and (max-width: 500px) {
+  .product-card {
+    cursor: pointer;
+    height: 95%;
+    min-width: 29.3%;
+    margin: 0 1.7%;
+    border-radius: 7px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 2px #a1a1a1;
+    border: 1px rgb(231, 231, 231) solid;
+    transform: translateX(calc(-111.35% * var(--clock)));
+    transition: all 0.5s ease-out;
+
+    .product-card__img {
+      max-height: 80%;
+    }
+  }
+}

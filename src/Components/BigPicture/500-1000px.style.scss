@@ -1,0 +1,16 @@
+@import "../../Assets/Sass/variables";
+
+@media only screen and (min-width: 500px) and (max-width: 1000px) {
+  .big-picture {
+    width: 51.626vw;
+    height: 51.626vw;
+    z-index: 10;
+    position: absolute;
+    top: 10.156%;
+    right: 0%;
+  }
+
+  &__img {
+    width: 100%;
+  }
+}

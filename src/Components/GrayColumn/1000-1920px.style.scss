@@ -1,0 +1,14 @@
+@import "../../Assets/Sass/variables";
+
+@media only screen and (min-width: 1000px) {
+  .Gray-Column {
+    height: 100vh;
+    max-height: 1080px;
+    min-height: 56vw;
+    width: 23.151vw;
+    max-width: 444.5px;
+    position: absolute;
+    right: 0;
+    background: $secundary-color;
+  }
+}

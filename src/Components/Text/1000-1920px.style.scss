@@ -1,0 +1,40 @@
+@import "../../Assets/Sass/variables";
+
+@media only screen and (min-width: 1000px) {
+  .text {
+    width: 40.989vw;
+    height: 13.072vw;
+    z-index: 30;
+    position: absolute;
+    left: 4.687%;
+    top: 19.351%;
+
+    &__tittle {
+      font-size: 2.8vw;
+      padding: 0;
+      margin-top: 0.1%;
+      color: #565656;
+      font-family: $ubuntu;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+
+    &__description {
+      font-size: 1.7vw;
+      padding: 0;
+      margin-top: 0.1%;
+      color: #565656;
+      text-align: justify;
+      line-height: 150%;
+      font-family: $ubuntu;
+      font-weight: 300;
+    }
+
+    .text__linea {
+      width: 40.937vw;
+      height: 2px;
+      background: #727272;
+      transform: translateY(.8vw);
+    }
+  }
+}

@@ -1,0 +1,119 @@
+@import "../src/Assets/Sass/variables";
+
+@media only screen and (min-width: 1000px) {
+  .App {
+    min-width: calc(100vw - 2vw);
+    max-width: 1920px;
+    max-height: 1080px;
+    min-height: 56vw;
+    position: relative;
+    margin: 0;
+  }
+
+  .header {
+    min-width: 100vw;
+    height: 5.052vw;
+    margin: 0;
+    overflow: auto;
+    position: absolute;
+    z-index: 20;
+
+    &__logo {
+      width: auto;
+      height: auto;
+      position: absolute;
+      bottom: 0;
+      left: 4.687vw;
+      cursor: pointer;
+      z-index: 30;
+    }
+
+    &__logoImg {
+      width: 3.801vw;
+    }
+
+    &__nav {
+      min-width: 100vw;
+      height: 5.052vw;
+      margin: 0;
+      padding: 0;
+      overflow: auto;
+      position: absolute;
+      z-index: 20;
+    }
+
+    &__ul {
+      min-width: 100vw;
+      height: 5.052vw;
+      margin: 0;
+      padding: 0;
+      overflow: auto;
+      position: absolute;
+      z-index: 21;
+    }
+
+    &__purchases {
+      text-decoration: none;
+      text-transform: uppercase;
+      font-family: $ubuntu;
+      font-weight: 500;
+      font-size: 1.458vw;
+      list-style: none;
+      color: #565656;
+      position: absolute;
+      left: 13.437%;
+      top: 50%;
+      cursor: pointer;
+    }
+
+    &__purchasesText {
+      margin: 0;
+    }
+
+    &__store {
+      text-decoration: none;
+      text-transform: uppercase;
+      font-family: $ubuntu;
+      font-weight: 500;
+      font-size: 1.458vw;
+      list-style: none;
+      color: #565656;
+      position: absolute;
+      left: 27.708%;
+      top: 50%;
+      cursor: pointer;
+    }
+
+    &__storeText {
+      margin: 0;
+    }
+
+    &__cart {
+      width: auto;
+      height: auto;
+      list-style: none;
+      font-size: 1.8vw;
+      color: $brand-color;
+      position: absolute;
+      left: 37.604%;
+      top: 45%;
+      cursor: pointer;
+    }
+
+    &__search {
+      width: auto;
+      height: auto;
+      list-style: none;
+      font-size: 1.8vw;
+      color: $brand-color;
+      position: absolute;
+      left: 44.947%;
+      top: 45%;
+      cursor: pointer;
+    }
+
+    &__bag {
+      display: none;
+    }
+  }
+}
