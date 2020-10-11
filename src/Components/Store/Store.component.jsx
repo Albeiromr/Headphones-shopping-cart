@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import Proptypes from "prop-types";
 import './1000-1920px.style.scss';
 import './500-1000px.style.scss';
@@ -20,8 +20,71 @@ const Store = ({Products, changeShoppingCart, shoppingCart}) => {
     const [productSelected, changeProductSelected] = useState(Products[0])
     // this state is for the page to know the twho images in the two smallest squares
     const [thumbnail, changeThumbnail] = useState([productSelected.firstColor[0].img1, productSelected.firstColor[1].img2])
-    
-    
+    // this state is for choosing the right product color to send to the shoppingCart
+    // in order to prevent sending wrong colors to the shopping cart is nessesary to create first
+    // a new object 
+    const [itemToCart, addItemToCart] = useState({
+      color: productSelected.colors.color1,
+      image: productSelected.firstColor[0].img1,
+      name: productSelected.reference,
+      price: productSelected.price,
+    });
+    // the itemToCart changes every time there is a change in the following 
+    // states picture, productSelected, thumbnail
+    // for achieve that let´s use the following useEffect()
+    useEffect(() => {
+      switch (picture) {
+        case productSelected.firstColor[0].img1:
+          addItemToCart({
+            color: productSelected.colors.color1,
+            image: productSelected.firstColor[0].img1,
+            name: productSelected.reference,
+            price: productSelected.price,
+          });
+          break;
+        case productSelected.firstColor[1].img2:
+          addItemToCart({
+            color: productSelected.colors.color1,
+            image: productSelected.firstColor[0].img1,
+            name: productSelected.reference,
+            price: productSelected.price,
+          });
+          break;
+        case productSelected.secondColor[0].img1:
+          addItemToCart({
+            color: productSelected.colors.color2,
+            image: productSelected.secondColor[0].img1,
+            name: productSelected.reference,
+            price: productSelected.price,
+          });
+          break;
+        case productSelected.secondColor[1].img2:
+          addItemToCart({
+            color: productSelected.colors.color2,
+            image: productSelected.secondColor[0].img1,
+            name: productSelected.reference,
+            price: productSelected.price,
+          });
+          break;
+        case productSelected.thirdColor[0].img1:
+          addItemToCart({
+            color: productSelected.colors.color3,
+            image: productSelected.thirdColor[0].img1,
+            name: productSelected.reference,
+            price: productSelected.price,
+          });
+          break;
+        case productSelected.thirdColor[1].img2:
+          addItemToCart({
+            color: productSelected.colors.color3,
+            image: productSelected.thirdColor[0].img1,
+            name: productSelected.reference,
+            price: productSelected.price,
+          });
+          break;
+        default:
+      }
+    }, [picture, productSelected, thumbnail]);
     
     return (
         
@@ -48,8 +111,8 @@ const Store = ({Products, changeShoppingCart, shoppingCart}) => {
             />
             <ButtonAdd
             changeShoppingCart={changeShoppingCart}
-            productSelected={productSelected}
             shoppingCart={shoppingCart}
+            itemToCart={itemToCart}
             />
             <ButtonBuy 
             />

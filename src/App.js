@@ -13,7 +13,7 @@ function App() {
 
   // this state is the user´s shopping cart
   const [shoppingCart, changeShoppingCart] = useState([]);
-
+  
   // put a red point over the cart icon if there are items in the shopping cart
   const [point, changePoint] = useState(false);
 

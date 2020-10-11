@@ -5,11 +5,13 @@ import './500-1000px.style.scss';
 import './0-500px.style.scss';
 
 
-const ButtonAdd = ({changeShoppingCart, productSelected, shoppingCart}) => {
+const ButtonAdd = ({changeShoppingCart, shoppingCart, itemToCart}) => {
+    
+    
     
     //this function is used to add products to de user´s shopping Cart
     const addToCart = () => {
-        changeShoppingCart([...shoppingCart, productSelected]);
+        changeShoppingCart([...shoppingCart, itemToCart]);
     }
 
     return (
@@ -25,8 +27,8 @@ const ButtonAdd = ({changeShoppingCart, productSelected, shoppingCart}) => {
 
 ButtonAdd.propTypes = {
     changeShoppingCart: Proptypes.func.isRequired,
-    productSelected: Proptypes.object.isRequired,
     shoppingCart: Proptypes.array.isRequired,
+    itemToCart: Proptypes.object.isRequired,
   };
 
 export default ButtonAdd;
