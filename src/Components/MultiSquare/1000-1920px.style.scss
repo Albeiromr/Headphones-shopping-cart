@@ -1,0 +1,22 @@
+@import "../../Assets/Sass/variables";
+
+@media only screen and (min-width: 1000px) {
+  .blue-square {
+    width: 29.843vw;
+    height: 41.927vw;
+    background: $brand-color;
+    border-radius: 1.614vw;
+    position: absolute;
+    top: 16.296%;
+    right: 10.208%;
+    z-index: 10;
+
+    &__checkout {
+      display: none;
+    }
+
+    &__back {
+      display: none;
+    }
+  }
+}

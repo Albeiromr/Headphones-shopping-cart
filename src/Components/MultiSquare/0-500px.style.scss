@@ -1,0 +1,51 @@
+@import "../../Assets/Sass/variables";
+
+@media only screen and (max-width: 500px) {
+  .blue-square {
+    width: 86.231vw;
+    height: 121.014vw;
+    background: $brand-color;
+    border-radius: 1.614vw;
+    position: absolute;
+    top: 25.815%;
+    left: 7.004%;
+    z-index: 10;
+    transform: translateX(100vw);
+    transition: all 1s ease-in;
+
+    &__checkout {
+      cursor: pointer;
+      width: 39.215%;
+      height: 6.986%;
+      border-radius: 4vw;
+      background: white;
+      position: absolute;
+      top: 86.826%;
+      left: 46.778%;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+
+    &__text {
+      color: $brand-color;
+      font-size: 3.864vw;
+      font-weight: 600;
+      font-family: $ubuntu;
+    }
+
+    &__arrow {
+      color: $brand-color;
+      font-size: 4.864vw;
+    }
+
+    &__back {
+      cursor: pointer;
+      font-size: 9.026vw;
+      color: white;
+      position: absolute;
+      left: 17.899%;
+      bottom: 6.5%;
+    }
+  }
+}
