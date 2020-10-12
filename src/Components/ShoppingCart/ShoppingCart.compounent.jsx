@@ -1,6 +1,4 @@
 import React from 'react';
-import MultiSquare from '../MultiSquare/MultiSquare.component'
-import ContCart from '../ContCart/ContCart.component';
 import Proptypes from "prop-types";
 import './1000-1920px.style.scss';
 import './500-1000px.style.scss';
@@ -10,14 +8,9 @@ const ShoppingCart = () => {
 
 
     return (
-
-        
         <section className='shopping-cart'>
-            <MultiSquare />
-            <ContCart/>
+            <h1 className='a'> este es el carrito</h1>
         </section>
-        
-        
     )
 };
 

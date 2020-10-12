@@ -25,8 +25,6 @@ const ButtonAdd = ({changeShoppingCart, shoppingCart, itemToCart}) => {
     )
 };
 
-// component documentation
-
 ButtonAdd.propTypes = {
     changeShoppingCart: Proptypes.func.isRequired,
     shoppingCart: Proptypes.array.isRequired,
