@@ -1,5 +1,7 @@
 @import "../../../Assets/Sass/variables";
 
 @media only screen and (min-width: 1000px) {
-   
+    .movable-container{
+        display: none;
+    }
 }

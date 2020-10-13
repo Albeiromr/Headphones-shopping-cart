@@ -1,5 +1,16 @@
 @import "../../../Assets/Sass/variables";
 
 @media only screen and (max-width: 500px) {
-   
+  .movable-container {
+    width: 200vw;
+    height: 155.314vw;
+    background: darkorchid;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 20;
+    border-radius: 10vw 10vw 0 0;
+    transition: all .5s ease;
+    transform: translateX(var(--translate));
+  }
 }
