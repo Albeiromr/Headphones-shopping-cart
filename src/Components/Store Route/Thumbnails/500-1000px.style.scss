@@ -1,0 +1,40 @@
+@import "../../../Assets/Sass/variables";
+
+@media only screen and (min-width: 500px) and (max-width: 1000px) {
+  .thumbnail {
+    width: 26.171vw;
+    height: 11.718vw;
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+    right: 5.468%;
+    display: flex;
+    justify-content: space-between;
+
+    &__img1 {
+      width: 11.718vw;
+      height: 11.718vw;
+      border-radius: 1vw;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 2px 2px 2px #a1a1a1;
+    }
+
+    &__img2 {
+      width: 11.718vw;
+      height: 11.718vw;
+      border-radius: 1vw;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 2px 2px 2px #a1a1a1;
+    }
+
+    &__picture {
+      max-width: 80%;
+    }
+  }
+}

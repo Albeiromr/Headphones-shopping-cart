@@ -4,9 +4,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShoppingCart, faSearch, faShoppingBag} from '@fortawesome/free-solid-svg-icons'
 import logo from './Assets/Img/Logo/logosound.png'
 import Products from './Assets/Img/Products';
-import GrayColumn from './Components/GrayColumn/GrayColumn.component';
-import Store from './Components/Store/Store.component';
-import ShoppingCart from './Components/ShoppingCart/ShoppingCart.compounent';
+import GrayColumn from './Components/Store Route/GrayColumn/GrayColumn.component';
+import Store from './Components/Store Route/Store/Store.component';
+import ShoppingCart from './Components/Cart Route/ShoppingCart/ShoppingCart.compounent';
 import './App-0-500px.style.scss';
 import './App-500-1000px.style.scss';
 import './App-1000-1920px.style.scss';

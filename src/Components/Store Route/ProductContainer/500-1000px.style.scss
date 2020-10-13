@@ -1,0 +1,44 @@
+@import "../../../Assets/Sass/variables";
+
+@media only screen and (min-width: 500px) and (max-width: 1000px) {
+  .product-container {
+    width: 91.406vw;
+    height: 36.328vw;
+    position: absolute;
+    bottom: 5.957%;
+    left: 4.3%;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__subcontainer {
+      width: 78.205vw;
+      height: 26.262vw;
+      max-height: 187px;
+      position: absolute;
+      z-index: 20;
+      display: flex;
+      overflow-x: hidden;
+    }
+
+    &__rightArrow {
+      z-index: 30;
+      color: $brand-color;
+      font-size: 6.352vw;
+      position: absolute;
+      right: 0;
+      cursor: pointer;
+    }
+
+    &__leftArrow {
+      z-index: 30;
+      color: $brand-color;
+      font-size: 6.352vw;
+      position: absolute;
+      left: 0;
+      cursor: pointer;
+      display: var(--hidden);
+    }
+  }
+}
