@@ -1,0 +1,30 @@
+@import "../../../Assets/Sass/variables";
+
+@media only screen and (max-width: 500px) {
+  .steps {
+    width: 89.371vw;
+    height: 6.038vw;
+    background-color: yellow;
+    position: absolute;
+    top: 9.239%;
+    left: 6.763%;
+    z-index: 30;
+
+    &__line {
+      width: 89.371vw;
+      height: .5vw;
+      background: #d5d5d5;
+      position: absolute;
+      bottom: 0;
+    }
+
+    &__cont {
+      width: 27.053vw;
+      height: 6.038vw;
+      background: blue;
+      position: absolute;
+      right: 0;
+      
+    }
+  }
+}

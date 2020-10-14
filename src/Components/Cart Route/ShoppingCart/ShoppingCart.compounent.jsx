@@ -5,6 +5,7 @@ import './500-1000px.style.scss';
 import './0-500px.style.scss';
 import MovableContainer from '../MovableContainer/MovableContainer.component';
 import FormSquare from '../FormSquare/FormSquare.compounent';
+import Steps from '../../Confirmation Route/Steps/Steps.compounent';
 
 const ShoppingCart = () => {
 
@@ -12,6 +13,9 @@ const ShoppingCart = () => {
 
     return (
         <section className='shopping-cart'>
+
+            <Steps 
+            />
             < MovableContainer
             />
 
