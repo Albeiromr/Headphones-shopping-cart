@@ -1,17 +1,41 @@
 @import "../../../Assets/Sass/variables";
 
 @media only screen and (min-width: 500px) and (max-width: 1000px) {
-    .movable-container{
-        width: 200vw;
-        height: 111.848vw;
-        background: darkorchid;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        z-index: 20;
-        border-radius: 10vw 10vw 0 0;
-        transition: all .5s ease;
-        transform: translateX(var(--translate));
-    }
-}
+  .movable-container {
+    width: 200vw;
+    height: 111.848vw;
+    background: rgb(193, 152, 214);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 20;
+    transition: all 0.5s ease;
+    transform: translateX(var(--translate));
 
+    &__forward {
+      cursor: pointer;
+      width: 44.921vw;
+      height: 6.64vw;
+      background: $brand-color;
+      border-radius: 2.604vw;
+      position: absolute;
+      bottom: 7.799%;
+      left: 13.802%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+
+    &__text {
+      color: white;
+      font-size: 2.994vw;
+      font-family: $ubuntu;
+      font-weight: 600;
+    }
+
+    &__arrow {
+      font-size: 3.432vw;
+      color: white;
+    }
+  }
+}
