@@ -7,6 +7,7 @@ import Products from './Assets/Img/Products';
 import GrayColumn from './Components/Store Route/GrayColumn/GrayColumn.component';
 import Store from './Components/Store Route/Store/Store.component';
 import ShoppingCart from './Components/Cart Route/ShoppingCart/ShoppingCart.compounent';
+import Confirmation from './Components/Confirmation Route/Confirmation/Confirmation.compounent';
 import './App-0-500px.style.scss';
 import './App-500-1000px.style.scss';
 import './App-1000-1920px.style.scss';
@@ -75,7 +76,16 @@ function App() {
           />
           <GrayColumn />
         </Route>
+
+        <Route exact path='/confirmation'>
+          <Confirmation
+          />
+          <GrayColumn />
+        </Route>
+
       </Switch>
+
+      
 
     </div>
     </Router>

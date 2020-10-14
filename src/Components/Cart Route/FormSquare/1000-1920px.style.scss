@@ -48,5 +48,17 @@
       font-size: 1.597vw;
       color: $brand-color;
     }
+
+    &__next {
+      display: none;
+    }
+
+    &__text2 {
+      display: none;
+    }
+
+    &__arrow2 {
+      display: none;
+    }
   }
 }
