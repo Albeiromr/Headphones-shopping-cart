@@ -4,7 +4,7 @@ import './1000-1920px.style.scss';
 import './500-1000px.style.scss';
 import './0-500px.style.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLongArrowAltLeft} from '@fortawesome/free-solid-svg-icons';
+import { faLongArrowAltLeft, faLongArrowAltRight} from '@fortawesome/free-solid-svg-icons';
 
 const FormSquare = ({changeTranslate}) => {
 
@@ -20,6 +20,20 @@ const FormSquare = ({changeTranslate}) => {
              className='form-square__back'
              onClick={handleClick}
              />
+
+             <div className='form-square__forward'>
+
+                <p className='form-square__text'>
+                  Checkout
+                </p>
+
+                <FontAwesomeIcon
+                icon={faLongArrowAltRight}
+                className='form-square__arrow'
+                onClick={handleClick}
+                />
+
+             </div>
 
         </div>
     )

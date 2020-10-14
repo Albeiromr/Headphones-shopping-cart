@@ -1,24 +1,30 @@
 @import "../../../Assets/Sass/variables";
 
 @media only screen and (min-width: 500px) and (max-width: 1000px) {
-   .form-square {
-       width: 63.020vw;
-       height: 88.541vw;
-       background: $brand-color;
-       position: absolute;
-       right: 9.244%;
-       bottom: 5.005%;
-       border-radius: 4.036vw;
+  .form-square {
+    width: 63.02vw;
+    height: 88.541vw;
+    background: $brand-color;
+    position: absolute;
+    right: 9.244%;
+    bottom: 5.005%;
+    border-radius: 4.036vw;
 
-       &__back {
-           cursor: pointer;
-           font-size: 6.026vw;
-           color: white;
-           position: absolute;
-           left: 18.161%;
-           bottom: 8%;
-       }
+    &__back {
+      cursor: pointer;
+      font-size: 6.026vw;
+      color: white;
+      position: absolute;
+      left: 18.161%;
+      bottom: 8%;
+    }
 
-       
-   }
+    &__text {
+        display: none;
+      }
+  
+      &__arrow {
+        display: none;
+      }
+  }
 }
