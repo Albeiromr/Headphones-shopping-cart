@@ -2,17 +2,16 @@
 
 @media only screen and (min-width: 500px) and (max-width: 1000px) {
   .steps {
-    width: 87.630vw;
+    width: 87.63vw;
     height: 4.557vw;
-    background-color: yellow;
     position: absolute;
     top: 12.695%;
     left: 5.208%;
     z-index: 30;
 
     &__line {
-      width: 87.630vw;
-      height: .4vw;
+      width: 87.63vw;
+      height: 0.4vw;
       background: #d5d5d5;
       position: absolute;
       bottom: 0;
@@ -21,10 +20,32 @@
     &__cont {
       width: 35.286vw;
       height: 4.557vw;
-      background: blue;
       position: absolute;
       right: 0;
-      
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__advance1 {
+      width: 28%;
+      height: 16%;
+      background: $brand-color;
+      border-radius: 2vw;
+    }
+
+    &__advance2 {
+      width: 28%;
+      height: 16%;
+      background: $brand-color;
+      border-radius: 2vw;
+    }
+
+    &__advance3 {
+      width: 28%;
+      height: 16%;
+      background: $brand-color;
+      border-radius: 2vw;
     }
   }
 }

@@ -9,9 +9,11 @@ const Steps = () => {
     return (
         <div className='steps'>
             <div className='steps__line'></div>
-            <div className='steps__cont'>
-
-            </div>
+                <div className='steps__cont'>
+                    <div className='steps__advance1'></div>
+                    <div className='steps__advance2'></div>
+                    <div className='steps__advance3'></div>
+                </div>
         </div>
     )
 };

@@ -4,7 +4,6 @@
   .steps {
     width: 45.052vw;
     height: 2.291vw;
-    background: darkcyan;
     position: absolute;
     top: 17.592%;
     left: 12.5%;
@@ -20,10 +19,32 @@
     &__cont {
       width: 17.343vw;
       height: 2.291vw;
-      background: blue;
       position: absolute;
       right: 0;
-      
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__advance1 {
+      width: 28%;
+      height: 16%;
+      background: $brand-color;
+      border-radius: 2vw;
+    }
+
+    &__advance2 {
+      width: 28%;
+      height: 16%;
+      background: $brand-color;
+      border-radius: 2vw;
+    }
+
+    &__advance3 {
+      width: 28%;
+      height: 16%;
+      background: $brand-color;
+      border-radius: 2vw;
     }
   }
 }
