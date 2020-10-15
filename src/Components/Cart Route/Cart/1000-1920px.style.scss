@@ -1,0 +1,12 @@
+@import "../../../Assets/Sass/variables";
+
+@media only screen and (min-width: 1000px) {
+  .cart {
+    width: 39.635vw;
+    height: 28.098vw;
+    background: darkcyan;
+    position: absolute;
+    top: 35.833%;
+    left: 12.552%;
+  }
+}

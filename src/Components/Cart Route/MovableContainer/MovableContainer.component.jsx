@@ -23,22 +23,27 @@ const MovableContainer = () => {
         style={{'--translate': translate}}
         >
 
-          <div 
-          className='movable-container__forward'
-          onClick={handleClick}
-          >
+            <div className='movable-container__cart'>
 
-            <p className='movable-container__text'>
-              Checkout
-            </p>
+            </div>
+          
+
+            <div 
+            className='movable-container__forward'
+            onClick={handleClick}
+            >
+
+              <p className='movable-container__text'>
+                Checkout
+              </p>
 
 
-          </div>
+            </div>
 
 
-          <FormSquare 
-          changeTranslate={changeTranslate}
-          />
+            <FormSquare 
+            changeTranslate={changeTranslate}
+            />
 
         </div>
         

@@ -4,7 +4,6 @@
   .movable-container {
     width: 200vw;
     height: 111.848vw;
-    background: rgb(193, 152, 214);
     position: absolute;
     bottom: 0;
     left: 0;
@@ -31,6 +30,15 @@
       font-size: 2.994vw;
       font-family: $ubuntu;
       font-weight: 600;
+    }
+
+    &__cart {
+      width: 87.239vw;
+      height: 70.442vw;
+      background: darkcyan;
+      position: absolute;
+      top: 20.605%;
+      left: 2.604%;
     }
   }
 }
