@@ -32,11 +32,6 @@ const MovableContainer = () => {
               Checkout
             </p>
 
-            <FontAwesomeIcon
-             icon={faLongArrowAltRight}
-             className='movable-container__arrow'
-             onClick={handleClick}
-             />
 
           </div>
 

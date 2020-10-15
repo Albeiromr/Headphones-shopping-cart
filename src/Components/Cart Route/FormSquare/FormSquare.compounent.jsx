@@ -24,21 +24,13 @@ const FormSquare = ({changeTranslate}) => {
           <div className="form-square__forward">
             <p className="form-square__text">Checkout</p>
 
-            <FontAwesomeIcon
-              icon={faLongArrowAltRight}
-              className="form-square__arrow"
-              onClick={handleClick}
-            />
+            
           </div>
         </Link>
         <Link to="/confirmation">
           <div className="form-square__next">
             <p className="form-square__text2">Checkout</p>
 
-            <FontAwesomeIcon
-              icon={faLongArrowAltRight}
-              className="form-square__arrow2"
-            />
           </div>
         </Link>
       </div>
