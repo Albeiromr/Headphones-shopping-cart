@@ -12,6 +12,7 @@ const Confirmation = () => {
 
     return (
         <section className='confirmation'>
+          
           <Steps 
           />
         </section>
