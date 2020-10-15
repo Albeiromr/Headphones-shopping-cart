@@ -8,6 +8,7 @@ import FormSquare from '../FormSquare/FormSquare.compounent';
 import Steps from '../../Confirmation Route/Steps/Steps.compounent';
 import ContinueShopping from '../../Confirmation Route/ContinueShopping/ContinueShopping.compounent';
 import Cart from '../Cart/Cart.component';
+import FormSquareBig from '../FormSquareBig/FormSquareBig.compounent';
 
 const ShoppingCart = () => {
 
@@ -26,7 +27,7 @@ const ShoppingCart = () => {
             <Cart 
             />
 
-            <FormSquare 
+            <FormSquareBig 
             />
         </section>
     )

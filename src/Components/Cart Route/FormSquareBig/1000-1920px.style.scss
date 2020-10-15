@@ -1,0 +1,56 @@
+@import "../../../Assets/Sass/variables";
+
+@media only screen and (min-width: 1000px) {
+  .form-square-big {
+    width: 29.843vw;
+    height: 41.927vw;
+    background: $brand-color;
+    position: absolute;
+    top: 16.296%;
+    right: 10.208%;
+    border-radius: 1.614vw;
+    z-index: 20;
+    
+
+    &__back {
+      display: none;
+    }
+
+    &__forward {
+      cursor: pointer;
+      width: 19.947vw;
+      height: 2.968vw;
+      background: white;
+      border-radius: 1.041vw;
+      position: absolute;
+      bottom: 5.962%;
+      left: 16.579%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+
+    &__forward:hover {
+      -webkit-transform: scale(1.1);
+      -moz-transform: scale(1.1);
+      -o-transform: scale(1.1);
+      transform: scale(1.1);
+      transition: all 0.2s ease-in;
+    }
+
+    &__text {
+      color: $brand-color;
+      font-family: $ubuntu;
+      font-weight: 600;
+      font-size: 1.197vw;
+    }
+
+    &__next {
+      display: none;
+    }
+
+    &__text2 {
+      display: none;
+    }
+  }
+}

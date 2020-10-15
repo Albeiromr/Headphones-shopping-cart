@@ -5,7 +5,7 @@ import './500-1000px.style.scss';
 import './0-500px.style.scss';
 import {Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLongArrowAltLeft, faLongArrowAltRight} from '@fortawesome/free-solid-svg-icons';
+import { faLongArrowAltLeft} from '@fortawesome/free-solid-svg-icons';
 
 const FormSquare = ({changeTranslate}) => {
 
