@@ -4,6 +4,22 @@
   .cart-product {
     width: 100%;
     height: 25%;
-    background: green;
+    position: relative;
+
+    &__sub-container {
+      height: 68.148%;
+      width: 80.683%;
+      position: absolute;
+      top: 15.926%;
+      right: 0;
+      border: 1px solid #bbbbbb;
+      border-radius: 1vw;
+    }
+
+    &__image {
+      width: 14.109%;
+      position: absolute;
+      top: 9%;
+    }
   }
 }
