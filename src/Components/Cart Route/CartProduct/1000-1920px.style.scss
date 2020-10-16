@@ -13,13 +13,43 @@
       top: 15.926%;
       right: 0;
       border: 1px solid #bbbbbb;
-      border-radius: 1vw;
+      border-radius: .5vw;
     }
 
     &__image {
       width: 14.109%;
       position: absolute;
       top: 9%;
+    }
+
+    &__reference {
+      margin: 0;
+      font-family: $ubuntu;
+      font-size: 1.2vw;
+      position: absolute;
+      top: 10%;
+      left: 5%;
+      color: #565656;
+
+    }
+
+    &__color {
+      font-family: $ubuntu;
+      font-size: 1.2vw;
+      position: absolute;
+      top: 36%;
+      left: 5%; 
+      color: #565656;
+    }
+
+    &__price {
+      font-family: $ubuntu;
+      font-size: 1.2vw;
+      position: absolute;
+      margin: 0;
+      top: 10%;
+      right: 5%; 
+      color: #565656;
     }
   }
 }

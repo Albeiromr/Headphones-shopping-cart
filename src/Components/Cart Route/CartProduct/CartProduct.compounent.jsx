@@ -12,7 +12,9 @@ const CartProduct = ({cartProduct}) => {
         <div className='cart-product'>
 
             <article className='cart-product__sub-container'>
-
+                <h2 className='cart-product__reference'>{name}</h2>
+                <p className='cart-product__color'>{color}</p>
+                <p className='cart-product__price'>$ {price}</p>
             </article>
 
             <img className='cart-product__image' src={image} alt="product image"/>
