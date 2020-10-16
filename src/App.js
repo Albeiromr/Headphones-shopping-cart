@@ -72,7 +72,9 @@ function App() {
         </Route>
 
         <Route  path='/shoppingcart'>
-          <ShoppingCart   
+          <ShoppingCart  
+          shoppingCart={shoppingCart} 
+          changeShoppingCart={changeShoppingCart}
           />
           <GrayColumn />
         </Route>

@@ -3,17 +3,26 @@ import Proptypes from "prop-types";
 import './1000-1920px.style.scss';
 import './500-1000px.style.scss';
 import './0-500px.style.scss';
+import CartProduct from '../CartProduct/CartProduct.compounent';
 
-const Cart = () => {
+const Cart = ({shoppingCart, changeShoppingCart}) => {
 
     return (
         <div className='cart'>
+
+            {shoppingCart.map((cartProduct) => (
+            <CartProduct 
+            key={cartProduct.id}
+            cartProduct={cartProduct}
+            />))}
 
         </div>
     )
 };
 
 Cart.propTypes = {
+    shoppingCart: Proptypes.array.isRequired,
+    changeShoppingCart: Proptypes.func.isRequired,
     };
 
 export default  Cart;

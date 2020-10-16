@@ -4,14 +4,14 @@ import './1000-1920px.style.scss';
 import './500-1000px.style.scss';
 import './0-500px.style.scss';
 import MovableContainer from '../MovableContainer/MovableContainer.component';
-import FormSquare from '../FormSquare/FormSquare.compounent';
 import Steps from '../../Confirmation Route/Steps/Steps.compounent';
 import ContinueShopping from '../../Confirmation Route/ContinueShopping/ContinueShopping.compounent';
 import Cart from '../Cart/Cart.component';
 import FormSquareBig from '../FormSquareBig/FormSquareBig.compounent';
 
-const ShoppingCart = () => {
+const ShoppingCart = ({shoppingCart, changeShoppingCart }) => {
 
+    
     
 
     return (
@@ -25,6 +25,8 @@ const ShoppingCart = () => {
             < MovableContainer
             />
             <Cart 
+            shoppingCart={shoppingCart}
+            changeShoppingCart={changeShoppingCart}
             />
 
             <FormSquareBig 
@@ -36,7 +38,8 @@ const ShoppingCart = () => {
 // component documentation
 
 ShoppingCart.propTypes = {
-    
+    shoppingCart: Proptypes.array.isRequired,
+    changeShoppingCart: Proptypes.func.isRequired,
   };
 
 export default ShoppingCart;

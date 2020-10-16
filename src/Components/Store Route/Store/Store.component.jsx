@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import Proptypes from "prop-types";
 import './1000-1920px.style.scss';
 import './500-1000px.style.scss';
@@ -28,6 +29,7 @@ const Store = ({Products, changeShoppingCart, shoppingCart}) => {
       image: productSelected.firstColor[0].img1,
       name: productSelected.reference,
       price: productSelected.price,
+      
     });
     // the itemToCart changes every time there is a change in the following 
     // states picture, productSelected, thumbnail
@@ -40,6 +42,7 @@ const Store = ({Products, changeShoppingCart, shoppingCart}) => {
             image: productSelected.firstColor[0].img1,
             name: productSelected.reference,
             price: productSelected.price,
+            id: uuidv4(),
           });
           break;
         case productSelected.firstColor[1].img2:
@@ -48,6 +51,7 @@ const Store = ({Products, changeShoppingCart, shoppingCart}) => {
             image: productSelected.firstColor[0].img1,
             name: productSelected.reference,
             price: productSelected.price,
+            id: uuidv4(),
           });
           break;
         case productSelected.secondColor[0].img1:
@@ -56,6 +60,7 @@ const Store = ({Products, changeShoppingCart, shoppingCart}) => {
             image: productSelected.secondColor[0].img1,
             name: productSelected.reference,
             price: productSelected.price,
+            id: uuidv4(),
           });
           break;
         case productSelected.secondColor[1].img2:
@@ -64,6 +69,7 @@ const Store = ({Products, changeShoppingCart, shoppingCart}) => {
             image: productSelected.secondColor[0].img1,
             name: productSelected.reference,
             price: productSelected.price,
+            id: uuidv4(),
           });
           break;
         case productSelected.thirdColor[0].img1:
@@ -72,6 +78,7 @@ const Store = ({Products, changeShoppingCart, shoppingCart}) => {
             image: productSelected.thirdColor[0].img1,
             name: productSelected.reference,
             price: productSelected.price,
+            id: uuidv4(),
           });
           break;
         case productSelected.thirdColor[1].img2:
@@ -80,6 +87,7 @@ const Store = ({Products, changeShoppingCart, shoppingCart}) => {
             image: productSelected.thirdColor[0].img1,
             name: productSelected.reference,
             price: productSelected.price,
+            id: uuidv4(),
           });
           break;
         default:
