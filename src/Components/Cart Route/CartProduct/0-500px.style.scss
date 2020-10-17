@@ -1,55 +1,78 @@
 @import "../../../Assets/Sass/variables";
 
 @media only screen and (max-width: 500px) {
-    .cart-product {
-        width: 100%;
-        height: 25%;
-        position: relative;
-    
-        &__sub-container {
-          height: 68.148%;
-          width: 75.683%;
-          position: absolute;
-          top: 15.926%;
-          right: 0;
-          border: 1px solid #bbbbbb;
-          border-radius: 3vw;
-          background: white;
-        }
-    
-        &__image {
-          width: 20.109%;
-          position: absolute;
-          top: 13%;
-        }
+  .cart-product {
+    width: 100%;
+    height: 25%;
+    position: relative;
 
-        &__reference {
-          margin: 0;
-          font-family: $ubuntu;
-          font-size: 3.5vw;
-          position: absolute;
-          top: 15%;
-          left: 5%;
-          color: #565656;
-        }
-    
-        &__color {
-          font-family: $ubuntu;
-          font-size: 3.5vw;
-          position: absolute;
-          top: 35%;
-          left: 5%;
-          color: #565656;
-        }
+    &__sub-container {
+      height: 68.148%;
+      width: 75.683%;
+      position: absolute;
+      top: 15.926%;
+      right: 0;
+      border: 1px solid #bbbbbb;
+      border-radius: 3vw;
+      background: white;
+    }
 
-        &__price {
-          font-family: $ubuntu;
-          font-size: 3.5vw;
-          position: absolute;
-          margin: 0;
-          top: 13%;
-          right: 5%; 
-          color: #565656;
-        }
-      }
+    &__image {
+      width: 20.109%;
+      position: absolute;
+      top: 13%;
+    }
+
+    &__reference {
+      margin: 0;
+      font-family: $ubuntu;
+      font-size: 3.5vw;
+      position: absolute;
+      top: 15%;
+      left: 5%;
+      color: #565656;
+    }
+
+    &__color {
+      font-family: $ubuntu;
+      font-size: 3.5vw;
+      position: absolute;
+      top: 35%;
+      left: 5%;
+      color: #565656;
+    }
+
+    &__price {
+      font-family: $ubuntu;
+      font-size: 3.5vw;
+      position: absolute;
+      top: 35%;
+      right: 5%;
+      color: #565656;
+    }
+
+    &__quantity-container {
+      width: 27%;
+      height: 50%;
+      position: absolute;
+      top: 45%;
+      right: 35%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__add-less {
+      color: $brand-color;
+      font-size: 4.5vw;
+      cursor: pointer;
+    }
+
+    &__quantity {
+      font-family: $ubuntu;
+      color: #565656;
+      font-weight: 400;
+      font-size: 3.5vw;
+    }
+  }
 }

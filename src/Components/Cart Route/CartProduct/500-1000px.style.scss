@@ -46,10 +46,33 @@
       font-family: $ubuntu;
       font-size: 3vw;
       position: absolute;
-      margin: 0;
-      top: 10%;
+      top: 31%;
       right: 5%; 
       color: #565656;
+    }
+
+    &__quantity-container {
+      width: 17%;
+      height: 50%;
+      position: absolute;
+      top: 30%;
+      right: 35%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__add-less {
+      color: $brand-color;
+      font-size: 3vw;
+      cursor: pointer;
+    }
+
+    &__quantity {
+      font-family: $ubuntu;
+      color: #565656;
+      font-weight: 400;
+      font-size: 3vw;
     }
   }
 }
