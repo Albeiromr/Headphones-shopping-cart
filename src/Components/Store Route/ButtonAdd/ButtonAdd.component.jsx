@@ -8,16 +8,8 @@ import './0-500px.style.scss';
 const ButtonAdd = ({changeShoppingCart, shoppingCart, itemToCart}) => {
     
     
-    const [existing, changeExisting] = useState(itemToCart);
-    //this function is used to add products to de user´s shopping Cart
     const addToCart = () => {
-      changeExisting(itemToCart);
-      let filtered = shoppingCart.filter(
-        (productFiltered) => productFiltered.name === existing.name
-      )[0];
-      if (itemToCart === filtered) {
-        changeShoppingCart([...shoppingCart]);
-      } else changeShoppingCart([...shoppingCart, itemToCart]);
+       {changeShoppingCart([...shoppingCart, itemToCart])}
     };
 
     return (
