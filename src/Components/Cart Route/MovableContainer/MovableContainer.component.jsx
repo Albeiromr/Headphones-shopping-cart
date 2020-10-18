@@ -30,6 +30,8 @@ const MovableContainer = ({shoppingCart, changeShoppingCart }) => {
             <CartProduct 
             key={cartProduct.id}
             cartProduct={cartProduct}
+            shoppingCart={shoppingCart}
+            changeShoppingCart={changeShoppingCart}
             />))}
 
 

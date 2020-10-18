@@ -7,10 +7,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlusCircle, faMinusCircle, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 
 
-const CartProduct = ({cartProduct}) => {
+const CartProduct = ({cartProduct, shoppingCart, changeShoppingCart}) => {
 
 
-    const [quantity, changeQuantity] =useState(1)
+    // state for select the product quantity tu purchase for each product
+    const [quantity, changeQuantity] = useState(1)
     // cartProduct destructuring
     let {color, image, name, price, id} = cartProduct;
     // counter for incrmenting product quantity
@@ -26,14 +27,17 @@ const CartProduct = ({cartProduct}) => {
 
     const handleMinusClick = () => {
       // this is the action taken when clicking in the minus button
-      
-      if(quantity < 2){
-        changeQuantity(1)
-      }else {
-        increment--
-        changeQuantity(increment)
+      if (quantity < 2) {
+        changeQuantity(1);
+      } else {
+        increment--;
+        changeQuantity(increment);
       }
-      
+    };
+
+    const handleTimesCircleClick = (id) => {
+      let filtered = shoppingCart.filter(pct => pct.id !== id)
+      changeShoppingCart(filtered)
     }
 
     return (
@@ -44,6 +48,7 @@ const CartProduct = ({cartProduct}) => {
           <p className="cart-product__price">$ {priceMultiplied.toFixed(2)}</p>
 
                 <FontAwesomeIcon 
+                onClick={() => (handleTimesCircleClick(id))}
                 className='cart-product__close'
                 icon={faTimesCircle}
                 />
@@ -75,6 +80,8 @@ const CartProduct = ({cartProduct}) => {
 
 CartProduct.propTypes = {
     cartProduct: Proptypes.object.isRequired,
+    changeShoppingCart: Proptypes.func.isRequired,
+    shoppingCart: Proptypes.array.isRequired
     };
 
 export default CartProduct;

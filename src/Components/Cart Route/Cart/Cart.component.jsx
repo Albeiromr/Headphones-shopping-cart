@@ -14,6 +14,8 @@ const Cart = ({shoppingCart, changeShoppingCart}) => {
             <CartProduct 
             key={cartProduct.id}
             cartProduct={cartProduct}
+            shoppingCart={shoppingCart}
+            changeShoppingCart={changeShoppingCart}
             />))}
 
         </div>
