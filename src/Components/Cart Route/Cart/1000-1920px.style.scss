@@ -7,5 +7,10 @@
     position: absolute;
     top: 35.833%;
     left: 12.552%;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      width: 0px;
+    }
   }
 }

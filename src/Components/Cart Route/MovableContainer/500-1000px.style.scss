@@ -38,6 +38,12 @@
       position: absolute;
       top: 20.605%;
       left: 2.604%;
+      overflow-y: scroll;
+      scrollbar-width: none;
+      
+      &::-webkit-scrollbar {
+        width: 0px;
+      }
     }
   }
 }

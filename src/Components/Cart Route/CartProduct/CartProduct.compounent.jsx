@@ -36,6 +36,7 @@ const CartProduct = ({cartProduct, shoppingCart, changeShoppingCart}) => {
     };
 
     const handleTimesCircleClick = (id) => {
+      // function for deleting items from shopping cart
       let filtered = shoppingCart.filter(pct => pct.id !== id)
       changeShoppingCart(filtered)
     }
