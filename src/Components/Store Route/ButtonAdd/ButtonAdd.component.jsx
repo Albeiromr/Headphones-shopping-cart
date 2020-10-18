@@ -9,7 +9,15 @@ const ButtonAdd = ({changeShoppingCart, shoppingCart, itemToCart}) => {
     
     
     const addToCart = () => {
-       {changeShoppingCart([...shoppingCart, itemToCart])}
+      // filtering for preventing duplicity in shopping cart
+      let filtered = shoppingCart.filter(
+        (pdt) => pdt.color === itemToCart.color && pdt.name === itemToCart.name
+      )[0];
+      if (itemToCart === filtered) {
+        changeShoppingCart([...shoppingCart]);
+      } else {
+        changeShoppingCart([...shoppingCart, itemToCart]);
+      }
     };
 
     return (
