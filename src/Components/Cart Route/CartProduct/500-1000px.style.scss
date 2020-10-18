@@ -74,5 +74,14 @@
       font-weight: 400;
       font-size: 3vw;
     }
+
+    &__close {
+      color: #9b9b9b;
+      font-size: 3vw;
+      cursor: pointer;
+      position: absolute;
+      right: 1%;
+      top: 5%;
+    }
   }
 }

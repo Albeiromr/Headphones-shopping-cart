@@ -75,5 +75,14 @@
       color: #565656;
       font-weight: 500;
     }
+
+    &__close {
+      color: #9b9b9b;
+      font-size: 1.5vw;
+      cursor: pointer;
+      position: absolute;
+      right: 1%;
+      top: 5%;
+    }
   }
 }
