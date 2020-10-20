@@ -2,7 +2,7 @@
 
 @media only screen and (max-width: 500px) {
   .Gray-Column {
-    height: 100vh;
+    height: calc(100vh - 8vh);
     width: 38.888vw;
     min-height: 568px;
     position: absolute;
