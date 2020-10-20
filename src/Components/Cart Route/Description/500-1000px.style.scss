@@ -4,9 +4,27 @@
   .description {
     width: 41.015vw;
     height: 19.921vw;
-    background: red;
     position: absolute;
     top: 0%;
     left: 2.539%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    &__h2 {
+      font-size: 3.645vw;
+      font-family: $ubuntu;
+      font-weight: 600;
+      margin: 0;
+      color: #565656;
+    }
+
+    &__p {
+      font-size: 2.994vw;
+      font-family: $ubuntu;
+      font-weight: 400;
+      margin: 0;
+      color: #565656;
+    }
   }
 }

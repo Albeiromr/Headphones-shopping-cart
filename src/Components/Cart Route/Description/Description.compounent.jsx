@@ -10,7 +10,12 @@ const Description = () => {
 
     return (
         <div className='description'>
-
+            <h2 className='description__h2'>
+              Shopping Cart
+          </h2>
+          <p className='description__p'>
+              You have 4 items in your cart
+          </p>
         </div>
     )
 };

@@ -14,7 +14,7 @@ const DescriptionBig = () => {
               Shopping Cart
           </h2>
           <p className='description-main__p'>
-              
+              You have 4 items in your cart
           </p>
         </div>
     )

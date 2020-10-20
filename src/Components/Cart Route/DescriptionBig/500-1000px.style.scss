@@ -1,7 +1,15 @@
 @import "../../../Assets/Sass/variables";
 
 @media only screen and (min-width: 500px) and (max-width: 1000px) {
-  .description-big {
+  .description-main {
     display: none;
+
+    &__h2 {
+      display: none;
+    }
+
+    &__p {
+      display: none;
+    }
   }
 }
