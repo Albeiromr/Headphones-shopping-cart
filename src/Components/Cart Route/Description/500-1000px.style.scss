@@ -1,0 +1,12 @@
+@import "../../../Assets/Sass/variables";
+
+@media only screen and (min-width: 500px) and (max-width: 1000px) {
+  .description {
+    width: 41.015vw;
+    height: 19.921vw;
+    background: red;
+    position: absolute;
+    top: 0%;
+    left: 2.539%;
+  }
+}

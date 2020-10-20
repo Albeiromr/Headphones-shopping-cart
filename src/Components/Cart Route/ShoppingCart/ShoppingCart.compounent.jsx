@@ -8,8 +8,11 @@ import Steps from '../../Confirmation Route/Steps/Steps.compounent';
 import ContinueShopping from '../../Confirmation Route/ContinueShopping/ContinueShopping.compounent';
 import Cart from '../Cart/Cart.component';
 import FormSquareBig from '../FormSquareBig/FormSquareBig.compounent';
+import DescriptionBig from '../DescriptionBig/DescriptionBig.component';
+
 
 const ShoppingCart = ({shoppingCart, changeShoppingCart }) => {
+
 
     
     
@@ -21,6 +24,8 @@ const ShoppingCart = ({shoppingCart, changeShoppingCart }) => {
             />
 
             <Steps 
+            />
+            <DescriptionBig 
             />
             < MovableContainer
             shoppingCart={shoppingCart}

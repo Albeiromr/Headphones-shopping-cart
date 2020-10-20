@@ -5,6 +5,7 @@ import './500-1000px.style.scss';
 import './0-500px.style.scss';
 import FormSquare from '../FormSquare/FormSquare.compounent';
 import CartProduct from '../CartProduct/CartProduct.compounent';
+import Description from '../Description/Description.compounent';
 
 
 const MovableContainer = ({shoppingCart, changeShoppingCart }) => {
@@ -23,6 +24,9 @@ const MovableContainer = ({shoppingCart, changeShoppingCart }) => {
         className='movable-container'
         style={{'--translate': translate}}
         >
+
+            <Description 
+            />
 
             <div className='movable-container__cart'>
 
