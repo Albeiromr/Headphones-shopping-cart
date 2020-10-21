@@ -4,7 +4,7 @@ import './1000-1920px.style.scss';
 import './500-1000px.style.scss';
 import './0-500px.style.scss';
 
-const Summary = () => {
+const Summary = ({total}) => {
 
     return (
         <div className='summary'>
@@ -18,14 +18,14 @@ const Summary = () => {
                 <p className='summary__numbers'>$500.00</p>
                 <p className='summary__numbers'>$500.00</p>
                 <p className='summary__numbers'>$500.00</p>
-                <p className='summary__numbers'>$500.00</p>
+                <p className='summary__numbers'>$ {total}</p>
             </div>
         </div>
     )
 };
 
 Summary.propTypes = {
-    
+    total: Proptypes.number.isRequired,
 };
 
 export default Summary;

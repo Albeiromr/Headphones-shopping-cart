@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import Proptypes from "prop-types";
 import './1000-1920px.style.scss';
 import './500-1000px.style.scss';
@@ -18,7 +18,10 @@ const ShoppingCart = ({shoppingCart, changeShoppingCart }) => {
     // this state is used to sume items in the desciption component
     const [sume, setSume] = useState(0)
 
-    console.log(sume);
+    //let sume all the items to get the total purchase amount
+    const [total, setTotal] = useState(
+        shoppingCart.map(item => item.price).reduce((a, b) =>  a + b, 0).toFixed(2)
+        );
     
 
     return (
@@ -39,12 +42,16 @@ const ShoppingCart = ({shoppingCart, changeShoppingCart }) => {
             changeShoppingCart={changeShoppingCart}
             sume={sume}
             setSume={setSume}
+            setTotal={setTotal}
+            total={total}
             />
             <Cart 
             shoppingCart={shoppingCart}
             changeShoppingCart={changeShoppingCart}
             sume={sume}
             setSume={setSume}
+            setTotal={setTotal}
+            total={total}
             />
 
             <FormSquareBig 

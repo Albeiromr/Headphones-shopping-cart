@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlusCircle, faMinusCircle, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 
 
-const CartProduct = ({cartProduct, shoppingCart, changeShoppingCart, sume, setSume}) => {
+const CartProduct = ({cartProduct, shoppingCart, changeShoppingCart, sume, setSume, setTotal,total}) => {
 
   
 
@@ -51,6 +51,8 @@ const CartProduct = ({cartProduct, shoppingCart, changeShoppingCart, sume, setSu
       // function for deleting items from shopping cart
       let filtered = shoppingCart.filter(pct => pct.id !== id)
       changeShoppingCart(filtered)
+      let newTotal = total - price
+      setTotal(newTotal.toFixed(2))
     }
 
     return (
@@ -97,6 +99,8 @@ CartProduct.propTypes = {
     shoppingCart: Proptypes.array.isRequired,
     sume: Proptypes.number.isRequired,
     setSume: Proptypes.func.isRequired,
+    setTotal: Proptypes.func.isRequired,
+    total: Proptypes.number.isRequired,
     };
 
 export default CartProduct;

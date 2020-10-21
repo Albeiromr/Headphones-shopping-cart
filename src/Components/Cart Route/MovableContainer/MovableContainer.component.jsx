@@ -9,12 +9,10 @@ import Description from '../Description/Description.compounent';
 import Summary from '../Summary/Summary.component';
 
 
-const MovableContainer = ({shoppingCart, changeShoppingCart, sume, setSume }) => {
+const MovableContainer = ({shoppingCart, changeShoppingCart, sume, setSume, setTotal, total  }) => {
 
   
-  
-  
-  // this state is for moving this container side to side
+   // this state is for moving this container side to side
   const [translate, changeTranslate] = useState('0vw');
 
     const handleClick = () => {
@@ -35,6 +33,7 @@ const MovableContainer = ({shoppingCart, changeShoppingCart, sume, setSume }) =>
             />
 
             <Summary 
+            total={total}
             />
 
             <div className='movable-container__cart'>
@@ -49,6 +48,9 @@ const MovableContainer = ({shoppingCart, changeShoppingCart, sume, setSume }) =>
               changeShoppingCart={changeShoppingCart}
               sume={sume}
               setSume={setSume}
+              setTotal={setTotal}
+              total={total}
+  
               />)) :
 
               <p className='movable-container__empty'>
@@ -89,6 +91,8 @@ MovableContainer.propTypes = {
     changeShoppingCart: Proptypes.func.isRequired,
     sume: Proptypes.number.isRequired,
     setSume: Proptypes.func.isRequired,
+    setTotal: Proptypes.func.isRequired,
+    total: Proptypes.number.isRequired,
   };
 
 export default MovableContainer;
