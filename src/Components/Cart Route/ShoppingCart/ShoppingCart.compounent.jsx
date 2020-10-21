@@ -9,6 +9,7 @@ import ContinueShopping from '../../Confirmation Route/ContinueShopping/Continue
 import Cart from '../Cart/Cart.component';
 import FormSquareBig from '../FormSquareBig/FormSquareBig.compounent';
 import DescriptionBig from '../DescriptionBig/DescriptionBig.component';
+import Summary from '../Summary/Summary.component';
 
 
 const ShoppingCart = ({shoppingCart, changeShoppingCart }) => {
@@ -27,6 +28,8 @@ const ShoppingCart = ({shoppingCart, changeShoppingCart }) => {
             />
             <DescriptionBig
             shoppingCart={shoppingCart} 
+            />
+            <Summary 
             />
             < MovableContainer
             shoppingCart={shoppingCart}
