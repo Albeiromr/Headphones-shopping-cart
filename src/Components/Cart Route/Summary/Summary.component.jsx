@@ -8,7 +8,18 @@ const Summary = () => {
 
     return (
         <div className='summary'>
-
+            <div className='summary__text'>
+                <p className='summary__paragraphs'>Products</p>
+                <p className='summary__paragraphs'>Taxes</p>
+                <p className='summary__paragraphs'>Shipping</p>
+                <p className='summary__paragraphs'>Total</p>
+            </div>
+            <div className='summary__quantity'>
+                <p className='summary__numbers'>$500.00</p>
+                <p className='summary__numbers'>$500.00</p>
+                <p className='summary__numbers'>$500.00</p>
+                <p className='summary__numbers'>$500.00</p>
+            </div>
         </div>
     )
 };

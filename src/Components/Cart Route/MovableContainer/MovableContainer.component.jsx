@@ -6,6 +6,7 @@ import './0-500px.style.scss';
 import FormSquare from '../FormSquare/FormSquare.compounent';
 import CartProduct from '../CartProduct/CartProduct.compounent';
 import Description from '../Description/Description.compounent';
+import Summary from '../Summary/Summary.component';
 
 
 const MovableContainer = ({shoppingCart, changeShoppingCart }) => {
@@ -29,6 +30,9 @@ const MovableContainer = ({shoppingCart, changeShoppingCart }) => {
 
             <Description 
             shoppingCart={shoppingCart}
+            />
+
+            <Summary 
             />
 
             <div className='movable-container__cart'>

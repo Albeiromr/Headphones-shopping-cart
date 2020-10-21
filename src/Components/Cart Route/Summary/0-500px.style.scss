@@ -1,5 +1,49 @@
 @import "../../../Assets/Sass/variables";
 
 @media only screen and (max-width: 500px) {
-    
+  .summary {
+    width: 47.457vw;
+    height: 24.0821vw;
+    position: absolute;
+    top: 0%;
+    left: 24.381%;
+
+    &__text {
+      width: 60%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+
+    &__paragraphs {
+      font-size: 2.84vw;
+      font-family: $ubuntu;
+      font-weight: 400;
+      margin: 0;
+      color: #565656;
+      padding-left: 15vw;
+    }
+
+    &__quantity {
+      width: 40%;
+      height: 100%;
+      position: absolute;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      text-align: right;
+    }
+
+    &__numbers {
+      font-size: 2.84vw;
+      font-family: $ubuntu;
+      font-weight: 400;
+      margin: 0;
+      color: #565656;
+    }
+  }
 }
