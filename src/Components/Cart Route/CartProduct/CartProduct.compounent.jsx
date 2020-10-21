@@ -7,8 +7,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlusCircle, faMinusCircle, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 
 
-const CartProduct = ({cartProduct, shoppingCart, changeShoppingCart}) => {
+const CartProduct = ({cartProduct, shoppingCart, changeShoppingCart, sume, setSume}) => {
 
+  
 
     // state for select the product quantity tu purchase for each product
     const [quantity, changeQuantity] = useState(1)
@@ -18,11 +19,15 @@ const CartProduct = ({cartProduct, shoppingCart, changeShoppingCart}) => {
     let increment = quantity
     // price * quantity
     let priceMultiplied = price * quantity
+    
+    let aditionalProduct = sume;
 
     const handlePlusClick = () => {
       // this is the action taken when clicking in the plus button
       increment++
+      aditionalProduct++
       changeQuantity(increment)
+      setSume(aditionalProduct)
     }
 
     const handleMinusClick = () => {
@@ -33,6 +38,13 @@ const CartProduct = ({cartProduct, shoppingCart, changeShoppingCart}) => {
         increment--;
         changeQuantity(increment);
       }
+      if(sume <= 0) {
+        aditionalProduct = 0
+      } else {
+        aditionalProduct--
+        setSume(aditionalProduct)
+      }
+      
     };
 
     const handleTimesCircleClick = (id) => {
@@ -58,7 +70,7 @@ const CartProduct = ({cartProduct, shoppingCart, changeShoppingCart}) => {
 
                 <FontAwesomeIcon 
                 onClick={handleMinusClick}
-                className='cart-product__add-less'
+                className={quantity < 2 ? 'cart-product__add-lessInactive' : 'cart-product__add-less' }
                 icon={faMinusCircle}
                 />
 
@@ -82,7 +94,9 @@ const CartProduct = ({cartProduct, shoppingCart, changeShoppingCart}) => {
 CartProduct.propTypes = {
     cartProduct: Proptypes.object.isRequired,
     changeShoppingCart: Proptypes.func.isRequired,
-    shoppingCart: Proptypes.array.isRequired
+    shoppingCart: Proptypes.array.isRequired,
+    sume: Proptypes.number.isRequired,
+    setSume: Proptypes.func.isRequired,
     };
 
 export default CartProduct;

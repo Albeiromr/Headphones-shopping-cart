@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Proptypes from "prop-types";
 import './1000-1920px.style.scss';
 import './500-1000px.style.scss';
@@ -15,7 +15,10 @@ import DescriptionBig from '../DescriptionBig/DescriptionBig.component';
 const ShoppingCart = ({shoppingCart, changeShoppingCart }) => {
 
 
-    
+    // this state is used to sume items in the desciption component
+    const [sume, setSume] = useState(0)
+
+    console.log(sume);
     
 
     return (
@@ -28,15 +31,20 @@ const ShoppingCart = ({shoppingCart, changeShoppingCart }) => {
             />
             <DescriptionBig
             shoppingCart={shoppingCart} 
+            sume={sume}
             />
             
             < MovableContainer
             shoppingCart={shoppingCart}
             changeShoppingCart={changeShoppingCart}
+            sume={sume}
+            setSume={setSume}
             />
             <Cart 
             shoppingCart={shoppingCart}
             changeShoppingCart={changeShoppingCart}
+            sume={sume}
+            setSume={setSume}
             />
 
             <FormSquareBig 

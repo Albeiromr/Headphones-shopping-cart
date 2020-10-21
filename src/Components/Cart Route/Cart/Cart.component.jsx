@@ -5,7 +5,9 @@ import './500-1000px.style.scss';
 import './0-500px.style.scss';
 import CartProduct from '../CartProduct/CartProduct.compounent';
 
-const Cart = ({shoppingCart, changeShoppingCart}) => {
+const Cart = ({shoppingCart, changeShoppingCart, sume, setSume}) => {
+
+   
 
     return (
         <div className='cart'>
@@ -17,6 +19,8 @@ const Cart = ({shoppingCart, changeShoppingCart}) => {
             cartProduct={cartProduct}
             shoppingCart={shoppingCart}
             changeShoppingCart={changeShoppingCart}
+            sume={sume}
+            setSume={setSume}
             />)) :
 
             <p className='cart__empty'>
@@ -32,6 +36,8 @@ const Cart = ({shoppingCart, changeShoppingCart}) => {
 Cart.propTypes = {
     shoppingCart: Proptypes.array.isRequired,
     changeShoppingCart: Proptypes.func.isRequired,
+    sume: Proptypes.number.isRequired,
+    setSume: Proptypes.func.isRequired,
     };
 
 export default  Cart;

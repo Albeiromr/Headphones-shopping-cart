@@ -69,6 +69,12 @@
       font-size: 1.5vw;
       cursor: pointer;
     }
+    &__add-lessInactive {
+      color: rgb(219, 219, 219);
+      font-size: 1.5vw;
+      pointer-events: none;
+    }
+
 
     &__quantity {
       font-family: $ubuntu;
