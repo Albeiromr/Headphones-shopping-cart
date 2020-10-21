@@ -25,7 +25,8 @@ const ShoppingCart = ({shoppingCart, changeShoppingCart }) => {
 
             <Steps 
             />
-            <DescriptionBig 
+            <DescriptionBig
+            shoppingCart={shoppingCart} 
             />
             < MovableContainer
             shoppingCart={shoppingCart}

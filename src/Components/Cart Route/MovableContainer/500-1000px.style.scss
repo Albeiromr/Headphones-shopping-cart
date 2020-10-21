@@ -45,5 +45,15 @@
         width: 0px;
       }
     }
+
+      &__empty {
+        font-weight: 400;
+        font-family: $ubuntu;
+        color: #565656;
+        font-size: 3.645vw;
+        position: absolute;
+        left: 25%;
+        top: 30%;
+      }
   }
 }

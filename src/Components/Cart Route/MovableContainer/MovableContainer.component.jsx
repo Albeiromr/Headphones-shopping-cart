@@ -19,6 +19,8 @@ const MovableContainer = ({shoppingCart, changeShoppingCart }) => {
       changeTranslate('-100vw')
     }
 
+    
+
     return (
         <div 
         className='movable-container'
@@ -26,17 +28,25 @@ const MovableContainer = ({shoppingCart, changeShoppingCart }) => {
         >
 
             <Description 
+            shoppingCart={shoppingCart}
             />
 
             <div className='movable-container__cart'>
 
-            {shoppingCart.map((cartProduct) => (
-            <CartProduct 
-            key={cartProduct.id}
-            cartProduct={cartProduct}
-            shoppingCart={shoppingCart}
-            changeShoppingCart={changeShoppingCart}
-            />))}
+            {shoppingCart.length >= 1 ? 
+
+              shoppingCart.map((cartProduct) => (
+              <CartProduct 
+              key={cartProduct.id}
+              cartProduct={cartProduct}
+              shoppingCart={shoppingCart}
+              changeShoppingCart={changeShoppingCart}
+              />)) :
+
+              <p className='movable-container__empty'>
+                  Your cart is empty
+              </p>
+              } 
 
 
             </div>

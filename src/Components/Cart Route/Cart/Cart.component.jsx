@@ -10,13 +10,20 @@ const Cart = ({shoppingCart, changeShoppingCart}) => {
     return (
         <div className='cart'>
 
-            {shoppingCart.map((cartProduct) => (
+            {shoppingCart.length >= 1 ? 
+            shoppingCart.map((cartProduct) => (
             <CartProduct 
             key={cartProduct.id}
             cartProduct={cartProduct}
             shoppingCart={shoppingCart}
             changeShoppingCart={changeShoppingCart}
-            />))}
+            />)) :
+
+            <p className='cart__empty'>
+                Your cart is empty
+            </p>
+            } 
+            
 
         </div>
     )

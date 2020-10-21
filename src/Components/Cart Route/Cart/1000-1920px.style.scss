@@ -9,8 +9,20 @@
     left: 12.552%;
     overflow-y: scroll;
     scrollbar-width: none;
+
     &::-webkit-scrollbar {
       width: 0px;
+    }
+
+    &__empty {
+      font-weight: 400;
+      font-family: $ubuntu;
+      color: #565656;
+      font-size: 1.6vw;
+      position: absolute;
+      left: 40%;
+      top: 30%;
+
     }
   }
 }

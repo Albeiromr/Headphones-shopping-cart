@@ -4,9 +4,9 @@ import './1000-1920px.style.scss';
 import './500-1000px.style.scss';
 import './0-500px.style.scss';
 
-const Description = () => {
+const Description = ({shoppingCart}) => {
    
-    
+  let productamount = shoppingCart.length
 
     return (
         <div className='description'>
@@ -14,7 +14,7 @@ const Description = () => {
               Shopping Cart
           </h2>
           <p className='description__p'>
-              You have 4 items in your cart
+              You have {productamount} items in your cart
           </p>
         </div>
     )
