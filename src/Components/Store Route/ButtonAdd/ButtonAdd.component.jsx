@@ -9,14 +9,22 @@ const ButtonAdd = ({changeShoppingCart, shoppingCart, itemToCart}) => {
     
     
     const addToCart = () => {
-      // filtering for preventing duplicity in shopping cart
-      let filtered = shoppingCart.filter(
-        (pdt) => pdt.color === itemToCart.color && pdt.name === itemToCart.name
-      )[0];
-      if (itemToCart === filtered) {
-        changeShoppingCart([...shoppingCart]);
+      // this code is mainly to prevent the shopping cart to have duplicated products
+      let contain = shoppingCart.includes(itemToCart)
+      
+      if (contain === true) {
+        contain = true;
       } else {
-        changeShoppingCart([...shoppingCart, itemToCart]);
+        let filtered = shoppingCart.filter(
+          (pdt) =>
+            pdt.color === itemToCart.color && pdt.name === itemToCart.name
+        );
+
+        if (filtered.length > 0) {
+          changeShoppingCart([...shoppingCart]);
+        } else {
+          changeShoppingCart([...shoppingCart, itemToCart]);
+        }
       }
     };
 
