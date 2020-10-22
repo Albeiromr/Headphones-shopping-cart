@@ -32,13 +32,16 @@ const MovableContainer = ({shoppingCart, changeShoppingCart, sume, setSume, setT
             shoppingCart={shoppingCart}
             sume={sume}
             />
-            
+            {shoppingCart.length > 0 ?
             <Summary 
             total={total}
             taxes={taxes}
             shipping={shipping}
             purchase={purchase}
-            />
+            /> :
+            null
+            }
+            
 
             <div className='movable-container__cart'>
 
