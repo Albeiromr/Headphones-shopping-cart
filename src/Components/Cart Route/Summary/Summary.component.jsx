@@ -4,7 +4,7 @@ import './1000-1920px.style.scss';
 import './500-1000px.style.scss';
 import './0-500px.style.scss';
 
-const Summary = ({total, taxes}) => {
+const Summary = ({total, taxes, shipping, purchase}) => {
 
     
 
@@ -19,8 +19,8 @@ const Summary = ({total, taxes}) => {
             <div className='summary__quantity'>
                 <p className='summary__numbers'>$ {total}</p>
                 <p className='summary__numbers'>$ {taxes}</p>
-                <p className='summary__numbers'>$ {}</p>
-                <p className='summary__numbers'>$ {}</p>
+                <p className='summary__numbers'>$ {shipping}</p>
+                <p className='summary__numbers'>$ {purchase}</p>
             </div>
         </div>
     )
@@ -29,6 +29,8 @@ const Summary = ({total, taxes}) => {
 Summary.propTypes = {
     total: Proptypes.number.isRequired,
     taxes: Proptypes.number.isRequired,
+    shipping: Proptypes.number.isRequired,
+    purchase: Proptypes.number.isRequired,
 };
 
 export default Summary;

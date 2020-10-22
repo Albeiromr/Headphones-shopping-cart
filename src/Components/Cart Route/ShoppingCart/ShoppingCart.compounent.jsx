@@ -18,17 +18,28 @@ const ShoppingCart = ({shoppingCart, changeShoppingCart }) => {
     // this state is used to sume items in the desciption component
     const [sume, setSume] = useState(0)
 
-    //let sume all the items to get the total purchase amount
+    //let sume all the items prices
     const [total, setTotal] = useState(
         shoppingCart.map(item => item.price).reduce((a, b) =>  a + b, 0).toFixed(2)
         );
     // obtaining the taxes for the whole purchase
     const [taxes, setTaxes] = useState(0.00)
+    // calculating the shipping cost
+    const [shipping, setShipping] = useState(0.00)
+    //getting the total purchase price
+    const [purchase, setPurchase] = useState(0.00)
+
 
     useEffect(() => {
         let a = total * 7 / 100
         setTaxes(a.toFixed(2))
-    },[total])
+        ///////////////////////
+        let b = total * 1.5 / 100
+        setShipping(b.toFixed(2))
+        //////////////////////
+        let c = total * 108.5 / 100 
+        setPurchase(c.toFixed(2))
+    },[total,shoppingCart])
     
 
     return (
@@ -52,6 +63,8 @@ const ShoppingCart = ({shoppingCart, changeShoppingCart }) => {
             setTotal={setTotal}
             total={total}
             taxes={taxes}
+            shipping={shipping}
+            purchase={purchase}
             />
             <Cart 
             shoppingCart={shoppingCart}
