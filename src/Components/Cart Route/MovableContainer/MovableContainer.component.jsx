@@ -32,7 +32,7 @@ const MovableContainer = ({shoppingCart, changeShoppingCart, sume, setSume, setT
             shoppingCart={shoppingCart}
             sume={sume}
             />
-
+            
             <Summary 
             total={total}
             taxes={taxes}

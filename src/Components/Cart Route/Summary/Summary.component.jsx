@@ -14,13 +14,13 @@ const Summary = ({total, taxes, shipping, purchase}) => {
                 <p className='summary__paragraphs'>Products</p>
                 <p className='summary__paragraphs'>Taxes</p>
                 <p className='summary__paragraphs'>Shipping</p>
-                <p className='summary__paragraphs'>Total</p>
+                <p className='summary__paragraphs summary__black'>Total</p>
             </div>
             <div className='summary__quantity'>
                 <p className='summary__numbers'>$ {total}</p>
                 <p className='summary__numbers'>$ {taxes}</p>
                 <p className='summary__numbers'>$ {shipping}</p>
-                <p className='summary__numbers'>$ {purchase}</p>
+                <p className='summary__numbers summary__black'>$ {purchase}</p>
             </div>
         </div>
     )
