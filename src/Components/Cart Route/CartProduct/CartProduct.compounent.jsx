@@ -28,6 +28,9 @@ const CartProduct = ({cartProduct, shoppingCart, changeShoppingCart, sume, setSu
       aditionalProduct++
       changeQuantity(increment)
       setSume(aditionalProduct)
+      ///////////////////////////////////
+      let newTotal = parseFloat(total) + price
+      setTotal(newTotal.toFixed(2))
     }
 
     const handleMinusClick = () => {
@@ -44,6 +47,9 @@ const CartProduct = ({cartProduct, shoppingCart, changeShoppingCart, sume, setSu
         aditionalProduct--
         setSume(aditionalProduct)
       }
+      ///////////////////////////////////
+      let newTotal = parseFloat(total) - price
+      setTotal(newTotal.toFixed(2))
       
     };
 
@@ -51,7 +57,8 @@ const CartProduct = ({cartProduct, shoppingCart, changeShoppingCart, sume, setSu
       // function for deleting items from shopping cart
       let filtered = shoppingCart.filter(pct => pct.id !== id)
       changeShoppingCart(filtered)
-      let newTotal = total - price
+      /////////////////////////////////////////
+      let newTotal = parseFloat(total) - price * quantity 
       setTotal(newTotal.toFixed(2))
     }
 
