@@ -10,7 +10,6 @@
     right: 10.208%;
     border-radius: 1.614vw;
     z-index: 20;
-    
 
     &__back {
       display: none;
@@ -51,6 +50,14 @@
 
     &__text2 {
       display: none;
+    }
+
+    &__cards {
+      width: 100%;
+      height: 8.571%;
+      background: cyan;
+      position: absolute;
+      top: 17.142%;
     }
   }
 }

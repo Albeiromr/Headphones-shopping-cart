@@ -11,6 +11,10 @@ const FormSquareBig = () => {
 
     return (
       <div className="form-square-big">
+
+        <div className='form-square-big__cards'>
+            
+        </div>
         
         <Link to="/confirmation">
           <div className="form-square-big__forward">

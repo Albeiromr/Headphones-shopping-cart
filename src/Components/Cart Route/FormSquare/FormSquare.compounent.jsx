@@ -15,6 +15,12 @@ const FormSquare = ({changeTranslate}) => {
 
     return (
       <div className="form-square">
+
+            <div className='form-square__cards'>
+            
+            </div>
+
+
         <FontAwesomeIcon
           icon={faLongArrowAltLeft}
           className="form-square__back"
