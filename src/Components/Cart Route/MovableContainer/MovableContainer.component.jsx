@@ -9,7 +9,7 @@ import Description from '../Description/Description.compounent';
 import Summary from '../Summary/Summary.component';
 
 
-const MovableContainer = ({shoppingCart, changeShoppingCart, sume, setSume, setTotal, total  }) => {
+const MovableContainer = ({shoppingCart, changeShoppingCart, sume, setSume, setTotal, total, taxes  }) => {
 
   
    // this state is for moving this container side to side
@@ -34,6 +34,7 @@ const MovableContainer = ({shoppingCart, changeShoppingCart, sume, setSume, setT
 
             <Summary 
             total={total}
+            taxes={taxes}
             />
 
             <div className='movable-container__cart'>
@@ -93,6 +94,7 @@ MovableContainer.propTypes = {
     setSume: Proptypes.func.isRequired,
     setTotal: Proptypes.func.isRequired,
     total: Proptypes.number.isRequired,
+    taxes: Proptypes.number.isRequired,
   };
 
 export default MovableContainer;

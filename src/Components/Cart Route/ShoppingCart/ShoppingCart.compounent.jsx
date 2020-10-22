@@ -22,6 +22,13 @@ const ShoppingCart = ({shoppingCart, changeShoppingCart }) => {
     const [total, setTotal] = useState(
         shoppingCart.map(item => item.price).reduce((a, b) =>  a + b, 0).toFixed(2)
         );
+    // obtaining the taxes for the whole purchase
+    const [taxes, setTaxes] = useState(0.00)
+
+    useEffect(() => {
+        let a = total * 7 / 100
+        setTaxes(a.toFixed(2))
+    },[total])
     
 
     return (
@@ -44,6 +51,7 @@ const ShoppingCart = ({shoppingCart, changeShoppingCart }) => {
             setSume={setSume}
             setTotal={setTotal}
             total={total}
+            taxes={taxes}
             />
             <Cart 
             shoppingCart={shoppingCart}
