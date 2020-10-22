@@ -5,7 +5,8 @@ import './500-1000px.style.scss';
 import './0-500px.style.scss';
 import {Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLongArrowAltLeft} from '@fortawesome/free-solid-svg-icons';
+import { faLongArrowAltLeft } from '@fortawesome/free-solid-svg-icons';
+import {faCcVisa, faCcMastercard, faCcDiscover, faCcAmex } from '@fortawesome/free-brands-svg-icons';
 
 const FormSquare = ({changeTranslate}) => {
 
@@ -16,10 +17,29 @@ const FormSquare = ({changeTranslate}) => {
     return (
       <div className="form-square">
 
-            <div className='form-square__cards'>
-            
-            </div>
+        <div className="form-square__cards">
+          
+          <FontAwesomeIcon
+            icon={faCcVisa}
+            className=""
+          />
 
+          <FontAwesomeIcon
+            icon={faCcMastercard}
+            className=""
+          />
+
+          <FontAwesomeIcon
+            icon={faCcDiscover}
+            className=""
+          />
+
+          <FontAwesomeIcon
+            icon={faCcAmex}
+            className=""
+          />
+
+        </div>
 
         <FontAwesomeIcon
           icon={faLongArrowAltLeft}
@@ -29,14 +49,11 @@ const FormSquare = ({changeTranslate}) => {
         <Link to="/confirmation">
           <div className="form-square__forward">
             <p className="form-square__text">Checkout</p>
-
-            
           </div>
         </Link>
         <Link to="/confirmation">
           <div className="form-square__next">
             <p className="form-square__text2">Checkout</p>
-
           </div>
         </Link>
       </div>
