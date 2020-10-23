@@ -81,22 +81,58 @@
     &__name {
       width: 98.5%;
       height: 25%;
+      padding: 0 4vw;
       border: none;
       border-radius: 2vw;
       box-sizing: border-box;
       background: rgba(255, 255, 255, 0.301);
       outline: none;
+      &::placeholder {
+        color: white;
+        font-family: $ubuntu;
+        font-weight: 500;
+      }
+      &:-moz-placeholder {
+        color: white;
+        opacity: 1;
+        font-family: $ubuntu;
+        font-weight: 500;
+      }
+      &::-moz-placeholder {
+        color: white;
+        opacity: 1;
+        font-family: $ubuntu;
+        font-weight: 500;
+      }
       
     }
 
     &__number {
       width: 98.5%;
       height: 25%;
+      padding: 0 4vw;
       border: none;
       border-radius: 2vw;
       box-sizing: border-box;
       background: rgba(255, 255, 255, 0.301);
       outline: none;
+      &::placeholder {
+        color: white;
+        font-family: $ubuntu;
+        font-weight: 500;
+      }
+      &:-moz-placeholder {
+        color: white;
+        opacity: 1;
+        font-family: $ubuntu;
+        font-weight: 500;
+      }
+      &::-moz-placeholder {
+        color: white;
+        opacity: 1;
+        font-family: $ubuntu;
+        font-weight: 500;
+      }
       
     }
 
@@ -111,21 +147,57 @@
     &__date {
       width: 47%;
       height: 100%;
+      padding: 0 4vw;
       border: none;
       border-radius: 2vw;
       box-sizing: border-box;
       background: rgba(255, 255, 255, 0.301);
       outline: none;
+      &::placeholder {
+        color: white;
+        font-family: $ubuntu;
+        font-weight: 500;
+      }
+      &:-moz-placeholder {
+        color: white;
+        opacity: 1;
+        font-family: $ubuntu;
+        font-weight: 500;
+      }
+      &::-moz-placeholder {
+        color: white;
+        opacity: 1;
+        font-family: $ubuntu;
+        font-weight: 500;
+      }
     }
 
     &__code {
       width: 47%;
       height: 100%;
+      padding: 0 4vw;
       border: none;
       border-radius: 2vw;
       box-sizing: border-box;
       background: rgba(255, 255, 255, 0.301);
       outline: none;
+      &::placeholder {
+        color: white;
+        font-family: $ubuntu;
+        font-weight: 500;
+      }
+      &:-moz-placeholder {
+        color: white;
+        opacity: 1;
+        font-family: $ubuntu;
+        font-weight: 500;
+      }
+      &::-moz-placeholder {
+        color: white;
+        opacity: 1;
+        font-family: $ubuntu;
+        font-weight: 500;
+      }
     }
   }
 }
