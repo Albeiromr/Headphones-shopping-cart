@@ -84,6 +84,9 @@
     &__name {
       width: 98.5%;
       height: 25%;
+      color: white;
+      font-family: $ubuntu;
+      font-weight: 500;
       padding: 0 2vw;
       border: none;
       border-radius: 0.5vw;
@@ -112,6 +115,9 @@
     &__number {
       width: 98.5%;
       height: 25%;
+      color: white;
+      font-family: $ubuntu;
+      font-weight: 500;
       padding: 0 2vw;
       border: none;
       border-radius: 0.5vw;
@@ -148,6 +154,9 @@
     &__date {
       width: 47%;
       height: 100%;
+      color: white;
+      font-family: $ubuntu;
+      font-weight: 500;
       padding: 0 2vw;
       border: none;
       border-radius: 0.5vw;
@@ -176,6 +185,9 @@
     &__code {
       width: 47%;
       height: 100%;
+      color: white;
+      font-family: $ubuntu;
+      font-weight: 500;
       padding: 0 2vw;
       border: none;
       border-radius: 0.5vw;

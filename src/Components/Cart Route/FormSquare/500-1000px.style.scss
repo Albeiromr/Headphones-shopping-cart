@@ -75,12 +75,14 @@
       flex-direction: column;
       align-items: center;
       justify-content: space-between;
-      
     }
 
     &__name {
       width: 98.5%;
       height: 25%;
+      color: white;
+      font-family: $ubuntu;
+      font-weight: 500;
       padding: 0 3vw;
       border: none;
       border-radius: 1.5vw;
@@ -104,12 +106,14 @@
         font-family: $ubuntu;
         font-weight: 500;
       }
-      
     }
 
     &__number {
       width: 98.5%;
       height: 25%;
+      color: white;
+      font-family: $ubuntu;
+      font-weight: 500;
       padding: 0 3vw;
       border: none;
       border-radius: 1.5vw;
@@ -133,7 +137,6 @@
         font-family: $ubuntu;
         font-weight: 500;
       }
-      
     }
 
     &__security {
@@ -147,6 +150,9 @@
     &__date {
       width: 47%;
       height: 100%;
+      color: white;
+      font-family: $ubuntu;
+      font-weight: 500;
       padding: 0 3vw;
       border: none;
       border-radius: 1.5vw;
@@ -175,6 +181,9 @@
     &__code {
       width: 47%;
       height: 100%;
+      color: white;
+      font-family: $ubuntu;
+      font-weight: 500;
       padding: 0 3vw;
       border: none;
       border-radius: 1.5vw;
