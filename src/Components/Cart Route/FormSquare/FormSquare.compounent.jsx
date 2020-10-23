@@ -41,7 +41,9 @@ const FormSquare = ({changeTranslate}) => {
 
         </div>
 
-          
+        <form className='form-square__form'>
+
+        </form>
 
         <FontAwesomeIcon
           icon={faLongArrowAltLeft}

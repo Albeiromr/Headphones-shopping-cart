@@ -38,7 +38,10 @@ const FormSquareBig = () => {
             
         </div>
         
-        
+        <form className='form-square-big__form'>
+
+        </form>
+
 
 
         <Link to="/confirmation">
