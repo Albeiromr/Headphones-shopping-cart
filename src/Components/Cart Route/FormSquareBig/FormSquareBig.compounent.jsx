@@ -18,26 +18,29 @@ const FormSquareBig = () => {
 
             <FontAwesomeIcon
                 icon={faCcVisa}
-                className=""
+                className="form-square-big__card"
               />
 
             <FontAwesomeIcon
               icon={faCcMastercard}
-              className=""
+              className="form-square-big__card"
             />
 
             <FontAwesomeIcon
               icon={faCcDiscover}
-              className=""
+              className="form-square-big__card"
             />
 
             <FontAwesomeIcon
               icon={faCcAmex}
-              className=""
+              className="form-square-big__card"
             />
             
         </div>
         
+        
+
+
         <Link to="/confirmation">
           <div className="form-square-big__forward">
             <p className="form-square-big__text">Checkout</p>

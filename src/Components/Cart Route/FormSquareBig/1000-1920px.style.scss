@@ -55,9 +55,18 @@
     &__cards {
       width: 100%;
       height: 8.571%;
-      background: cyan;
       position: absolute;
       top: 17.142%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      box-sizing: border-box;
+      padding: 0 6%;
+    }
+
+    &__card {
+      font-size: 4.2vw;
+      color: white;
     }
   }
 }

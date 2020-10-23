@@ -21,25 +21,27 @@ const FormSquare = ({changeTranslate}) => {
           
           <FontAwesomeIcon
             icon={faCcVisa}
-            className=""
+            className="form-square__card"
           />
 
           <FontAwesomeIcon
             icon={faCcMastercard}
-            className=""
+            className="form-square__card"
           />
 
           <FontAwesomeIcon
             icon={faCcDiscover}
-            className=""
+            className="form-square__card"
           />
 
           <FontAwesomeIcon
             icon={faCcAmex}
-            className=""
+            className="form-square__card"
           />
 
         </div>
+
+          
 
         <FontAwesomeIcon
           icon={faLongArrowAltLeft}
