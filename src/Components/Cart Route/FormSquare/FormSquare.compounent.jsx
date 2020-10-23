@@ -43,6 +43,41 @@ const FormSquare = ({changeTranslate}) => {
 
         <form className='form-square__form'>
 
+          <input
+            type="text"
+            name='name'
+            className='form-square__name'
+            placeholder='test'
+
+            />
+
+            <input
+            type="text"
+            name='number'
+            className='form-square__number'
+            placeholder='test'
+            
+            />
+
+            <div className='form-square__security'>
+
+                <input
+                type="text"
+                name='date'
+                className='form-square__date'
+                placeholder='test'
+                
+                />
+
+                <input
+                type="text"
+                name='security'
+                className='form-square__code'
+                placeholder='test'
+                
+                />
+
+            </div>
         </form>
 
         <FontAwesomeIcon

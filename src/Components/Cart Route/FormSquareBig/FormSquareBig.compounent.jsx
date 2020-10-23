@@ -40,6 +40,42 @@ const FormSquareBig = () => {
         
         <form className='form-square-big__form'>
 
+          <input
+           type="text"
+           name='name'
+           className='form-square-big__name'
+           placeholder='test'
+
+           />
+
+          <input
+           type="text"
+           name='number'
+           className='form-square-big__number'
+           placeholder='test'
+           
+           />
+
+           <div className='form-square-big__security'>
+
+              <input
+              type="text"
+              name='date'
+              className='form-square-big__date'
+              placeholder='test'
+              
+              />
+
+              <input
+              type="text"
+              name='security'
+              className='form-square-big__code'
+              placeholder='test'
+              
+              />
+
+           </div>
+
         </form>
 
 
