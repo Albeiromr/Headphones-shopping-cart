@@ -88,6 +88,19 @@ const FormSquare = ({changeTranslate}) => {
 
         <div className='form-square__cont-summary'>
 
+              <div className='form-square__text3'>
+                <p className='form-square__paragraphs'>Products</p>
+                <p className='form-square__paragraphs'>Taxes</p>
+                <p className='form-square__paragraphs'>Shipping</p>
+                <p className='form-square__paragraphs form-square__black'>Total</p>
+              </div>
+              <div className='form-square__quantity'>
+                <p className='form-square__numbers'>$ 500</p>
+                <p className='form-square__numbers'>$ 500</p>
+                <p className='form-square__numbers'>$ 500</p>
+                <p className='form-square__numbers form-square__black'>$ 500</p>
+              </div>
+
         </div>
 
         <FontAwesomeIcon

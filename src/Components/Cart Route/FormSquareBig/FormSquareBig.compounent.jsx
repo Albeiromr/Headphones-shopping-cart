@@ -86,6 +86,19 @@ const FormSquareBig = () => {
 
         <div className='form-square-big__cont-summary'>
 
+              <div className='form-square-big__text3'>
+                <p className='form-square-big__paragraphs'>Products</p>
+                <p className='form-square-big__paragraphs'>Taxes</p>
+                <p className='form-square-big__paragraphs'>Shipping</p>
+                <p className='form-square-big__paragraphs form-square-big__black'>Total</p>
+              </div>
+              <div className='form-square-big__quantity'>
+                <p className='form-square-big__numbers'>$ 500</p>
+                <p className='form-square-big__numbers'>$ 500</p>
+                <p className='form-square-big__numbers'>$ 500</p>
+                <p className='form-square-big__numbers form-square-big__black'>$ 500</p>
+              </div>
+
         </div>
 
         <Link to="/confirmation">

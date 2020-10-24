@@ -223,11 +223,42 @@
 
     &__cont-summary {
       width: 83.689%;
-      height: 21.645%;
-      background: cyan;
+      height: 17.645%;
       position: absolute;
       left: 8.312%;
-      top: 62%;
+      top: 64%;
+      display: flex;
+    }
+
+    &__text3{
+      height: 100%;
+      width: 50%;
+      font-size: 3.5vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    &__paragraphs { 
+      color: white;
+      font-family: $ubuntu;
+      margin: 0;
+    }
+
+    &__quantity {
+      height: 100%;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      text-align: right;
+    }
+
+    &__numbers {
+      color: white;
+      font-family: $ubuntu;
+      margin: 0;
+      font-size: 3.5vw;
     }
   }
 }
