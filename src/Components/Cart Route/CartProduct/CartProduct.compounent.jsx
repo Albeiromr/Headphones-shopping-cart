@@ -60,6 +60,8 @@ const CartProduct = ({cartProduct, shoppingCart, changeShoppingCart, sume, setSu
       /////////////////////////////////////////
       let newTotal = parseFloat(total) - price * quantity 
       setTotal(newTotal.toFixed(2))
+      /////////////////////////////////////////
+      setSume(aditionalProduct - quantity + 1)
     }
 
     return (
