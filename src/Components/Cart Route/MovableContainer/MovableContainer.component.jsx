@@ -1,54 +1,47 @@
-import React, {useState} from 'react';
+import React, { useState } from "react";
 import Proptypes from "prop-types";
-import './1000-1920px.style.scss';
-import './500-1000px.style.scss';
-import './0-500px.style.scss';
-import FormSquare from '../FormSquare/FormSquare.compounent';
-import CartProduct from '../CartProduct/CartProduct.compounent';
-import Description from '../Description/Description.compounent';
-import Summary from '../Summary/Summary.component';
+import "./1000-1920px.style.scss";
+import "./500-1000px.style.scss";
+import "./0-500px.style.scss";
+import FormSquare from "../FormSquare/FormSquare.compounent";
+import CartProduct from "../CartProduct/CartProduct.compounent";
+import Description from "../Description/Description.compounent";
+import Summary from "../Summary/Summary.component";
 
+const MovableContainer = ({
+  shoppingCart,
+  changeShoppingCart,
+  sume,
+  setSume,
+  setTotal,
+  total,
+  taxes,
+  shipping,
+  purchase,
+}) => {
+  // this state is for moving this container side to side
+  const [translate, changeTranslate] = useState("0vw");
 
-const MovableContainer = ({shoppingCart, changeShoppingCart, sume, setSume, setTotal, total, taxes, shipping, purchase  }) => {
+  const handleClick = () => {
+    changeTranslate("-100vw");
+  };
 
-  
-  
-   // this state is for moving this container side to side
-  const [translate, changeTranslate] = useState('0vw');
+  return (
+    <div className="movable-container" style={{ "--translate": translate }}>
+      <Description shoppingCart={shoppingCart} sume={sume} />
+      {shoppingCart.length > 0 ? (
+        <Summary
+          total={total}
+          taxes={taxes}
+          shipping={shipping}
+          purchase={purchase}
+        />
+      ) : null}
 
-    const handleClick = () => {
-      changeTranslate('-100vw')
-    }
-
-    
-
-    return (
-        <div 
-        className='movable-container'
-        style={{'--translate': translate}}
-        >
-
-            <Description 
-            shoppingCart={shoppingCart}
-            sume={sume}
-            />
-            {shoppingCart.length > 0 ?
-            <Summary 
-            total={total}
-            taxes={taxes}
-            shipping={shipping}
-            purchase={purchase}
-            /> :
-            null
-            }
-            
-
-            <div className='movable-container__cart'>
-
-            {shoppingCart.length >= 1 ? 
-
-              shoppingCart.map((cartProduct) => (
-              <CartProduct 
+      <div className="movable-container__cart">
+        {shoppingCart.length >= 1 ? (
+          shoppingCart.map((cartProduct) => (
+            <CartProduct
               key={cartProduct.id}
               cartProduct={cartProduct}
               shoppingCart={shoppingCart}
@@ -57,65 +50,46 @@ const MovableContainer = ({shoppingCart, changeShoppingCart, sume, setSume, setT
               setSume={setSume}
               setTotal={setTotal}
               total={total}
-  
-              />)) :
-
-              <div>
-
-              <p className='movable-container__empty'>
-                  Your cart is empty
-                  
-              </p>
-
-              <button className='movable-container__button'>
-              Add products
-              </button>
-
-              </div>
-            } 
-
-
-            </div>
-          
-
-            <div 
-            className='movable-container__forward'
-            onClick={handleClick}
-            >
-
-              <p className='movable-container__text'>
-                Checkout
-              </p>
-
-
-            </div>
-
-
-            <FormSquare 
-            changeTranslate={changeTranslate}
-            total={total}
-            taxes={taxes}
-            shipping={shipping}
-            purchase={purchase}
             />
+          ))
+        ) : (
+          <div>
+            <p className="movable-container__empty">Your cart is empty</p>
 
+            <button className="movable-container__button">Add products</button>
+          </div>
+        )}
+      </div>
+
+      {shoppingCart < 1 ? null : (
+        <div className="movable-container__forward" onClick={handleClick}>
+          <p className="movable-container__text">Checkout</p>
         </div>
-        
-    )
+      )}
+
+      <FormSquare
+        changeTranslate={changeTranslate}
+        total={total}
+        taxes={taxes}
+        shipping={shipping}
+        purchase={purchase}
+      />
+    </div>
+  );
 };
 
 // component documentation
 
 MovableContainer.propTypes = {
-    shoppingCart: Proptypes.object.isRequired,
-    changeShoppingCart: Proptypes.func.isRequired,
-    sume: Proptypes.number.isRequired,
-    setSume: Proptypes.func.isRequired,
-    setTotal: Proptypes.func.isRequired,
-    total: Proptypes.number.isRequired,
-    taxes: Proptypes.number.isRequired,
-    shipping: Proptypes.number.isRequired,
-    purchase: Proptypes.number.isRequired,
-  };
+  shoppingCart: Proptypes.object.isRequired,
+  changeShoppingCart: Proptypes.func.isRequired,
+  sume: Proptypes.number.isRequired,
+  setSume: Proptypes.func.isRequired,
+  setTotal: Proptypes.func.isRequired,
+  total: Proptypes.number.isRequired,
+  taxes: Proptypes.number.isRequired,
+  shipping: Proptypes.number.isRequired,
+  purchase: Proptypes.number.isRequired,
+};
 
 export default MovableContainer;
