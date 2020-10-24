@@ -60,10 +60,19 @@ const MovableContainer = ({shoppingCart, changeShoppingCart, sume, setSume, setT
   
               />)) :
 
+              <div>
+
               <p className='movable-container__empty'>
                   Your cart is empty
+                  
               </p>
-              } 
+
+              <button className='movable-container__button'>
+              Add products
+              </button>
+
+              </div>
+            } 
 
 
             </div>

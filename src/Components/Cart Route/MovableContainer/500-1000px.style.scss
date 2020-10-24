@@ -40,20 +40,39 @@
       left: 2.604%;
       overflow-y: scroll;
       scrollbar-width: none;
-      
+
       &::-webkit-scrollbar {
         width: 0px;
       }
     }
 
-      &__empty {
-        font-weight: 400;
-        font-family: $ubuntu;
-        color: #565656;
-        font-size: 3.645vw;
-        position: absolute;
-        left: 25%;
-        top: 30%;
-      }
+    &__empty {
+      font-weight: 400;
+      font-family: $ubuntu;
+      color: $brand-color;
+      font-size: 3.645vw;
+      position: absolute;
+      left: 36%;
+      top: 30%;
+    }
+
+    &__button {
+      width: 35vw;
+      height: 6vw;
+      margin: 0;
+      outline: none;
+      border-radius: 2.2vw;
+      background: $brand-color;
+      border: none;
+      position: absolute;
+      left: 33%;
+      top: 50%;
+      cursor: pointer;
+      color: white;
+      font-family: $ubuntu;
+      font-weight: 600;
+      font-size: 2.397vw;
+      transition: all 0.2s ease-in;
+    }
   }
 }

@@ -17,12 +17,38 @@
     &__empty {
       font-weight: 400;
       font-family: $ubuntu;
-      color: #565656;
+      color: $brand-color;
       font-size: 1.6vw;
       position: absolute;
-      left: 40%;
+      left: 35%;
       top: 30%;
+    }
 
+    &__button {
+      width: 20vw;
+      height: 3.3vw;
+      margin: 0;
+      outline: none;
+      border-radius: 1vw;
+      background: $brand-color;
+      border: none;
+      position: absolute;
+      left: 27%;
+      top: 50%;
+      cursor: pointer;
+      color: white;
+      font-family: $ubuntu;
+      font-weight: 500;
+      font-size: 1.297vw;
+      transition: all 0.2s ease-in;
+
+      &:hover {
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -o-transform: scale(1.1);
+        transform: scale(1.1);
+        transition: all 0.2s ease-in;
+      }
     }
   }
 }

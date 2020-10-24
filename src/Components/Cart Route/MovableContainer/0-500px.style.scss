@@ -48,11 +48,30 @@
     &__empty {
       font-weight: 400;
       font-family: $ubuntu;
-      color: #565656;
+      color: $brand-color;
       font-size: 4.347vw;
       position: absolute;
-      left: 20%;
+      left: 34%;
       top: 30%;
+    }
+
+    &__button {
+      width: 60vw;
+      height: 13vw;
+      margin: 0;
+      outline: none;
+      border-radius: 4.5vw;
+      background: $brand-color;
+      border: none;
+      position: absolute;
+      left: 20%;
+      top: 50%;
+      cursor: pointer;
+      color: white;
+      font-family: $ubuntu;
+      font-weight: 600;
+      font-size: 4vw;
+      transition: all 0.2s ease-in;
     }
   }
 }

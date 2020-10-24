@@ -25,9 +25,18 @@ const Cart = ({shoppingCart, changeShoppingCart, sume, setSume, setTotal,total})
             total={total}
             />)) :
 
+            <div>
+
             <p className='cart__empty'>
                 Your cart is empty
+                
             </p>
+
+            <button className='cart__button'>
+            Add products
+            </button>
+
+            </div>
             } 
             
 
