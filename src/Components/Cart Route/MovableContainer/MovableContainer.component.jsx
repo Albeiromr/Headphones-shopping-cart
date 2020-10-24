@@ -18,6 +18,8 @@ const MovableContainer = ({
   taxes,
   shipping,
   purchase,
+  setWrite,
+  write,
 }) => {
   // this state is for moving this container side to side
   const [translate, changeTranslate] = useState("0vw");
@@ -73,6 +75,8 @@ const MovableContainer = ({
         taxes={taxes}
         shipping={shipping}
         purchase={purchase}
+        setWrite={setWrite}
+        write={write}
       />
     </div>
   );
@@ -90,6 +94,8 @@ MovableContainer.propTypes = {
   taxes: Proptypes.number.isRequired,
   shipping: Proptypes.number.isRequired,
   purchase: Proptypes.number.isRequired,
+  write: Proptypes.bool.isRequired,
+  setWrite: Proptypes.func.isRequired,
 };
 
 export default MovableContainer;

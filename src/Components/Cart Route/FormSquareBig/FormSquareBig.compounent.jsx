@@ -7,15 +7,18 @@ import {Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faCcVisa, faCcMastercard, faCcDiscover, faCcAmex } from '@fortawesome/free-brands-svg-icons';
 
-const FormSquareBig = ({total, taxes, shipping, purchase}) => {
+const FormSquareBig = ({total, taxes, shipping, purchase, write, setWrite}) => {
 
-  
+    const handleClick = () => {
+      setWrite(true)
+    }
 
     return (
       <div className="form-square-big">
 
         <p className='form-square-big__type'>Card Details</p>
 
+        
         <div className='form-square-big__cards'>
 
             <FontAwesomeIcon
@@ -40,49 +43,97 @@ const FormSquareBig = ({total, taxes, shipping, purchase}) => {
             
         </div>
         
-        <form className='form-square-big__form'>
+        {write === true ?
+          <form className='form-square-big__form'>
 
-          <input
-           type="text"
-           name='name'
-           disabled
-           className='form-square-big__name'
-           placeholder='Mike Daniels'
+         <input
+          type="text"
+          name='name'
+          disabled
+          className='form-square-big__name'
+          placeholder='Mike Daniels'
 
-           />
+          />
 
-          <input
-           type="text"
-           name='number'
-           disabled
-           className='form-square-big__number'
-           placeholder='4578 3421 8910 3456'
-           
-           />
+         <input
+          type="text"
+          name='number'
+          disabled
+          className='form-square-big__number'
+          placeholder='4578 3421 8910 3456'
+          
+          />
 
-           <div className='form-square-big__security'>
+          <div className='form-square-big__security'>
 
-              <input
-              type="text"
-              name='date'
-              disabled
-              className='form-square-big__date'
-              placeholder='04/25'
-              
-              />
+             <input
+             type="text"
+             name='date'
+             disabled
+             className='form-square-big__date'
+             placeholder='04/25'
+             
+             />
 
-              <input
-              type="text"
-              name='security'
-              disabled
-              className='form-square-big__code'
-              placeholder='837'
-              
-              />
+             <input
+             type="text"
+             name='security'
+             disabled
+             className='form-square-big__code'
+             placeholder='837'
+             
+             />
 
-           </div>
+          </div>
 
-        </form>
+       </form> :
+          <form className='form-square-big__form'>
+
+        <input
+         type="text"
+         name='name'
+         className='form-square-big__name'
+         placeholder='Name on card'
+         onClick={handleClick}
+
+         />
+
+        <input
+         type="text"
+         name='number'
+         className='form-square-big__number'
+         placeholder='Card number'
+         onClick={handleClick}
+         
+         />
+
+         <div className='form-square-big__security'>
+
+            <input
+            type="text"
+            name='date'
+            className='form-square-big__date'
+            placeholder='MM/YY'
+            onClick={handleClick}
+            
+            />
+
+            <input
+            type="text"
+            name='security'
+            className='form-square-big__code'
+            placeholder='CVV'
+            onClick={handleClick}
+            
+            />
+
+         </div>
+
+      </form>
+        }
+
+        
+        
 
         <div className='form-square-big__line'></div>
 
@@ -103,13 +154,14 @@ const FormSquareBig = ({total, taxes, shipping, purchase}) => {
 
         </div>
 
-        <Link to="/confirmation">
-          <div className="form-square-big__forward">
-            <p className="form-square-big__text">Checkout</p>
-
-            
-          </div>
-        </Link>
+        {total > 0 ?
+         <Link to="/confirmation">
+            <div className="form-square-big__forward">
+              <p className="form-square-big__text">Checkout</p>
+            </div>
+        </Link>  :
+          null
+        }
         
       </div>
     )
@@ -122,6 +174,8 @@ FormSquareBig.propTypes = {
   taxes: Proptypes.number.isRequired,
   shipping: Proptypes.number.isRequired,
   purchase: Proptypes.number.isRequired,
+  write: Proptypes.bool.isRequired,
+  setWrite: Proptypes.func.isRequired,
   };
 
 export default FormSquareBig;

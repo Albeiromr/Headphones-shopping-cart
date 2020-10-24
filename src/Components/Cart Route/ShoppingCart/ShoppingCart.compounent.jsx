@@ -16,18 +16,18 @@ const ShoppingCart = ({shoppingCart, changeShoppingCart }) => {
 
 
     // this state is used to sume items in the desciption component
-    const [sume, setSume] = useState(0)
+    const [sume, setSume] = useState(0);
 
     //let sume all the items prices
     const [total, setTotal] = useState(
         shoppingCart.map(item => item.price).reduce((a, b) =>  a + b, 0).toFixed(2)
         );
     // obtaining the taxes for the whole purchase
-    const [taxes, setTaxes] = useState(0.00)
+    const [taxes, setTaxes] = useState(0.00);
     // calculating the shipping cost
-    const [shipping, setShipping] = useState(0.00)
+    const [shipping, setShipping] = useState(0.00);
     //getting the total purchase price
-    const [purchase, setPurchase] = useState(0.00)
+    const [purchase, setPurchase] = useState(0.00);
 
 
     useEffect(() => {
@@ -39,7 +39,17 @@ const ShoppingCart = ({shoppingCart, changeShoppingCart }) => {
         //////////////////////
         let c = total * 108.5 / 100 
         setPurchase(c.toFixed(2))
-    },[total,shoppingCart])
+    },[total,shoppingCart]);
+
+    // this state is for write autonaticaly the card details on click
+    const [write, setWrite] = useState(false)
+
+    useEffect(() => {
+        if (shoppingCart.length === 0) {
+            setWrite(false)
+        }
+    },[shoppingCart]);
+
     
 
     return (
@@ -65,6 +75,8 @@ const ShoppingCart = ({shoppingCart, changeShoppingCart }) => {
             taxes={taxes}
             shipping={shipping}
             purchase={purchase}
+            setWrite={setWrite}
+            write={write}
             />
             <Cart 
             shoppingCart={shoppingCart}
@@ -80,6 +92,8 @@ const ShoppingCart = ({shoppingCart, changeShoppingCart }) => {
             taxes={taxes}
             shipping={shipping}
             purchase={purchase}
+            setWrite={setWrite}
+            write={write}
             />
         </section>
     )
