@@ -84,6 +84,10 @@ const FormSquareBig = () => {
 
         <div className='form-square-big__line'></div>
 
+        <div className='form-square-big__cont-summary'>
+
+        </div>
+
         <Link to="/confirmation">
           <div className="form-square-big__forward">
             <p className="form-square-big__text">Checkout</p>
