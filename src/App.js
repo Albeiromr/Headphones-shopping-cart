@@ -43,7 +43,7 @@ function App() {
 
         <nav className='header__nav'>
           <ul className='header__ul'>
-            <li className='header__purchases'><p className='header__purchasesText'>Purchases</p></li>
+            <li className='header__purchases'><p className='header__purchasesText'>My Orders</p></li>
             <Link to='/'>
             <li className='header__store'><p className='header__storeText'>Store</p></li>
             </Link>
