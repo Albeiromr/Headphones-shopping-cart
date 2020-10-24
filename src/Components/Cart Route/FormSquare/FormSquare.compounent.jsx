@@ -46,16 +46,18 @@ const FormSquare = ({changeTranslate}) => {
           <input
             type="text"
             name='name'
+            disabled
             className='form-square__name'
-            placeholder='test'
+            placeholder='Mike Daniels'
 
             />
 
             <input
             type="text"
             name='number'
+            disabled
             className='form-square__number'
-            placeholder='test'
+            placeholder='4578 3421 8910 3456'
             
             />
 
@@ -64,16 +66,18 @@ const FormSquare = ({changeTranslate}) => {
                 <input
                 type="text"
                 name='date'
+                disabled
                 className='form-square__date'
-                placeholder='test'
+                placeholder='04/25'
                 
                 />
 
                 <input
                 type="text"
                 name='security'
+                disabled
                 className='form-square__code'
-                placeholder='test'
+                placeholder='837'
                 
                 />
 

@@ -43,16 +43,18 @@ const FormSquareBig = () => {
           <input
            type="text"
            name='name'
+           disabled
            className='form-square-big__name'
-           placeholder='test'
+           placeholder='Mike Daniels'
 
            />
 
           <input
            type="text"
            name='number'
+           disabled
            className='form-square-big__number'
-           placeholder='test'
+           placeholder='4578 3421 8910 3456'
            
            />
 
@@ -61,16 +63,18 @@ const FormSquareBig = () => {
               <input
               type="text"
               name='date'
+              disabled
               className='form-square-big__date'
-              placeholder='test'
+              placeholder='04/25'
               
               />
 
               <input
               type="text"
               name='security'
+              disabled
               className='form-square-big__code'
-              placeholder='test'
+              placeholder='837'
               
               />
 

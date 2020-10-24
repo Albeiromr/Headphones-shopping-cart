@@ -120,6 +120,7 @@
       box-sizing: border-box;
       background: rgba(255, 255, 255, 0.301);
       outline: none;
+      letter-spacing: 1.5px;
       &::placeholder {
         color: white;
         font-family: $ubuntu;
@@ -159,6 +160,7 @@
       box-sizing: border-box;
       background: rgba(255, 255, 255, 0.301);
       outline: none;
+      letter-spacing: 2px;
       &::placeholder {
         color: white;
         font-family: $ubuntu;
@@ -190,6 +192,7 @@
       box-sizing: border-box;
       background: rgba(255, 255, 255, 0.301);
       outline: none;
+      letter-spacing: 1.5px;
       &::placeholder {
         color: white;
         font-family: $ubuntu;
