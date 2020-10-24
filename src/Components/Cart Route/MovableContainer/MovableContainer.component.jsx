@@ -3,6 +3,7 @@ import Proptypes from "prop-types";
 import "./1000-1920px.style.scss";
 import "./500-1000px.style.scss";
 import "./0-500px.style.scss";
+import {Link } from 'react-router-dom';
 import FormSquare from "../FormSquare/FormSquare.compounent";
 import CartProduct from "../CartProduct/CartProduct.compounent";
 import Description from "../Description/Description.compounent";
@@ -57,8 +58,9 @@ const MovableContainer = ({
         ) : (
           <div>
             <p className="movable-container__empty">Your cart is empty</p>
-
-            <button className="movable-container__button">Add products</button>
+            <Link to='./'>
+              <button className="movable-container__button">Add products</button>
+            </Link>
           </div>
         )}
       </div>
