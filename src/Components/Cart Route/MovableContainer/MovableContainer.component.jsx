@@ -84,6 +84,10 @@ const MovableContainer = ({shoppingCart, changeShoppingCart, sume, setSume, setT
 
             <FormSquare 
             changeTranslate={changeTranslate}
+            total={total}
+            taxes={taxes}
+            shipping={shipping}
+            purchase={purchase}
             />
 
         </div>

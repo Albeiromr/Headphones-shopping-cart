@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLongArrowAltLeft } from '@fortawesome/free-solid-svg-icons';
 import {faCcVisa, faCcMastercard, faCcDiscover, faCcAmex } from '@fortawesome/free-brands-svg-icons';
 
-const FormSquare = ({changeTranslate}) => {
+const FormSquare = ({changeTranslate, total, taxes, shipping, purchase}) => {
 
   const handleClick = () => {
     changeTranslate('0vw')
@@ -95,10 +95,10 @@ const FormSquare = ({changeTranslate}) => {
                 <p className='form-square__paragraphs form-square__black'>Total</p>
               </div>
               <div className='form-square__quantity'>
-                <p className='form-square__numbers'>$ 500</p>
-                <p className='form-square__numbers'>$ 500</p>
-                <p className='form-square__numbers'>$ 500</p>
-                <p className='form-square__numbers form-square__black'>$ 500</p>
+                <p className='form-square__numbers'>${total}</p>
+                <p className='form-square__numbers'>${taxes}</p>
+                <p className='form-square__numbers'>${shipping}</p>
+                <p className='form-square__numbers form-square__black'>${purchase}</p>
               </div>
 
         </div>
@@ -125,7 +125,11 @@ const FormSquare = ({changeTranslate}) => {
 // component documentation
 
 FormSquare.propTypes = {
-  changeTranslate: Proptypes.func.isRequired
+  changeTranslate: Proptypes.func.isRequired,
+  total: Proptypes.number.isRequired,
+  taxes: Proptypes.number.isRequired,
+  shipping: Proptypes.number.isRequired,
+  purchase: Proptypes.number.isRequired,
   };
 
 export default FormSquare;

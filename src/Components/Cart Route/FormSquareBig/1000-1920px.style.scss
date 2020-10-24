@@ -11,6 +11,17 @@
     border-radius: 1.614vw;
     z-index: 20;
 
+    &__type {
+      font-family: $ubuntu;
+      font-weight: 500;
+      color: white;
+      font-size: 1.7vw;
+      position: absolute;
+      left: 10.089% ;
+      top: 4.571%;
+      
+    }
+
     &__back {
       display: none;
     }
@@ -263,6 +274,10 @@
       font-family: $ubuntu;
       margin: 0;
       font-size: 1.2vw;
+    }
+
+    &__black {
+      font-weight: 600;
     }
   }
 }

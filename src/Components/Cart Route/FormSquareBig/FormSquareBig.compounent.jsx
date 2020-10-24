@@ -7,12 +7,14 @@ import {Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faCcVisa, faCcMastercard, faCcDiscover, faCcAmex } from '@fortawesome/free-brands-svg-icons';
 
-const FormSquareBig = () => {
+const FormSquareBig = ({total, taxes, shipping, purchase}) => {
 
   
 
     return (
       <div className="form-square-big">
+
+        <p className='form-square-big__type'>Card Details</p>
 
         <div className='form-square-big__cards'>
 
@@ -93,10 +95,10 @@ const FormSquareBig = () => {
                 <p className='form-square-big__paragraphs form-square-big__black'>Total</p>
               </div>
               <div className='form-square-big__quantity'>
-                <p className='form-square-big__numbers'>$ 500</p>
-                <p className='form-square-big__numbers'>$ 500</p>
-                <p className='form-square-big__numbers'>$ 500</p>
-                <p className='form-square-big__numbers form-square-big__black'>$ 500</p>
+                <p className='form-square-big__numbers'>${total}</p>
+                <p className='form-square-big__numbers'>${taxes}</p>
+                <p className='form-square-big__numbers'>${shipping}</p>
+                <p className='form-square-big__numbers form-square-big__black'>${purchase}</p>
               </div>
 
         </div>
@@ -116,6 +118,10 @@ const FormSquareBig = () => {
 // component documentation
 
 FormSquareBig.propTypes = {
+  total: Proptypes.number.isRequired,
+  taxes: Proptypes.number.isRequired,
+  shipping: Proptypes.number.isRequired,
+  purchase: Proptypes.number.isRequired,
   };
 
 export default FormSquareBig;

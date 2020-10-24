@@ -76,6 +76,10 @@ const ShoppingCart = ({shoppingCart, changeShoppingCart }) => {
             />
 
             <FormSquareBig 
+            total={total}
+            taxes={taxes}
+            shipping={shipping}
+            purchase={purchase}
             />
         </section>
     )
