@@ -3,7 +3,7 @@ import Proptypes from "prop-types";
 import './1000-1920px.style.scss';
 import './500-1000px.style.scss';
 import './0-500px.style.scss';
-import {Link } from 'react-router-dom';
+//import {Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faCcVisa, faCcMastercard, faCcDiscover, faCcAmex } from '@fortawesome/free-brands-svg-icons';
 
@@ -155,11 +155,11 @@ const FormSquareBig = ({total, taxes, shipping, purchase, write, setWrite}) => {
         </div>
 
         {total > 0 ?
-         <Link to="/confirmation">
+         
             <div className="form-square-big__forward">
               <p className="form-square-big__text">Checkout</p>
             </div>
-        </Link>  :
+          :
           null
         }
         

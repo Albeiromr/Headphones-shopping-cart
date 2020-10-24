@@ -1,5 +1,6 @@
 import React from 'react';
 import Proptypes from "prop-types";
+import {Link } from 'react-router-dom';
 import './1000-1920px.style.scss';
 import './500-1000px.style.scss';
 import './0-500px.style.scss';
@@ -31,10 +32,11 @@ const Cart = ({shoppingCart, changeShoppingCart, sume, setSume, setTotal,total})
                 Your cart is empty
                 
             </p>
-
-            <button className='cart__button'>
-            Add products
-            </button>
+            <Link to='./'>
+                <button className='cart__button'>
+                Add products
+                </button>
+            </Link>
 
             </div>
             } 
