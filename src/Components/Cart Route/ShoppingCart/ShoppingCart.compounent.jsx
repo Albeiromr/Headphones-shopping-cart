@@ -42,17 +42,19 @@ const ShoppingCart = ({shoppingCart, changeShoppingCart }) => {
         setPurchase(c.toFixed(2))
     },[total,shoppingCart]);
 
+    /////////////////////////////
+
     // this state is for write autonaticaly the card details on click
     const [write, setWrite] = useState(false)
     // this state is for showing the scroll indicator
-    const [show, setShow] = useState(true)
- 
+    const [show, setShow] = useState(false)
+    ////////////////////////////
     useEffect(() => {
         if (shoppingCart.length === 0) {
             setWrite(false)
         }
     },[shoppingCart]);
-
+   /////////////////////////////
     useEffect(() => {
         if (shoppingCart.length > 4) {
             setShow(true)
@@ -60,7 +62,7 @@ const ShoppingCart = ({shoppingCart, changeShoppingCart }) => {
             setShow(false)
         }
     },[shoppingCart]);
-
+    ///////////////////////////
     
 
     return (
