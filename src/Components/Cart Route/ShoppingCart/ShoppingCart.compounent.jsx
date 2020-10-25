@@ -63,11 +63,16 @@ const ShoppingCart = ({shoppingCart, changeShoppingCart }) => {
         }
     },[shoppingCart]);
     ///////////////////////////
+
+    // this state is for conditionately show the elements in the formsquare compounent
+    const [compounent, setCompounent] = useState(1)
     
 
     return (
       <section className="shopping-cart">
         <ContinueShopping />
+
+        
 
         {show ? <Scroll /> : null}
 
@@ -87,6 +92,8 @@ const ShoppingCart = ({shoppingCart, changeShoppingCart }) => {
           setWrite={setWrite}
           write={write}
           setShow={setShow}
+          compounent={compounent}
+          setCompounent={setCompounent}
         />
         <Cart
           shoppingCart={shoppingCart}
@@ -105,6 +112,8 @@ const ShoppingCart = ({shoppingCart, changeShoppingCart }) => {
           purchase={purchase}
           setWrite={setWrite}
           write={write}
+          compounent={compounent}
+          setCompounent={setCompounent}
         />
       </section>
     );

@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLongArrowAltLeft } from '@fortawesome/free-solid-svg-icons';
 import {faCcVisa, faCcMastercard, faCcDiscover, faCcAmex } from '@fortawesome/free-brands-svg-icons';
 
-const FormSquare = ({changeTranslate, total, taxes, shipping, purchase, setWrite, write,}) => {
+const FormSquare = ({changeTranslate, total, taxes, shipping, purchase, setWrite, write, compounent, setCompounent}) => {
 
   const handleClick = () => {
     changeTranslate('0vw')
@@ -179,6 +179,8 @@ FormSquare.propTypes = {
   purchase: Proptypes.number.isRequired,
   write: Proptypes.bool.isRequired,
   setWrite: Proptypes.func.isRequired,
+  compounent: Proptypes.number.isRequired,
+  setCompounent: Proptypes.func.isRequired,
   };
 
 export default FormSquare;
