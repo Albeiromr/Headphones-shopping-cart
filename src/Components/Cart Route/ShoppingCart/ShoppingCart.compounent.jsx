@@ -11,6 +11,7 @@ import FormSquareBig from '../FormSquareBig/FormSquareBig.compounent';
 import DescriptionBig from '../DescriptionBig/DescriptionBig.component';
 import Scroll from '../Scroll/Scroll.component';
 import SniperSquareBig from '../SniperSquareBig/SniperSquareBig.compounent';
+import ContinueSquareBig from '../ContinueSquareBig/SniperSquareBig.compounent';
 
 
 
@@ -71,10 +72,7 @@ const ShoppingCart = ({shoppingCart, changeShoppingCart }) => {
 
     return (
       <section className="shopping-cart">
-
         <ContinueShopping />
-
-        
 
         {show ? <Scroll /> : null}
 
@@ -107,23 +105,27 @@ const ShoppingCart = ({shoppingCart, changeShoppingCart }) => {
           setShow={setShow}
         />
 
-        {compounent === 1 ?
-        <FormSquareBig
-        total={total}
-        taxes={taxes}
-        shipping={shipping}
-        purchase={purchase}
-        setWrite={setWrite}
-        write={write}
-        setCompounent={setCompounent}
-        /> :
-        <SniperSquareBig />
-        }
+        {compounent === 1 ? (
+          <FormSquareBig
+            total={total}
+            taxes={taxes}
+            shipping={shipping}
+            purchase={purchase}
+            setWrite={setWrite}
+            write={write}
+            setCompounent={setCompounent}
+          />
+        ) : compounent === 2 ? (
+          <SniperSquareBig />
+        ) : compounent === 3 ? (
+          <ContinueSquareBig />
+        ) : null}
         
-
       </section>
     );
 };
+
+
 
 // component documentation
 

@@ -3,33 +3,45 @@ import Proptypes from "prop-types";
 import "./1000-1920px.style.scss";
 import "./500-1000px.style.scss";
 import "./0-500px.style.scss";
-import {Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import FormSquare from "../FormSquare/FormSquare.compounent";
 import CartProduct from "../CartProduct/CartProduct.compounent";
 import Description from "../Description/Description.compounent";
 import Summary from "../Summary/Summary.component";
-import CcDEtails from '../CcDetails/CcDetails.component';
-import SniperSquare from '../SniperSquare/SniperSquare.compounent';
+import CcDEtails from "../CcDetails/CcDetails.component";
+import SniperSquare from "../SniperSquare/SniperSquare.compounent";
+import ContinueSquare from '../ContinueSquare/SniperSquare.compounent';
 
-const MovableContainer = ({shoppingCart, changeShoppingCart, sume, setSume,setTotal,
-   total, taxes, shipping, purchase, setWrite, write, setShow, compounent, setCompounent}) => {
+const MovableContainer = ({
+  shoppingCart,
+  changeShoppingCart,
+  sume,
+  setSume,
+  setTotal,
+  total,
+  taxes,
+  shipping,
+  purchase,
+  setWrite,
+  write,
+  setShow,
+  compounent,
+  setCompounent,
+}) => {
   // this state is for moving this container side to side
   const [translate, changeTranslate] = useState("0vw");
 
   const handleClick = () => {
     changeTranslate("-100vw");
-    setShow(false)
+    setShow(false);
   };
 
   const handleScroll = () => {
-    setShow(false)
-  }
-
-  
+    setShow(false);
+  };
 
   return (
     <div className="movable-container" style={{ "--translate": translate }}>
-
       <Description shoppingCart={shoppingCart} sume={sume} />
       {shoppingCart.length > 0 ? (
         <Summary
@@ -57,8 +69,10 @@ const MovableContainer = ({shoppingCart, changeShoppingCart, sume, setSume,setTo
         ) : (
           <div>
             <p className="movable-container__empty">Your cart is empty</p>
-            <Link to='./'>
-              <button className="movable-container__button">Add products</button>
+            <Link to="./">
+              <button className="movable-container__button">
+                Add products
+              </button>
             </Link>
           </div>
         )}
@@ -72,21 +86,22 @@ const MovableContainer = ({shoppingCart, changeShoppingCart, sume, setSume,setTo
         </div>
       )}
 
-      {compounent === 1 ?
+      {compounent === 1 ? (
         <FormSquare
-        changeTranslate={changeTranslate}
-        total={total}
-        taxes={taxes}
-        shipping={shipping}
-        purchase={purchase}
-        setWrite={setWrite}
-        write={write}
-        setCompounent={setCompounent}
-        setShow={setShow}
-      /> :
-      <SniperSquare />
-    }
-      
+          total={total}
+          taxes={taxes}
+          shipping={shipping}
+          purchase={purchase}
+          setWrite={setWrite}
+          write={write}
+          setCompounent={setCompounent}
+        />
+      ) : compounent === 2 ? (
+        <SniperSquare />
+      ) : compounent === 3 ? (
+        <ContinueSquare />
+      ) : null}
+
     </div>
   );
 };
@@ -109,7 +124,6 @@ MovableContainer.propTypes = {
   compounent: Proptypes.number.isRequired,
   setCompounent: Proptypes.func.isRequired,
   show: Proptypes.bool.isRequired,
-
 };
 
 export default MovableContainer;

@@ -1,0 +1,25 @@
+@import "../../../Assets/Sass/variables";
+
+@media only screen and (min-width: 500px) and (max-width: 1000px) {
+  .continue-square {
+    width: 63.02vw;
+    height: 88.541vw;
+    background: red;
+    position: absolute;
+    right: 9.244%;
+    bottom: 5.005%;
+    border-radius: 4.036vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__text {
+      font-family: $ubuntu;
+      color: white;
+      font-weight: 500;
+      font-size: 3vw;
+      margin-top: 15vw;
+    }
+  }
+}

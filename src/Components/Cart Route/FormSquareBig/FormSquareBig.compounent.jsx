@@ -15,6 +15,9 @@ const FormSquareBig = ({total, taxes, shipping, purchase, write, setWrite, setCo
 
     const handleClick2 = () => {
       setCompounent(2)
+      setTimeout(() => {
+        setCompounent(3)
+      }, 3000)
     }
 
     

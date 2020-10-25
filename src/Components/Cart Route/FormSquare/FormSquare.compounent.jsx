@@ -24,6 +24,9 @@ const FormSquare = ({changeTranslate, total, taxes, shipping, purchase, setWrite
 
   const handleClick3 = () => {
     setCompounent(2)
+    setTimeout(() => {
+      setCompounent(3)
+    }, 3000)
   }
 
   
