@@ -156,14 +156,16 @@ const FormSquare = ({changeTranslate, total, taxes, shipping, purchase, setWrite
           onClick={handleClick}
         />
         
-          <div className="form-square__forward">
-            <p className="form-square__text">Checkout</p>
-          </div>
-        
+          
+        {total > 0 && write === true?
         
           <div className="form-square__next">
             <p className="form-square__text2">Checkout</p>
-          </div>
+          </div> 
+
+          :
+          null
+        }
         
       </div>
     );

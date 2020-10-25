@@ -156,7 +156,7 @@ const FormSquareBig = ({total, taxes, shipping, purchase, write, setWrite, compo
 
         </div>
 
-        {total > 0 ?
+        {total > 0 && write === true?
          
             <div className="form-square-big__forward">
               <p className="form-square-big__text">Checkout</p>
