@@ -9,5 +9,17 @@
     right: 9.244%;
     bottom: 5.005%;
     border-radius: 4.036vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__text {
+      font-family: $ubuntu;
+      color: white;
+      font-weight: 500;
+      font-size: 3vw;
+      margin-top: 15vw;
+    }
   }
 }
