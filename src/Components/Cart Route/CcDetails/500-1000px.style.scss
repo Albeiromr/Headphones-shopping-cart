@@ -1,0 +1,30 @@
+@import "../../../Assets/Sass/variables";
+
+@media only screen and (min-width: 500px) and (max-width: 1000px) {
+  .cc-details {
+    width: 39.546vw;
+    height: 8.682vw;
+    position: absolute;
+    right: 27.687%;
+    top: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__title {
+      font-size: 3.645vw;
+      margin: 0;
+      font-family: $ubuntu;
+      color: #565656;
+      font-weight: 500;
+    }
+
+    &__p {
+      font-size: 2.994vw;
+      font-family: $ubuntu;
+      font-weight: 400;
+      margin: 0;
+      color: #565656;
+    }
+  }
+}

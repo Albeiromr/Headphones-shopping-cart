@@ -8,20 +8,9 @@ import FormSquare from "../FormSquare/FormSquare.compounent";
 import CartProduct from "../CartProduct/CartProduct.compounent";
 import Description from "../Description/Description.compounent";
 import Summary from "../Summary/Summary.component";
+import CcDEtails from '../CcDetails/CcDetails.component';
 
-const MovableContainer = ({
-  shoppingCart,
-  changeShoppingCart,
-  sume,
-  setSume,
-  setTotal,
-  total,
-  taxes,
-  shipping,
-  purchase,
-  setWrite,
-  write,
-}) => {
+const MovableContainer = ({shoppingCart, changeShoppingCart, sume, setSume,setTotal, total, taxes, shipping, purchase, setWrite, write,}) => {
   // this state is for moving this container side to side
   const [translate, changeTranslate] = useState("0vw");
 
@@ -64,6 +53,8 @@ const MovableContainer = ({
           </div>
         )}
       </div>
+
+      <CcDEtails />
 
       {shoppingCart < 1 ? null : (
         <div className="movable-container__forward" onClick={handleClick}>
