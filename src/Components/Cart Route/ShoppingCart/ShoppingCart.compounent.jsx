@@ -9,6 +9,7 @@ import ContinueShopping from '../../Confirmation Route/ContinueShopping/Continue
 import Cart from '../Cart/Cart.component';
 import FormSquareBig from '../FormSquareBig/FormSquareBig.compounent';
 import DescriptionBig from '../DescriptionBig/DescriptionBig.component';
+import Scroll from '../Scroll/Scroll.component';
 
 
 
@@ -57,6 +58,8 @@ const ShoppingCart = ({shoppingCart, changeShoppingCart }) => {
 
             <ContinueShopping 
             />
+
+            <Scroll />
 
             <Steps 
             />
