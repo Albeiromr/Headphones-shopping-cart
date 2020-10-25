@@ -44,62 +44,68 @@ const ShoppingCart = ({shoppingCart, changeShoppingCart }) => {
 
     // this state is for write autonaticaly the card details on click
     const [write, setWrite] = useState(false)
-
+    // this state is for showing the scroll indicator
+    const [show, setShow] = useState(true)
+ 
     useEffect(() => {
         if (shoppingCart.length === 0) {
             setWrite(false)
         }
     },[shoppingCart]);
 
+    useEffect(() => {
+        if (shoppingCart.length > 4) {
+            setShow(true)
+        }else {
+            setShow(false)
+        }
+    },[shoppingCart]);
+
     
 
     return (
-        <section className='shopping-cart'>
+      <section className="shopping-cart">
+        <ContinueShopping />
 
-            <ContinueShopping 
-            />
+        {show ? <Scroll /> : null}
 
-            <Scroll />
+        <Steps />
+        <DescriptionBig shoppingCart={shoppingCart} sume={sume} />
 
-            <Steps 
-            />
-            <DescriptionBig
-            shoppingCart={shoppingCart} 
-            sume={sume}
-            />
-            
-            < MovableContainer
-            shoppingCart={shoppingCart}
-            changeShoppingCart={changeShoppingCart}
-            sume={sume}
-            setSume={setSume}
-            setTotal={setTotal}
-            total={total}
-            taxes={taxes}
-            shipping={shipping}
-            purchase={purchase}
-            setWrite={setWrite}
-            write={write}
-            />
-            <Cart 
-            shoppingCart={shoppingCart}
-            changeShoppingCart={changeShoppingCart}
-            sume={sume}
-            setSume={setSume}
-            setTotal={setTotal}
-            total={total}
-            />
+        <MovableContainer
+          shoppingCart={shoppingCart}
+          changeShoppingCart={changeShoppingCart}
+          sume={sume}
+          setSume={setSume}
+          setTotal={setTotal}
+          total={total}
+          taxes={taxes}
+          shipping={shipping}
+          purchase={purchase}
+          setWrite={setWrite}
+          write={write}
+          setShow={setShow}
+        />
+        <Cart
+          shoppingCart={shoppingCart}
+          changeShoppingCart={changeShoppingCart}
+          sume={sume}
+          setSume={setSume}
+          setTotal={setTotal}
+          total={total}
+          setShow={setShow}
+        />
 
-            <FormSquareBig 
-            total={total}
-            taxes={taxes}
-            shipping={shipping}
-            purchase={purchase}
-            setWrite={setWrite}
-            write={write}
-            />
-        </section>
-    )
+        <FormSquareBig
+          total={total}
+          taxes={taxes}
+          shipping={shipping}
+          purchase={purchase}
+          setWrite={setWrite}
+          write={write}
+        />
+      </section>
+    );
 };
 
 // component documentation

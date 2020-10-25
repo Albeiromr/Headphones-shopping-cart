@@ -6,12 +6,14 @@ import './500-1000px.style.scss';
 import './0-500px.style.scss';
 import CartProduct from '../CartProduct/CartProduct.compounent';
 
-const Cart = ({shoppingCart, changeShoppingCart, sume, setSume, setTotal,total}) => {
+const Cart = ({shoppingCart, changeShoppingCart, sume, setSume, setTotal,total,setShow}) => {
 
-   
+    const handleScroll = () => {
+        setShow(false)
+      }
 
     return (
-        <div className='cart'>
+        <div onScroll={handleScroll} className='cart'>
 
             {shoppingCart.length >= 1 ? 
             shoppingCart.map((cartProduct) => (
@@ -53,6 +55,7 @@ Cart.propTypes = {
     setSume: Proptypes.func.isRequired,
     setTotal: Proptypes.func.isRequired,
     total: Proptypes.number.isRequired,
+    setShow: Proptypes.func.isRequired,
     };
 
 export default  Cart;

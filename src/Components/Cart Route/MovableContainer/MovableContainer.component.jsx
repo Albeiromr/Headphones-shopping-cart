@@ -10,13 +10,17 @@ import Description from "../Description/Description.compounent";
 import Summary from "../Summary/Summary.component";
 import CcDEtails from '../CcDetails/CcDetails.component';
 
-const MovableContainer = ({shoppingCart, changeShoppingCart, sume, setSume,setTotal, total, taxes, shipping, purchase, setWrite, write,}) => {
+const MovableContainer = ({shoppingCart, changeShoppingCart, sume, setSume,setTotal, total, taxes, shipping, purchase, setWrite, write, setShow}) => {
   // this state is for moving this container side to side
   const [translate, changeTranslate] = useState("0vw");
 
   const handleClick = () => {
     changeTranslate("-100vw");
   };
+
+  const handleScroll = () => {
+    setShow(false)
+  }
 
   return (
     <div className="movable-container" style={{ "--translate": translate }}>
@@ -30,7 +34,7 @@ const MovableContainer = ({shoppingCart, changeShoppingCart, sume, setSume,setTo
         />
       ) : null}
 
-      <div className="movable-container__cart">
+      <div onScroll={handleScroll} className="movable-container__cart">
         {shoppingCart.length >= 1 ? (
           shoppingCart.map((cartProduct) => (
             <CartProduct
@@ -89,6 +93,7 @@ MovableContainer.propTypes = {
   purchase: Proptypes.number.isRequired,
   write: Proptypes.bool.isRequired,
   setWrite: Proptypes.func.isRequired,
+  setShow: Proptypes.func.isRequired,
 };
 
 export default MovableContainer;
