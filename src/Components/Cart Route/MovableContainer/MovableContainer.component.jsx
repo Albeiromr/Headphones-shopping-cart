@@ -95,6 +95,8 @@ const MovableContainer = ({
           setWrite={setWrite}
           write={write}
           setCompounent={setCompounent}
+          changeTranslate={changeTranslate}
+          setShow={setShow}
         />
       ) : compounent === 2 ? (
         <SniperSquare />

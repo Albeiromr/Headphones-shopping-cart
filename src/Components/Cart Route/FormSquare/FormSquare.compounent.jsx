@@ -16,7 +16,6 @@ const FormSquare = ({changeTranslate, total, taxes, shipping, purchase, setWrite
     setTimeout(() => {
       setShow(true)
     }, 1000)
-    
   }
   const handleClick2 = () => {
     setWrite(true)
