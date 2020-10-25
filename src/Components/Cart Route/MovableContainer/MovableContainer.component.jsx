@@ -17,6 +17,7 @@ const MovableContainer = ({shoppingCart, changeShoppingCart, sume, setSume,setTo
 
   const handleClick = () => {
     changeTranslate("-100vw");
+    setShow(false)
   };
 
   const handleScroll = () => {
@@ -27,6 +28,7 @@ const MovableContainer = ({shoppingCart, changeShoppingCart, sume, setSume,setTo
 
   return (
     <div className="movable-container" style={{ "--translate": translate }}>
+
       <Description shoppingCart={shoppingCart} sume={sume} />
       {shoppingCart.length > 0 ? (
         <Summary
@@ -79,6 +81,7 @@ const MovableContainer = ({shoppingCart, changeShoppingCart, sume, setSume,setTo
         write={write}
         compounent={compounent}
         setCompounent={setCompounent}
+        setShow={setShow}
       />
     </div>
   );
@@ -101,6 +104,7 @@ MovableContainer.propTypes = {
   setShow: Proptypes.func.isRequired,
   compounent: Proptypes.number.isRequired,
   setCompounent: Proptypes.func.isRequired,
+  show: Proptypes.bool.isRequired,
 };
 
 export default MovableContainer;
