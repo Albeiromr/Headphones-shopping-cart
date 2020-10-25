@@ -7,15 +7,20 @@ import './0-500px.style.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faCcVisa, faCcMastercard, faCcDiscover, faCcAmex } from '@fortawesome/free-brands-svg-icons';
 
-const FormSquareBig = ({total, taxes, shipping, purchase, write, setWrite, compounent, setCompounent}) => {
+const FormSquareBig = ({total, taxes, shipping, purchase, write, setWrite, setCompounent}) => {
 
     const handleClick = () => {
       setWrite(true)
     }
 
+    const handleClick2 = () => {
+      setCompounent(2)
+    }
+
     
 
     return (
+
       <div className="form-square-big">
 
         <p className='form-square-big__type'>Card Details</p>
@@ -158,7 +163,7 @@ const FormSquareBig = ({total, taxes, shipping, purchase, write, setWrite, compo
 
         {total > 0 && write === true?
          
-            <div className="form-square-big__forward">
+            <div onClick={handleClick2} className="form-square-big__forward">
               <p className="form-square-big__text">Checkout</p>
             </div>
           :
@@ -178,7 +183,6 @@ FormSquareBig.propTypes = {
   purchase: Proptypes.number.isRequired,
   write: Proptypes.bool.isRequired,
   setWrite: Proptypes.func.isRequired,
-  compounent: Proptypes.number.isRequired,
   setCompounent: Proptypes.func.isRequired,
   };
 

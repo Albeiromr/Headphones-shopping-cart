@@ -1,0 +1,14 @@
+@import "../../../Assets/Sass/variables";
+
+@media only screen and (min-width: 1000px) {
+  .sniper-square-big {
+    width: 29.843vw;
+    height: 41.927vw;
+    background: $brand-color;
+    position: absolute;
+    top: 16.296%;
+    right: 10.208%;
+    border-radius: 1.614vw;
+    z-index: 20;
+  }
+}

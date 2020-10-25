@@ -9,6 +9,7 @@ import CartProduct from "../CartProduct/CartProduct.compounent";
 import Description from "../Description/Description.compounent";
 import Summary from "../Summary/Summary.component";
 import CcDEtails from '../CcDetails/CcDetails.component';
+import SniperSquare from '../SniperSquare/SniperSquare.compounent';
 
 const MovableContainer = ({shoppingCart, changeShoppingCart, sume, setSume,setTotal,
    total, taxes, shipping, purchase, setWrite, write, setShow, compounent, setCompounent}) => {
@@ -71,7 +72,8 @@ const MovableContainer = ({shoppingCart, changeShoppingCart, sume, setSume,setTo
         </div>
       )}
 
-      <FormSquare
+      {compounent === 1 ?
+        <FormSquare
         changeTranslate={changeTranslate}
         total={total}
         taxes={taxes}
@@ -79,10 +81,12 @@ const MovableContainer = ({shoppingCart, changeShoppingCart, sume, setSume,setTo
         purchase={purchase}
         setWrite={setWrite}
         write={write}
-        compounent={compounent}
         setCompounent={setCompounent}
         setShow={setShow}
-      />
+      /> :
+      <SniperSquare />
+    }
+      
     </div>
   );
 };
@@ -105,6 +109,7 @@ MovableContainer.propTypes = {
   compounent: Proptypes.number.isRequired,
   setCompounent: Proptypes.func.isRequired,
   show: Proptypes.bool.isRequired,
+
 };
 
 export default MovableContainer;
