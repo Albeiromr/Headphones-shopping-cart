@@ -37,13 +37,17 @@ function App() {
 
       <header className='header'>
 
+        <Link to='/'>
         <div className='header__logo'>
         <img className='header__logoImg' src={logo} alt="logo"/>
         </div>
+        </Link>
 
         <nav className='header__nav'>
           <ul className='header__ul'>
+            <Link to='/confirmation'>
             <li className='header__purchases'><p className='header__purchasesText'>My Orders</p></li>
+            </Link>
             <Link to='/'>
             <li className='header__store'><p className='header__storeText'>Store</p></li>
             </Link>
