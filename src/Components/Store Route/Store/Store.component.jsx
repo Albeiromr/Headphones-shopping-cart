@@ -123,6 +123,8 @@ const Store = ({Products, changeShoppingCart, shoppingCart}) => {
             itemToCart={itemToCart}
             />
             <ButtonBuy 
+            itemToCart={itemToCart}
+            changeShoppingCart={changeShoppingCart}
             />
             <Price 
             productSelected={productSelected}
