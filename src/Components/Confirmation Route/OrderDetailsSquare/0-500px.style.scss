@@ -1,0 +1,14 @@
+@import "../../../Assets/Sass/variables";
+
+@media only screen and (max-width: 500px) {
+  .order-details-square {
+    width: 186.710vw;
+    height: 63.086vw;
+    background: $brand-color;
+    position: absolute;
+    left: 6.642%;
+    bottom: 0;
+    border-radius: 4.830vw 4.830vw 0 0;
+    z-index: 40;
+  }
+}
