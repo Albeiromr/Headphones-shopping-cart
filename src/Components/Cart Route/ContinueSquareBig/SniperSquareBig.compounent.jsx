@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from 'react-router-dom';
 import Proptypes from "prop-types";
 import "./1000-1920px.style.scss";
 import "./500-1000px.style.scss";
@@ -6,7 +7,11 @@ import "./0-500px.style.scss";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 
-const ContinueSquareBig = () => {
+const ContinueSquareBig = ({changeShoppingCart}) => {
+
+    const myClick = () => {
+      changeShoppingCart([]);
+    };
 
     return (
       <div className="continue-square-big">
@@ -25,9 +30,11 @@ const ContinueSquareBig = () => {
                 We have received your payment
             </p>
 
-            <button className='continue-square-big__button'>
+            <Link to='/confirmation' >
+            <button onClick={myClick} className='continue-square-big__button'>
                 Go to my order
             </button>
+            </Link>
 
 
       </div>
@@ -36,7 +43,7 @@ const ContinueSquareBig = () => {
 
 
 ContinueSquareBig.propTypes = {
-    
+    changeShoppingCart: Proptypes.func.isRequired,
 };
 
 export default ContinueSquareBig;

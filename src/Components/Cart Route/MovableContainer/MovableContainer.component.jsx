@@ -101,7 +101,9 @@ const MovableContainer = ({
       ) : compounent === 2 ? (
         <SniperSquare />
       ) : compounent === 3 ? (
-        <ContinueSquare />
+        <ContinueSquare
+        changeShoppingCart={changeShoppingCart}
+        />
       ) : null}
 
     </div>

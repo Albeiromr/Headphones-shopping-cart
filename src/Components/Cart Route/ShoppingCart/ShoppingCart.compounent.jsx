@@ -118,7 +118,9 @@ const ShoppingCart = ({shoppingCart, changeShoppingCart }) => {
         ) : compounent === 2 ? (
           <SniperSquareBig />
         ) : compounent === 3 ? (
-          <ContinueSquareBig />
+          <ContinueSquareBig 
+          changeShoppingCart={changeShoppingCart}
+          />
         ) : null}
         
       </section>
