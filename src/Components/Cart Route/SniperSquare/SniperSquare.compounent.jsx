@@ -11,10 +11,6 @@ const SniperSquare = () => {
 
         <div className='sniper-square'>
             <Sniper />
-
-            <p className='sniper-square__text'>
-            We are verifying your payment
-            </p>
         </div>
     )
 };

@@ -4,7 +4,7 @@
   .continue-square {
     width: 86.231vw;
     height: 121.014vw;
-    background: red;
+    background: $brand-color;
     position: absolute;
     right: 3.381%;
     top: 12.998%;
@@ -18,8 +18,21 @@
       font-family: $ubuntu;
       color: white;
       font-weight: 500;
-      font-size: 4.5vw;
-      margin-top: 15vw;
+      font-size: 5.8vw;
+      margin-top: 10vw;
+    }
+
+    &__text2 {
+      font-family: $ubuntu;
+      color: white;
+      font-weight: 500;
+      font-size: 3.8vw;
+      margin: 0;
+    }
+
+    &__check-circle {
+      font-size: 25vw;
+      color: white;
     }
   }
 }
