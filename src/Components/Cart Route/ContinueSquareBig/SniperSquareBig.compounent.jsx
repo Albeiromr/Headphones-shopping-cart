@@ -26,7 +26,7 @@ const ContinueSquareBig = () => {
             </p>
 
             <button className='continue-square-big__button'>
-                Go to my orders
+                Go to my order
             </button>
 
 

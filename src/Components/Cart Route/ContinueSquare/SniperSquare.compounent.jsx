@@ -25,6 +25,11 @@ const ContinueSquare = () => {
             <p className="continue-square__text2">
                 We have received your payment
             </p>
+
+            <button className='continue-square__button'>
+                Go to my order
+            </button>
+
         </div>
     )
 };

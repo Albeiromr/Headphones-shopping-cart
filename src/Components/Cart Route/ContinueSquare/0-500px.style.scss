@@ -34,5 +34,22 @@
       font-size: 25vw;
       color: white;
     }
+
+    &__button {
+      cursor: pointer;
+      width: 61.816vw;
+      height: 10.454vw;
+      background: white;
+      border-radius: 4.83vw;
+      position: absolute;
+      bottom: 5.988%;
+      right: 14.005%;
+      border: none;
+      outline: none;
+      font-family: $ubuntu;
+      color: $brand-color;
+      font-weight: 600;
+      font-size: 4vw;
+    }
   }
 }
