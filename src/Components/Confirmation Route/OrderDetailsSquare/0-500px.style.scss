@@ -10,5 +10,45 @@
     bottom: 0;
     border-radius: 4.830vw 4.830vw 0 0;
     z-index: 40;
+    transition: all .3s ease;
+    transform: translateX(var(--move));
+
+    &__line1 {
+      width: .3%;
+      height: 70.220%;
+      background: white;
+      position: absolute;
+      top: 14.797%;
+      left: 10.643%;
+      z-index: 50;
+    }
+
+    &__line2 {
+      width: .3%;
+      height: 70.220%;
+      background: white;
+      position: absolute;
+      top: 14.797%;
+      right: 10.643%;
+      z-index: 50;
+    }
+
+    &__arrow-left {
+      cursor: pointer;
+      font-size: 12vw;
+      color: white;
+      position: absolute;
+      top: 40.931%;
+      left: 3.234%;
+    }
+
+    &__arrow-right {
+      cursor: pointer;
+      font-size: 12vw;
+      color: white;
+      position: absolute;
+      top: 40.931%;
+      right: 3.234%;
+    }
   }
 }

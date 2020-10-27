@@ -12,5 +12,33 @@
     top: 0;
     background: $brand-color;
     z-index: 40;
+
+    &__line1 {
+      width: 24.375vw;
+      height: .15vw;
+      background: white;
+      position: absolute;
+      top: 21%;
+      right: 18.503%;
+      z-index: 50;
+    }
+
+    &__line2 {
+      width: 24.375vw;
+      height: .15vw;
+      background: white;
+      position: absolute;
+      top: 54.074%;
+      right: 18.503%;
+      z-index: 50;
+    }
+
+    &__arrow-left {
+      display: none;
+    }
+
+    &__arrow-right {
+      display: none;
+    }
   }
 }
