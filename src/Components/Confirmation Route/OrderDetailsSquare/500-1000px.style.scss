@@ -32,5 +32,41 @@
     &__arrow-right {
       display: none;
     }
+
+    &__camp1 {
+      width: 24.075%;
+      height: 61.223%;
+      background: cyan;
+      position: absolute;
+      top: 9.994%;
+      left: 3.595%;
+    }
+
+    &__data1 {
+      width: 19.075%;
+      height: 61.223%;
+      background: rgb(6, 153, 80);
+      position: absolute;
+      top: 9.994%;
+      left: 27.953%;
+    }
+
+    &__camp2 {
+      width: 24.075%;
+      height: 61.223%;
+      background: cyan;
+      position: absolute;
+      top: 9.994%;
+      right: 23.595%;
+    }
+
+    &__data2 {
+      width: 19.075%;
+      height: 61.223%;
+      background: rgb(6, 153, 80);
+      position: absolute;
+      top: 9.994%;
+      right: 4.595%;
+    }
   }
 }

@@ -40,5 +40,41 @@
     &__arrow-right {
       display: none;
     }
+
+    &__camp1 {
+      width: 40.408%;
+      height: 26.944%;
+      background: cyan;
+      position: absolute;
+      top: 24.129%;
+      left: 17.843%;
+    }
+
+    &__data1 {
+      width: 23.265%;
+      height: 26.944%;
+      background:rgb(0, 139, 74);
+      position: absolute;
+      top: 24.129%;
+      left: 58.387%;
+    }
+
+    &__camp2 {
+      width: 40.408%;
+      height: 26.944%;
+      background: cyan;
+      position: absolute;
+      top: 57.129%;
+      left: 17.843%;
+    }
+
+    &__data2 {
+      width: 23.265%;
+      height: 26.944%;
+      background:rgb(0, 139, 74);
+      position: absolute;
+      top: 57.129%;
+      left: 58.387%;
+    }
   }
 }

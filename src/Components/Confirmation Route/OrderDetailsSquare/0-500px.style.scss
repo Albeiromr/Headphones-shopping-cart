@@ -50,5 +50,41 @@
       top: 40.931%;
       right: 3.234%;
     }
+
+    &__camp1 {
+      width: 18.370%;
+      height: 66.108%;
+      background: cyan;
+      position: absolute;
+      top: 16.838%;
+      left: 13.8513%;
+    }
+
+    &__data1 {
+      width: 16.370%;
+      height: 66.108%;
+      background: rgb(8, 170, 89);
+      position: absolute;
+      top: 16.838%;
+      left: 32.3513%;
+    }
+
+    &__camp2 {
+      width: 18.370%;
+      height: 66.108%;
+      background: cyan;
+      position: absolute;
+      top: 16.838%;
+      right: 30.3%;
+    }
+
+    &__data2 {
+      width: 16.370%;
+      height: 66.108%;
+      background: rgb(8, 170, 89);
+      position: absolute;
+      top: 16.838%;
+      right: 13.8513%;
+    }
   }
 }

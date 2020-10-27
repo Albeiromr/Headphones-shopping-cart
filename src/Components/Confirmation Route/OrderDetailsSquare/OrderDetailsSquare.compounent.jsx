@@ -37,6 +37,19 @@ const OrderDetailsSquare = () => {
             icon={faChevronRight}
             className="order-details-square__arrow-right"
             />
+
+            <div className='order-details-square__camp1'>
+
+            </div>
+            <div className='order-details-square__data1'>
+
+            </div>
+            <div className='order-details-square__camp2'>
+
+            </div>
+            <div className='order-details-square__data2'>
+
+            </div>
             
 
         </div>
