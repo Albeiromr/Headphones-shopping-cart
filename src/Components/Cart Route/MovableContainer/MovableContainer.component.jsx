@@ -99,6 +99,7 @@ const MovableContainer = ({
           setCompounent={setCompounent}
           changeTranslate={changeTranslate}
           setShow={setShow}
+          shoppingCart={shoppingCart}
         />
       ) : compounent === 2 ? (
         <SniperSquare />

@@ -8,14 +8,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLongArrowAltLeft } from '@fortawesome/free-solid-svg-icons';
 import {faCcVisa, faCcMastercard, faCcDiscover, faCcAmex } from '@fortawesome/free-brands-svg-icons';
 
-const FormSquare = ({changeTranslate, total, taxes, shipping, purchase, setWrite, write, setShow, setCompounent}) => {
+const FormSquare = ({changeTranslate, total, taxes, shipping, purchase, setWrite, write, setShow, setCompounent, shoppingCart}) => {
 
   const handleClick = () => {
     changeTranslate('0vw')
     //////////////////////
-    setTimeout(() => {
-      setShow(true)
-    }, 1000)
+    if(shoppingCart.length > 4){
+      setTimeout(() => {
+        setShow(true)
+      }, 1000)
+    }
   }
   const handleClick2 = () => {
     setWrite(true)
