@@ -36,19 +36,25 @@
     &__camp1 {
       width: 24.075%;
       height: 61.223%;
-      background: cyan;
       position: absolute;
       top: 9.994%;
       left: 3.595%;
+      display: flex;
+      flex-direction: column;
+      align-items: left;
+      justify-content: space-between;
     }
 
     &__data1 {
       width: 19.075%;
       height: 61.223%;
-      background: rgb(6, 153, 80);
       position: absolute;
       top: 9.994%;
       left: 27.953%;
+      display: flex;
+      flex-direction: column;
+      text-align: right;
+      justify-content: space-between;
     }
 
     &__camp2 {
@@ -67,6 +73,22 @@
       position: absolute;
       top: 9.994%;
       right: 4.595%;
+    }
+
+    &__text1 {
+      margin: 0;
+      font-size: 2.2vw;
+      color: white;
+      font-family: $ubuntu;
+      font-weight: 500;
+    }
+
+    &__text2 {
+      margin: 0;
+      font-size: 2.2vw;
+      color: white;
+      font-family: $ubuntu;
+      font-weight: 400;
     }
   }
 }

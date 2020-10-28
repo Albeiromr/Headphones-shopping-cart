@@ -167,7 +167,7 @@ const FormSquareBig = ({total, taxes, shipping, purchase, write, setWrite, setCo
         {total > 0 && write === true?
          
             <div onClick={handleClick2} className="form-square-big__forward">
-              <p className="form-square-big__text">Checkout</p>
+              <p className="form-square-big__text">Pay</p>
             </div>
           :
           null

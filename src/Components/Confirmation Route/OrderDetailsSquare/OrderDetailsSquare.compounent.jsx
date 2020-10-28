@@ -40,8 +40,22 @@ const OrderDetailsSquare = () => {
 
             <div className='order-details-square__camp1'>
 
+                <p className='order-details-square__text1'>Order ID</p>
+                <p className='order-details-square__text1'>Product Amount</p>
+                <p className='order-details-square__text1'>Products </p>
+                <p className='order-details-square__text1'>Taxes</p>
+                <p className='order-details-square__text1'>Shipping</p>
+                <p className='order-details-square__text1'>Total</p>
+
             </div>
             <div className='order-details-square__data1'>
+
+                <p className='order-details-square__text2'>A000000</p>
+                <p className='order-details-square__text2'>1</p>
+                <p className='order-details-square__text2'>$ 00.00</p>
+                <p className='order-details-square__text2'>$ 00.00</p>
+                <p className='order-details-square__text2'>$ 00.00</p>
+                <p className='order-details-square__text2'>$ 00.00</p>
 
             </div>
             <div className='order-details-square__camp2'>
