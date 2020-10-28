@@ -9,15 +9,18 @@ const DescriptionBig = ({shoppingCart, sume}) => {
     let productamount = shoppingCart.length
 
     return (
-        <div className='description-main'>
-          <h2 className='description-main__h2'>
-              Shopping Cart
+      <div className="description-main">
+        {productamount + sume > 1 ? (
+          <h2 className="description-main__h2">
+            {productamount + sume} Products
           </h2>
-          <p className='description-main__p'>
-              You have {productamount + sume} items in your cart
-          </p>
-        </div>
-    )
+        ) : (
+          <h2 className="description-main__h2">
+            {productamount + sume} Product
+          </h2>
+        )}
+      </div>
+    );
 };
 
 DescriptionBig.propTypes = {

@@ -12,20 +12,11 @@
     justify-content: space-evenly;
 
     &__h2 {
-      font-size: 1.770vw;
+      font-size: 1.77vw;
       font-family: $ubuntu;
       font-weight: 600;
       margin: 0;
-      color: #565656;
-
-    }
-
-    &__p {
-      font-size: 1.458vw;
-      font-family: $ubuntu;
-      font-weight: 400;
-      margin: 0;
-      color: #565656;
+      color: $brand-color;
     }
   }
 }
