@@ -2,13 +2,13 @@
 
 @media only screen and (min-width: 500px) and (max-width: 1000px) {
   .order {
-    width: 100%;
+    width: 97%;
     height: 26.104%;
-    margin: 4.358% 0;
+    margin: 4.7358% 0;
     background: white;
+    box-shadow: .5vw .5vw .5vw #5656563a;
     border-radius: 2.604vw;
     box-sizing: border-box;
-    border: 0.28vw solid $brand-color;
     position: relative;
 
     &__button-container {
@@ -24,6 +24,19 @@
 
     &__button {
       width: 26%;
+      height: 100%;
+      box-sizing: border-box;
+      background: $brand-color;
+      border: 0.28vw solid $brand-color;
+      border-radius: 2.604vw;
+      z-index: 60;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__button--preparing {
+      width: 24%;
       height: 100%;
       box-sizing: border-box;
       background: white;
@@ -46,6 +59,14 @@
     &__text {
       margin: 0;
       font-size: 2.2vw;
+      color: white;
+      font-family: $ubuntu;
+      font-weight: 500;
+    }
+
+    &__text--preparing {
+      margin: 0;
+      font-size: 2.2vw;
       color: $brand-color;
       font-family: $ubuntu;
       font-weight: 500;
@@ -54,7 +75,7 @@
     &__orderp {
       margin: 0;
       font-size: 2.2vw;
-      color: $brand-color;
+      color: #565656;
       font-family: $ubuntu;
       font-weight: 600;
       position: absolute;
@@ -65,7 +86,7 @@
     &__orderID {
       margin: 0;
       font-size: 2.2vw;
-      color: $brand-color;
+      color: #565656;
       font-family: $ubuntu;
       font-weight: 400;
       position: absolute;
@@ -76,7 +97,7 @@
     &__product-amount {
       margin: 0;
       font-size: 2.2vw;
-      color: $brand-color;
+      color: #565656;
       font-family: $ubuntu;
       font-weight: 500;
       position: absolute;

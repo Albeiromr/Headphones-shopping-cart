@@ -19,9 +19,9 @@ const Order = () => {
 
                 <div className='order__line'></div>
                 
-                <div className='order__button'>
+                <div className='order__button--preparing'>
 
-                    <p className='order__text'>
+                    <p className='order__text--preparing' >
                         Preparing
                     </p>
 
