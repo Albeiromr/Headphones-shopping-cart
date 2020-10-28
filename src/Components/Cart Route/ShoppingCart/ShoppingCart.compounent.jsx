@@ -15,7 +15,7 @@ import ContinueSquareBig from '../ContinueSquareBig/SniperSquareBig.compounent';
 
 
 
-const ShoppingCart = ({shoppingCart, changeShoppingCart }) => {
+const ShoppingCart = ({shoppingCart, changeShoppingCart, setOrders }) => {
 
 
     // this state is used to sume items in the desciption component
@@ -96,6 +96,7 @@ const ShoppingCart = ({shoppingCart, changeShoppingCart }) => {
           setShow={setShow}
           compounent={compounent}
           setCompounent={setCompounent}
+          setOrders={setOrders}
         />
         <Cart
           shoppingCart={shoppingCart}
@@ -116,6 +117,7 @@ const ShoppingCart = ({shoppingCart, changeShoppingCart }) => {
             setWrite={setWrite}
             write={write}
             setCompounent={setCompounent}
+            setOrders={setOrders}
           />
         ) : compounent === 2 ? (
           <SniperSquareBig />
@@ -136,6 +138,7 @@ const ShoppingCart = ({shoppingCart, changeShoppingCart }) => {
 ShoppingCart.propTypes = {
     shoppingCart: Proptypes.array.isRequired,
     changeShoppingCart: Proptypes.func.isRequired,
+    setOrders: Proptypes.func.isRequired,
   };
 
 export default ShoppingCart;

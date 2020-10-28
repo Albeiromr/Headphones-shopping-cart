@@ -7,7 +7,7 @@ import './0-500px.style.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faCcVisa, faCcMastercard, faCcDiscover, faCcAmex } from '@fortawesome/free-brands-svg-icons';
 
-const FormSquareBig = ({total, taxes, shipping, purchase, write, setWrite, setCompounent}) => {
+const FormSquareBig = ({total, taxes, shipping, purchase, write, setWrite, setCompounent, setOrders}) => {
 
     const handleClick = () => {
       setWrite(true)
@@ -187,6 +187,7 @@ FormSquareBig.propTypes = {
   write: Proptypes.bool.isRequired,
   setWrite: Proptypes.func.isRequired,
   setCompounent: Proptypes.func.isRequired,
+  setOrders: Proptypes.func.isRequired,
   };
 
 export default FormSquareBig;

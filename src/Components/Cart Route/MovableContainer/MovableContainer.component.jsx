@@ -27,6 +27,7 @@ const MovableContainer = ({
   setShow,
   compounent,
   setCompounent,
+  setOrders
 }) => {
   // this state is for moving this container side to side
   const [translate, changeTranslate] = useState("0vw");
@@ -100,6 +101,7 @@ const MovableContainer = ({
           changeTranslate={changeTranslate}
           setShow={setShow}
           shoppingCart={shoppingCart}
+          setOrders={setOrders}
         />
       ) : compounent === 2 ? (
         <SniperSquare />
@@ -131,6 +133,7 @@ MovableContainer.propTypes = {
   compounent: Proptypes.number.isRequired,
   setCompounent: Proptypes.func.isRequired,
   show: Proptypes.bool.isRequired,
+  setOrders: Proptypes.func.isRequired,
 };
 
 export default MovableContainer;

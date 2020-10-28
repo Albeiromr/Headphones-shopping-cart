@@ -1,4 +1,5 @@
 import React,{useState, useEffect} from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import {BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShoppingCart, faSearch, faShoppingBag} from '@fortawesome/free-solid-svg-icons'
@@ -28,6 +29,18 @@ function App() {
       changePoint(true);
     }
   }, [shoppingCart]);
+
+  // this state is for save the orders
+  const [orders, setOrders] = useState([
+    {
+      id: `OR${uuidv4().substr(1,7)}`,
+      productAmount: 5,
+      products: 879.99,
+      taxes: 61.59,
+      shipping: 13.19,
+      total: 954.77,
+    }
+  ])
   
   
   return (
@@ -79,6 +92,7 @@ function App() {
           <ShoppingCart  
           shoppingCart={shoppingCart} 
           changeShoppingCart={changeShoppingCart}
+          setOrders={setOrders}
           />
           <GrayColumn />
         </Route>
