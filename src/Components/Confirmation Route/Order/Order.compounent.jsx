@@ -9,6 +9,12 @@ const Order = () => {
     return (
         <article className='order'>
 
+            <p className='order__orderp'>Order ID:</p>
+
+            <p className='order__orderID'>A000000</p>
+
+            <p className='order__product-amount'>10 Products</p>
+
             <div className='order__button-container'>
 
                 <div className='order__line'></div>
