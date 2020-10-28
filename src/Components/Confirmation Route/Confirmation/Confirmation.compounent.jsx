@@ -5,6 +5,7 @@ import './500-1000px.style.scss';
 import './0-500px.style.scss';
 import Steps from '../Steps/Steps.compounent';
 import OrderDetailsSquare from '../OrderDetailsSquare/OrderDetailsSquare.compounent';
+import OrderContainer from '../OrderContainer/OrderContainer.compounent';
 
 
 const Confirmation = () => {
@@ -18,6 +19,9 @@ const Confirmation = () => {
           />
 
           <OrderDetailsSquare 
+          />
+
+          <OrderContainer 
           />
           
         </section>

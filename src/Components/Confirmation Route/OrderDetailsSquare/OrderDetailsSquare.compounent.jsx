@@ -38,6 +38,8 @@ const OrderDetailsSquare = () => {
             className="order-details-square__arrow-right"
             />
 
+            <p className='order-details-square__order-details'>Order Details</p>
+
             <div className='order-details-square__camp1'>
 
                 <p className='order-details-square__text1'>Order ID</p>

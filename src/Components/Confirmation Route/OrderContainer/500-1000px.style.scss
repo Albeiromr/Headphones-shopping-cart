@@ -1,0 +1,19 @@
+@import "../../../Assets/Sass/variables";
+
+@media only screen and (min-width: 500px) and (max-width: 1000px) {
+  .order-container {
+    width: 80.859vw;
+    height: 64.843vw;
+    position: absolute;
+    top: 18.652%;
+    left: 9.505%;
+    z-index: 50;
+
+    overflow-y: scroll;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      width: 0px;
+    }
+  }
+}

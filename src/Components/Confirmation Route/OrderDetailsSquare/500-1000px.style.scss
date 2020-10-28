@@ -11,6 +11,10 @@
     border-radius: 0 2.604vw 0 0;
     z-index: 40;
 
+    &__order-details {
+      display: none;
+    }
+
     &__line1 {
       width: .4%;
       height: 79.326%;

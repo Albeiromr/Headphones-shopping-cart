@@ -13,6 +13,17 @@
     background: $brand-color;
     z-index: 40;
 
+    &__order-details {
+      margin: 0;
+      font-size: 1.6vw;
+      color: white;
+      font-family: $ubuntu;
+      font-weight: 500;
+      position: absolute;
+      top: 12.685%;
+      left: 17.199%;
+    }
+
     &__line1 {
       width: 24.375vw;
       height: .15vw;
