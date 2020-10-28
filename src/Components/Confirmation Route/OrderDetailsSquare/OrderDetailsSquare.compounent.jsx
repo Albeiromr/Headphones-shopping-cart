@@ -60,9 +60,21 @@ const OrderDetailsSquare = () => {
             </div>
             <div className='order-details-square__camp2'>
 
+                <p className='order-details-square__text3'>Name</p>
+                <p className='order-details-square__text3'>Phone</p>
+                <p className='order-details-square__text3'>Shipping address</p>
+                <p className='order-details-square__text3'>City, State</p>
+                <p className='order-details-square__text3'>Zip code</p>
+                <p className='order-details-square__text3'>Purchase date</p>
+
             </div>
             <div className='order-details-square__data2'>
-
+                <p className='order-details-square__text4'>Mike Daniels</p>
+                <p className='order-details-square__text4'>856 985 78945</p>
+                <p className='order-details-square__text4'>4329 McDowell St</p>
+                <p className='order-details-square__text4'>Columbia, TN</p>
+                <p className='order-details-square__text4'>38401</p>
+                <p className='order-details-square__text4'>12/12/2020</p>
             </div>
             
 
