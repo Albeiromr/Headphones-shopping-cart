@@ -6,16 +6,21 @@ import './0-500px.style.scss';
 import Steps from '../Steps/Steps.compounent';
 import OrderDetailsSquare from '../OrderDetailsSquare/OrderDetailsSquare.compounent';
 import OrderContainer from '../OrderContainer/OrderContainer.compounent';
+import ContiniuShopping from '../ContinueShopping/ContinueShopping.compounent';
 
 
 const Confirmation = () => {
 
-    
+    // this variables is used for not showing some compounents in this route
+    const conditionalRendering = true
 
     return (
         <section className='confirmation'>
+
+          <ContiniuShopping />
           
-          <Steps 
+          <Steps
+          conditionalRendering={conditionalRendering}
           />
 
           <OrderDetailsSquare 

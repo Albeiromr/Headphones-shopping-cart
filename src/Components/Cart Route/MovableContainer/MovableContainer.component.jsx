@@ -42,7 +42,9 @@ const MovableContainer = ({
 
   return (
     <div className="movable-container" style={{ "--translate": translate }}>
-      <Description shoppingCart={shoppingCart} sume={sume} />
+
+      {shoppingCart.length > 0 ? <Description shoppingCart={shoppingCart} sume={sume} /> : null}
+
       {shoppingCart.length > 0 ? (
         <Summary
           total={total}

@@ -77,7 +77,9 @@ const ShoppingCart = ({shoppingCart, changeShoppingCart }) => {
         {show ? <Scroll /> : null}
 
         <Steps />
-        <DescriptionBig shoppingCart={shoppingCart} sume={sume} />
+        
+        {shoppingCart.length > 0 ? <DescriptionBig shoppingCart={shoppingCart} sume={sume} /> : null}
+        
 
         <MovableContainer
           shoppingCart={shoppingCart}

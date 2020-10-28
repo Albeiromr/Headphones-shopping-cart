@@ -17,7 +17,7 @@
     }
 
     &__cont {
-      width: 17.343vw;
+      width: 13.343vw;
       height: 2.291vw;
       position: absolute;
       right: 0;
@@ -27,24 +27,19 @@
     }
 
     &__advance1 {
-      width: 28%;
+      width: 45%;
       height: 16%;
       background: $brand-color;
       border-radius: 2vw;
     }
 
     &__advance2 {
-      width: 28%;
+      width: 45%;
       height: 16%;
       background: $brand-color;
       border-radius: 2vw;
     }
 
-    &__advance3 {
-      width: 28%;
-      height: 16%;
-      background: $brand-color;
-      border-radius: 2vw;
-    }
+    
   }
 }
