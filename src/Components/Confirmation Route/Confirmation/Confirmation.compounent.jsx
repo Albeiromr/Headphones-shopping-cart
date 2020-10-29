@@ -26,6 +26,7 @@ const Confirmation = ({orders}) => {
           />
 
           <OrderDetailsSquare 
+          filteredOrder={filteredOrder}
           />
 
           <OrderContainer 

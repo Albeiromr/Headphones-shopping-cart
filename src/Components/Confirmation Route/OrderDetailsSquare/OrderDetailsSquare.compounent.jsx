@@ -6,7 +6,9 @@ import "./1000-1920px.style.scss";
 import "./500-1000px.style.scss";
 import "./0-500px.style.scss";
 
-const OrderDetailsSquare = () => {
+const OrderDetailsSquare = ({filteredOrder}) => {
+
+    const {id, productAmount, products, taxes, shipping, total} = filteredOrder;
 
     // this state is for moving the whole order-details-square in smartphones displays
     const [move, setMove] = useState('0%')
@@ -52,12 +54,12 @@ const OrderDetailsSquare = () => {
             </div>
             <div className='order-details-square__data1'>
 
-                <p className='order-details-square__text2'>A000000</p>
-                <p className='order-details-square__text2'>1</p>
-                <p className='order-details-square__text2'>$ 00.00</p>
-                <p className='order-details-square__text2'>$ 00.00</p>
-                <p className='order-details-square__text2'>$ 00.00</p>
-                <p className='order-details-square__text2'>$ 00.00</p>
+                <p className='order-details-square__text2'>{id}</p>
+                <p className='order-details-square__text2'>{productAmount}</p>
+                <p className='order-details-square__text2'>$ {products}</p>
+                <p className='order-details-square__text2'>$ {taxes}</p>
+                <p className='order-details-square__text2'>$ {shipping}</p>
+                <p className='order-details-square__text2'>$ {total}</p>
 
             </div>
             <div className='order-details-square__camp2'>
@@ -88,7 +90,7 @@ const OrderDetailsSquare = () => {
 // component documentation
 
 OrderDetailsSquare.propTypes = {
-    
+    filteredOrder: Proptypes.object.isRequired,
 };
 
 export default OrderDetailsSquare
