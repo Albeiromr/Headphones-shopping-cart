@@ -31,16 +31,8 @@ function App() {
   }, [shoppingCart]);
 
   // this state is for save the orders
-  const [orders, setOrders] = useState([
-    {
-      id: `OR${uuidv4().substr(1,7)}`,
-      productAmount: 5,
-      products: 879.99,
-      taxes: 61.59,
-      shipping: 13.19,
-      total: 954.77,
-    }
-  ])
+  const [orders, setOrders] = useState([])
+
   
   
   return (
@@ -93,6 +85,7 @@ function App() {
           shoppingCart={shoppingCart} 
           changeShoppingCart={changeShoppingCart}
           setOrders={setOrders}
+          orders={orders}
           />
           <GrayColumn />
         </Route>

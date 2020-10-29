@@ -1,4 +1,5 @@
 import React from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import Proptypes from "prop-types";
 import './1000-1920px.style.scss';
 import './500-1000px.style.scss';
@@ -7,18 +8,35 @@ import './0-500px.style.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faCcVisa, faCcMastercard, faCcDiscover, faCcAmex } from '@fortawesome/free-brands-svg-icons';
 
-const FormSquareBig = ({total, taxes, shipping, purchase, write, setWrite, setCompounent, setOrders}) => {
+const FormSquareBig = ({total, taxes, shipping, purchase, write, setWrite, setCompounent, setOrders, orders, shoppingCart, sume, changeShoppingCart}) => {
 
     const handleClick = () => {
       setWrite(true)
     }
 
     const handleClick2 = () => {
-      setCompounent(2)
+      setCompounent(2);
       setTimeout(() => {
-        setCompounent(3)
-      }, 3000)
-    }
+        setCompounent(3);
+      }, 3000);
+      //////////////////////////
+      let newOrder = {
+        id: `OR${uuidv4().substr(1, 7)}`,
+        productAmount: shoppingCart.length + sume,
+        products: total,
+        taxes: taxes,
+        shipping: shipping,
+        total: purchase,
+      };
+
+      setOrders([...orders, newOrder]);
+
+      /////////////////////////
+      setTimeout(() => {
+        changeShoppingCart([]);
+      }, 3500);
+    };
+    
 
     
 
@@ -188,6 +206,10 @@ FormSquareBig.propTypes = {
   setWrite: Proptypes.func.isRequired,
   setCompounent: Proptypes.func.isRequired,
   setOrders: Proptypes.func.isRequired,
+  shoppingCart: Proptypes.array.isRequired,
+  sume: Proptypes.number.isRequired,
+  orders: Proptypes.array.isRequired,
+  changeShoppingCart: Proptypes.func.isRequired,
   };
 
 export default FormSquareBig;
