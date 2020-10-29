@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Proptypes from "prop-types";
 import './1000-1920px.style.scss';
 import './500-1000px.style.scss';
@@ -9,10 +9,12 @@ import OrderContainer from '../OrderContainer/OrderContainer.compounent';
 import ContiniuShopping from '../ContinueShopping/ContinueShopping.compounent';
 
 
-const Confirmation = () => {
+const Confirmation = ({orders}) => {
 
     // this variables is used for not showing some compounents in this route
     const conditionalRendering = true
+    //this state is for filtering the order that you select when clickin on it
+    const [filteredOrder, setFilteredProduct] = useState({});
 
     return (
         <section className='confirmation'>
@@ -27,6 +29,9 @@ const Confirmation = () => {
           />
 
           <OrderContainer 
+          orders={orders}
+          filteredOrder={filteredOrder}
+          setFilteredProduct={setFilteredProduct}
           />
           
         </section>
@@ -36,7 +41,7 @@ const Confirmation = () => {
 // component documentation
 
 Confirmation.propTypes = {
-    
+    orders: Proptypes.array.isRequired,
   };
 
 export default Confirmation;

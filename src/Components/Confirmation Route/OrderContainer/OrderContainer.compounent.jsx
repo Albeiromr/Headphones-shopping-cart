@@ -5,15 +5,20 @@ import "./500-1000px.style.scss";
 import "./0-500px.style.scss";
 import Order from '../Order/Order.compounent';
 
-const OrderContainer = () => {
+const OrderContainer = ({orders, filteredOrder, setFilteredProduct}) => {
+
+    
 
     return (
         <div className='order-container'>
 
-            <Order />
-            <Order />
-            <Order />
-            <Order />
+            {orders.map(order => (<Order
+                key={order.id} 
+                order={order}
+                orders={orders}
+                filteredOrder={filteredOrder}
+                setFilteredProduct={setFilteredProduct}
+            />))}
 
         </div>
     )
@@ -22,7 +27,9 @@ const OrderContainer = () => {
 // component documentation
 
 OrderContainer.propTypes = {
-
+    orders: Proptypes.array.isRequired,
+    filteredOrder: Proptypes.object.isRequired,
+    setFilteredProduct: Proptypes.func.isRequired
 };
 
 export default OrderContainer;

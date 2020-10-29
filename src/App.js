@@ -92,6 +92,7 @@ function App() {
 
         <Route exact path='/confirmation'>
           <Confirmation
+          orders={orders}
           />
           <GrayColumn />
         </Route>

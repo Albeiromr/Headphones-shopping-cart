@@ -1,19 +1,28 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Proptypes from "prop-types";
 import "./1000-1920px.style.scss";
 import "./500-1000px.style.scss";
 import "./0-500px.style.scss";
 
-const Order = () => {
+const Order = ({order, orders, filteredOrder, setFilteredProduct}) => {
+
+    
+
+    const handleClick = (id) => {
+       let selectedOrder = orders.filter(order => order.id === id)[0]
+       setFilteredProduct(selectedOrder)
+    }
+
+    const {id, productAmount, products, taxes, shipping, total} = order;
 
     return (
-        <article className='order'>
+        <article onClick={() => handleClick(id)} className='order'>
 
             <p className='order__orderp'>Order ID:</p>
 
-            <p className='order__orderID'>A000000</p>
+            <p className='order__orderID'>{id}</p>
 
-            <p className='order__product-amount'>10 Products</p>
+            <p className='order__product-amount'>{productAmount} Products</p>
 
             <div className='order__button-container'>
 
@@ -50,7 +59,10 @@ const Order = () => {
 // component documentation
 
 Order.propTypes = {
-
+    order: Proptypes.object.isRequired,
+    orders: Proptypes.array.isRequired,
+    filteredOrder: Proptypes.object.isRequired,
+    setFilteredProduct: Proptypes.func.isRequired,
 };
 
 export default Order;
