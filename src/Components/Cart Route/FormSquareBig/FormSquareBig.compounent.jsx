@@ -34,7 +34,7 @@ const FormSquareBig = ({total, taxes, shipping, purchase, write, setWrite, setCo
       /////////////////////////
       setTimeout(() => {
         changeShoppingCart([]);
-      }, 3500);
+      }, 1500);
     };
     
 

@@ -44,7 +44,7 @@ const FormSquare = ({changeTranslate, total, taxes, shipping, purchase, setWrite
     /////////////////////////
     setTimeout(() => {
       changeShoppingCart([])
-    },3500)
+    },1500)
   }
 
   

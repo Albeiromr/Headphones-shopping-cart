@@ -18,33 +18,33 @@ const Order = ({order, orders, filteredOrder, setFilteredProduct}) => {
     return (
         <article onClick={() => handleClick(id)} className={id === filteredOrder.id ? 'order--mod' : 'order'}>
 
-            <p className='order__orderp'>Order ID:</p>
+            <p className={id === filteredOrder.id ? 'order--mod__orderp' : 'order__orderp'}>Order ID:</p>
 
-            <p className='order__orderID'>{id}</p>
+            <p className={id === filteredOrder.id ? 'order--mod__orderID' : 'order__orderID'} >{id}</p>
 
-            <p className='order__product-amount'>{productAmount} Products</p>
+            <p className={id === filteredOrder.id ? 'order--mod__product-amount' : 'order__product-amount'}>{productAmount} Products</p>
 
-            <div className='order__button-container'>
+            <div className={id === filteredOrder.id ? 'order--mod__button-container' : 'order__button-container'}>
 
-                <div className='order__line'></div>
+                <div className={id === filteredOrder.id ? 'order--mod__line' : 'order__line'}></div>
                 
-                <div className='order__button--preparing'>
+                <div className={id === filteredOrder.id ? 'order--mod__button--preparing' : 'order__button--preparing'}>
 
-                    <p className='order__text--preparing' >
+                    <p className={id === filteredOrder.id ? 'order--mod__text--preparing' : 'order__text--preparing'} >
                         Preparing
                     </p>
 
                 </div>
-                <div className='order__button'>
+                <div className={id === filteredOrder.id ? 'order--mod__button' : 'order__button'}>
 
-                    <p className='order__text'>
+                    <p className={id === filteredOrder.id ? 'order--mod__text' : 'order__text'}>
                         On The Way
                     </p>
 
                 </div>
-                <div className='order__button'>
+                <div className={id === filteredOrder.id ? 'order--mod__button' : 'order__button'}>
                     
-                    <p className='order__text'>
+                    <p className={id === filteredOrder.id ? 'order--mod__text' : 'order__text'}>
                         Delivered
                     </p>
 

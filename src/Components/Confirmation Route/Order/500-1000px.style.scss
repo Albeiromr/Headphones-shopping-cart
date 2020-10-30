@@ -26,7 +26,7 @@
       width: 26%;
       height: 100%;
       box-sizing: border-box;
-      background: $brand-color;
+      background: white;
       border: 0.28vw solid $brand-color;
       border-radius: 2.604vw;
       z-index: 60;
@@ -39,7 +39,7 @@
       width: 24%;
       height: 100%;
       box-sizing: border-box;
-      background: white;
+      background: $brand-color;
       border: 0.28vw solid $brand-color;
       border-radius: 2.604vw;
       z-index: 60;
@@ -59,7 +59,7 @@
     &__text {
       margin: 0;
       font-size: 2.2vw;
-      color: white;
+      color: $brand-color;
       font-family: $ubuntu;
       font-weight: 500;
     }
@@ -67,7 +67,7 @@
     &__text--preparing {
       margin: 0;
       font-size: 2.2vw;
-      color: $brand-color;
+      color: white;
       font-family: $ubuntu;
       font-weight: 500;
     }
@@ -98,6 +98,111 @@
       margin: 0;
       font-size: 2.2vw;
       color: #565656;
+      font-family: $ubuntu;
+      font-weight: 500;
+      position: absolute;
+      right: 4.677%;
+      top: 15%;
+    }
+  }
+
+  .order--mod {
+    width: 97%;
+    height: 26.104%;
+    margin: 4.7358% 0;
+    background: $brand-color;
+    box-shadow: .5vw .5vw .5vw #5656563a;
+    border-radius: 2.604vw;
+    box-sizing: border-box;
+    position: relative;
+
+    &__button-container {
+      width: 90.644%;
+      height: 44.363%;
+      position: absolute;
+      top: 47.263%;
+      left: 4.677%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__button {
+      width: 26%;
+      height: 100%;
+      box-sizing: border-box;
+      background: $brand-color;
+      border: 0.28vw solid white;
+      border-radius: 2.604vw;
+      z-index: 60;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__button--preparing {
+      width: 24%;
+      height: 100%;
+      box-sizing: border-box;
+      background: white;
+      border: 0.28vw solid white;
+      border-radius: 2.604vw;
+      z-index: 60;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__line {
+      width: 90.644%;
+      height: 4%;
+      background: white;
+      position: absolute;
+      left: 4.677%;
+    }
+
+    &__text {
+      margin: 0;
+      font-size: 2.2vw;
+      color: white;
+      font-family: $ubuntu;
+      font-weight: 500;
+    }
+
+    &__text--preparing {
+      margin: 0;
+      font-size: 2.2vw;
+      color: $brand-color;
+      font-family: $ubuntu;
+      font-weight: 600;
+    }
+
+    &__orderp {
+      margin: 0;
+      font-size: 2.2vw;
+      color: white;
+      font-family: $ubuntu;
+      font-weight: 600;
+      position: absolute;
+      left: 4.677%;
+      top: 15%;
+    }
+
+    &__orderID {
+      margin: 0;
+      font-size: 2.2vw;
+      color: white;
+      font-family: $ubuntu;
+      font-weight: 400;
+      position: absolute;
+      left: 20.677%;
+      top: 15%;
+    }
+
+    &__product-amount {
+      margin: 0;
+      font-size: 2.2vw;
+      color: white;
       font-family: $ubuntu;
       font-weight: 500;
       position: absolute;
