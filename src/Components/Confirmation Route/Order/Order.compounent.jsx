@@ -6,17 +6,17 @@ import "./0-500px.style.scss";
 
 const Order = ({order, orders, filteredOrder, setFilteredProduct}) => {
 
-    
+    const {id, productAmount} = order;
 
     const handleClick = (id) => {
        let selectedOrder = orders.filter(order => order.id === id)[0]
-       setFilteredProduct(selectedOrder)
+       setFilteredProduct(selectedOrder) 
     }
 
-    const {id, productAmount, products, taxes, shipping, total} = order;
+    
 
     return (
-        <article onClick={() => handleClick(id)} className='order'>
+        <article onClick={() => handleClick(id)} className={id === filteredOrder.id ? 'order--mod' : 'order'}>
 
             <p className='order__orderp'>Order ID:</p>
 
