@@ -97,7 +97,7 @@ const CartProduct = ({cartProduct, shoppingCart, changeShoppingCart, sume, setSu
 
         </article>
 
-        <img className="cart-product__image" src={image} alt="product image" />
+        <img className="cart-product__image" src={image} alt="product" />
       </div>
     );
 };

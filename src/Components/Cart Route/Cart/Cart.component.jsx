@@ -1,11 +1,9 @@
 import React from 'react';
 import Proptypes from "prop-types";
-import {Link } from 'react-router-dom';
 import './1000-1920px.style.scss';
 import './500-1000px.style.scss';
 import './0-500px.style.scss';
 import CartProduct from '../CartProduct/CartProduct.compounent';
-import NoOrder from '../../Confirmation Route/NoOrders/NoOrders.compounent';
 
 const Cart = ({shoppingCart, changeShoppingCart, sume, setSume, setTotal,total,setShow}) => {
 
@@ -13,7 +11,6 @@ const Cart = ({shoppingCart, changeShoppingCart, sume, setSume, setTotal,total,s
         setShow(false)
       }
 
-      let conditional = true
 
     return (
         <div onScroll={handleScroll} className='cart'>
