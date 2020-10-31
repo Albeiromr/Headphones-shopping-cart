@@ -3,7 +3,6 @@ import Proptypes from "prop-types";
 import "./1000-1920px.style.scss";
 import "./500-1000px.style.scss";
 import "./0-500px.style.scss";
-import { Link } from "react-router-dom";
 import FormSquare from "../FormSquare/FormSquare.compounent";
 import CartProduct from "../CartProduct/CartProduct.compounent";
 import Description from "../Description/Description.compounent";
@@ -11,7 +10,7 @@ import Summary from "../Summary/Summary.component";
 import CcDEtails from "../CcDetails/CcDetails.component";
 import SniperSquare from "../SniperSquare/SniperSquare.compounent";
 import ContinueSquare from '../ContinueSquare/SniperSquare.compounent';
-import NoOrder from '../../Confirmation Route/NoOrders/NoOrders.compounent';
+
 
 const MovableContainer = ({
   shoppingCart,
@@ -42,8 +41,7 @@ const MovableContainer = ({
   const handleScroll = () => {
     setShow(false);
   };
-  // this variabe is for conditional rendering
-  let conditional = true
+  
 
   return (
     <div className="movable-container" style={{ "--translate": translate }}>
@@ -74,9 +72,7 @@ const MovableContainer = ({
             />
           ))
         ) : 
-        <NoOrder 
-        conditional={conditional}
-        />}
+        null }
       </div>
 
       <CcDEtails />

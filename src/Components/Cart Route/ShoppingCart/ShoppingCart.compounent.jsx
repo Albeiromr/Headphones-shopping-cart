@@ -12,6 +12,7 @@ import DescriptionBig from '../DescriptionBig/DescriptionBig.component';
 import Scroll from '../Scroll/Scroll.component';
 import SniperSquareBig from '../SniperSquareBig/SniperSquareBig.compounent';
 import ContinueSquareBig from '../ContinueSquareBig/SniperSquareBig.compounent';
+import NoOrder from '../../Confirmation Route/NoOrders/NoOrders.compounent';
 
 
 
@@ -68,6 +69,9 @@ const ShoppingCart = ({shoppingCart, changeShoppingCart, setOrders, orders }) =>
 
     // this state is for conditionately show the elements in the formsquare compounent
     const [compounent, setCompounent] = useState(1)
+
+    // this variabe is for conditional rendering
+    let conditional = true
     
 
     return (
@@ -79,6 +83,16 @@ const ShoppingCart = ({shoppingCart, changeShoppingCart, setOrders, orders }) =>
         <Steps />
         
         {shoppingCart.length > 0 ? <DescriptionBig shoppingCart={shoppingCart} sume={sume} /> : null}
+
+        
+
+        {shoppingCart.length >= 1 ? 
+        null
+        : 
+        <NoOrder 
+        conditional={conditional}
+        />}
+      
         
 
         <MovableContainer

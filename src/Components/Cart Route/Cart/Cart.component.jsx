@@ -5,12 +5,15 @@ import './1000-1920px.style.scss';
 import './500-1000px.style.scss';
 import './0-500px.style.scss';
 import CartProduct from '../CartProduct/CartProduct.compounent';
+import NoOrder from '../../Confirmation Route/NoOrders/NoOrders.compounent';
 
 const Cart = ({shoppingCart, changeShoppingCart, sume, setSume, setTotal,total,setShow}) => {
 
     const handleScroll = () => {
         setShow(false)
       }
+
+      let conditional = true
 
     return (
         <div onScroll={handleScroll} className='cart'>
@@ -28,19 +31,7 @@ const Cart = ({shoppingCart, changeShoppingCart, sume, setSume, setTotal,total,s
             total={total}
             />)) :
 
-            <div>
-
-            <p className='cart__empty'>
-                Your cart is empty
-                
-            </p>
-            <Link to='./'>
-                <button className='cart__button'>
-                Add products
-                </button>
-            </Link>
-
-            </div>
+            null
             } 
             
 
