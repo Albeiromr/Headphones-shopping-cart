@@ -7,6 +7,7 @@ import Steps from '../Steps/Steps.compounent';
 import OrderDetailsSquare from '../OrderDetailsSquare/OrderDetailsSquare.compounent';
 import OrderContainer from '../OrderContainer/OrderContainer.compounent';
 import ContiniuShopping from '../ContinueShopping/ContinueShopping.compounent';
+import NoOrder from '../NoOrders/NoOrders.compounent';
 
 
 const Confirmation = ({orders}) => {
@@ -25,9 +26,15 @@ const Confirmation = ({orders}) => {
           conditionalRendering={conditionalRendering}
           />
 
+        {orders.length > 0 ?
           <OrderDetailsSquare 
           filteredOrder={filteredOrder}
+          /> 
+          :
+          <NoOrder 
           />
+        }
+          
 
           <OrderContainer 
           orders={orders}

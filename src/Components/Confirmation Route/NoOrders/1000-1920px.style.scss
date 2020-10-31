@@ -1,0 +1,47 @@
+@import "../../../Assets/Sass/variables";
+
+@media only screen and (min-width: 1000px) {
+  .no-order {
+    width: 20.197vw;
+    height: 11.135vw;
+    position: absolute;
+    top: 30.648%;
+    left: 27.812%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+    text-align: center;
+    z-index: 50;
+
+    &__button {
+      cursor: pointer;
+      width: 100%;
+      height: 3.3vw;
+      background: $brand-color;
+      outline: none;
+      border: none;
+      border-radius: 1vw;
+      color: white;
+      font-family: $ubuntu;
+      font-weight: 600;
+      font-size: 1.37vw;
+
+      &:hover {
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -o-transform: scale(1.1);
+        transform: scale(1.1);
+        transition: all 0.2s ease-in;
+      }
+    }
+
+    &__text {
+      font-weight: 400;
+      font-family: $ubuntu;
+      color: $brand-color;
+      font-size: 1.6vw;
+      
+    }
+  }
+}
