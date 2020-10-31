@@ -11,6 +11,7 @@ import Summary from "../Summary/Summary.component";
 import CcDEtails from "../CcDetails/CcDetails.component";
 import SniperSquare from "../SniperSquare/SniperSquare.compounent";
 import ContinueSquare from '../ContinueSquare/SniperSquare.compounent';
+import NoOrder from '../../Confirmation Route/NoOrders/NoOrders.compounent';
 
 const MovableContainer = ({
   shoppingCart,
@@ -41,6 +42,8 @@ const MovableContainer = ({
   const handleScroll = () => {
     setShow(false);
   };
+  // this variabe is for conditional rendering
+  let conditional = true
 
   return (
     <div className="movable-container" style={{ "--translate": translate }}>
@@ -70,16 +73,10 @@ const MovableContainer = ({
               total={total}
             />
           ))
-        ) : (
-          <div>
-            <p className="movable-container__empty">Your cart is empty</p>
-            <Link to="./">
-              <button className="movable-container__button">
-                Add products
-              </button>
-            </Link>
-          </div>
-        )}
+        ) : 
+        <NoOrder 
+        conditional={conditional}
+        />}
       </div>
 
       <CcDEtails />
