@@ -8,7 +8,7 @@ import "./0-500px.style.scss";
 
 const OrderDetailsSquare = ({filteredOrder}) => {
 
-    const {id, productAmount, products, taxes, shipping, total} = filteredOrder;
+    const {id, productAmount, products, taxes, shipping, total, date} = filteredOrder;
 
     // this state is for moving the whole order-details-square in smartphones displays
     const [move, setMove] = useState('0%')
@@ -78,7 +78,7 @@ const OrderDetailsSquare = ({filteredOrder}) => {
                 <p className='order-details-square__text4'>4329 McDowell St</p>
                 <p className='order-details-square__text4'>Columbia, TN</p>
                 <p className='order-details-square__text4'>38401</p>
-                <p className='order-details-square__text4'>12/12/2020</p>
+                <p className='order-details-square__text4'>{date}</p>
             </div>
             
 

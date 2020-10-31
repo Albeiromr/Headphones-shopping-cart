@@ -27,6 +27,7 @@ const FormSquareBig = ({total, taxes, shipping, purchase, write, setWrite, setCo
         taxes: taxes,
         shipping: shipping,
         total: purchase,
+        date:  new Date().toISOString().slice(0, 10)
       };
 
       setOrders([...orders, newOrder]);

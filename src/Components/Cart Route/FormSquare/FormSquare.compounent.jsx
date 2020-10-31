@@ -37,6 +37,7 @@ const FormSquare = ({changeTranslate, total, taxes, shipping, purchase, setWrite
       taxes: taxes,
       shipping: shipping,
       total: purchase,
+      date:  new Date().toISOString().slice(0, 10)
   }
     
     setOrders([...orders, newOrder])

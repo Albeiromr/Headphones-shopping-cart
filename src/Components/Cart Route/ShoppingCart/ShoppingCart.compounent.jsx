@@ -76,6 +76,10 @@ const ShoppingCart = ({shoppingCart, changeShoppingCart, setOrders, orders }) =>
     // this state is for moving this container side to side
   const [translate, changeTranslate] = useState("0vw");
 
+ 
+
+  
+
 
     return (
       <section className="shopping-cart">
