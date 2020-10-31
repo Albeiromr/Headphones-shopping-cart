@@ -73,6 +73,9 @@ const ShoppingCart = ({shoppingCart, changeShoppingCart, setOrders, orders }) =>
     // this variabe is for conditional rendering
     let conditional = true
     
+    // this state is for moving this container side to side
+  const [translate, changeTranslate] = useState("0vw");
+
 
     return (
       <section className="shopping-cart">
@@ -86,7 +89,7 @@ const ShoppingCart = ({shoppingCart, changeShoppingCart, setOrders, orders }) =>
 
         
 
-        {shoppingCart.length >= 1 ? 
+        {shoppingCart.length >= 1 || translate === '-100vw' ? 
         null
         : 
         <NoOrder 
@@ -112,6 +115,8 @@ const ShoppingCart = ({shoppingCart, changeShoppingCart, setOrders, orders }) =>
           setCompounent={setCompounent}
           setOrders={setOrders}
           orders={orders}
+          translate={translate}
+          changeTranslate={changeTranslate}
         />
         <Cart
           shoppingCart={shoppingCart}

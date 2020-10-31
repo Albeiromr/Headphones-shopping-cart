@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Proptypes from "prop-types";
 import "./1000-1920px.style.scss";
 import "./500-1000px.style.scss";
@@ -28,10 +28,11 @@ const MovableContainer = ({
   compounent,
   setCompounent,
   setOrders,
-  orders
+  orders,
+  translate,
+  changeTranslate
+
 }) => {
-  // this state is for moving this container side to side
-  const [translate, changeTranslate] = useState("0vw");
 
   const handleClick = () => {
     changeTranslate("-100vw");
@@ -132,6 +133,8 @@ MovableContainer.propTypes = {
   show: Proptypes.bool.isRequired,
   setOrders: Proptypes.func.isRequired,
   orders: Proptypes.array.isRequired,
+  translate: Proptypes.string.isRequired,
+  changeTranslate: Proptypes.func.isRequired,
 };
 
 export default MovableContainer;
