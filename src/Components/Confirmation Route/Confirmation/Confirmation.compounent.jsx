@@ -8,6 +8,7 @@ import OrderDetailsSquare from '../OrderDetailsSquare/OrderDetailsSquare.compoun
 import OrderContainer from '../OrderContainer/OrderContainer.compounent';
 import ContiniuShopping from '../ContinueShopping/ContinueShopping.compounent';
 import NoOrder from '../NoOrders/NoOrders.compounent';
+import { useEffect } from 'react';
 
 
 const Confirmation = ({orders}) => {
@@ -16,6 +17,10 @@ const Confirmation = ({orders}) => {
     const conditionalRendering = true
     //this state is for filtering the order that you select when clickin on it
     const [filteredOrder, setFilteredProduct] = useState({});
+
+    useEffect(() => {
+      setFilteredProduct(orders[0])
+    },[orders])
 
     return (
         <section className='confirmation'>
