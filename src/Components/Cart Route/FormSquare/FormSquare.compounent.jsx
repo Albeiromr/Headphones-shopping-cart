@@ -9,7 +9,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLongArrowAltLeft } from '@fortawesome/free-solid-svg-icons';
 import {faCcVisa, faCcMastercard, faCcDiscover, faCcAmex } from '@fortawesome/free-brands-svg-icons';
 
-const FormSquare = ({changeTranslate, total, taxes, shipping, purchase, setWrite, write, setShow, setCompounent, shoppingCart, setOrders,sume, orders, changeShoppingCart}) => {
+const FormSquare = ({changeTranslate, total, taxes, shipping, purchase, setWrite, write, setShow, setCompounent, shoppingCart, setOrders,sume, orders, changeShoppingCart, setStepsCount}) => {
 
   const handleClick = () => {
     changeTranslate('0vw')
@@ -45,7 +45,9 @@ const FormSquare = ({changeTranslate, total, taxes, shipping, purchase, setWrite
     /////////////////////////
     setTimeout(() => {
       changeShoppingCart([])
+      setStepsCount(2)
     },1500)
+
   }
 
   
@@ -221,6 +223,7 @@ FormSquare.propTypes = {
   sume: Proptypes.number.isRequired,
   orders: Proptypes.array.isRequired,
   changeShoppingCart: Proptypes.func.isRequired,
+  setStepsCount: Proptypes.number.isRequired,
   };
 
 export default FormSquare;

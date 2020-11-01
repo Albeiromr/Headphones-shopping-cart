@@ -30,14 +30,16 @@
     &__advance1 {
       width: 45%;
       height: 16%;
-      background: $brand-color;
+      background: var(--first);
+      transition: all .5s ease;
       border-radius: 2vw;
     }
 
     &__advance2 {
       width: 45%;
       height: 16%;
-      background: $brand-color;
+      background: var(--second);
+      transition: all .5s ease;
       border-radius: 2vw;
     }
 

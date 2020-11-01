@@ -32,6 +32,7 @@ const ShoppingCart = ({shoppingCart, changeShoppingCart, setOrders, orders }) =>
     const [shipping, setShipping] = useState(0.00);
     //getting the total purchase price
     const [purchase, setPurchase] = useState(0.00);
+    
 
 
     useEffect(() => {
@@ -74,20 +75,33 @@ const ShoppingCart = ({shoppingCart, changeShoppingCart, setOrders, orders }) =>
     let conditional = true
     
     // this state is for moving this container side to side
-  const [translate, changeTranslate] = useState("0vw");
+    const [translate, changeTranslate] = useState("0vw");
 
+    // this state is for making the steps component interactive
+    const [stepsCount, setStepsCount] = useState(0)
+
+    const handleLoad = () => {
+      if(shoppingCart.length > 0){
+        setStepsCount(1)
+      } 
+    }
+
+
+  
  
 
   
 
 
     return (
-      <section className="shopping-cart">
+      <section onLoad={handleLoad} className="shopping-cart">
         <ContinueShopping />
 
         {show ? <Scroll /> : null}
 
-        <Steps />
+        <Steps 
+        stepsCount={stepsCount}
+        />
         
         {shoppingCart.length > 0 ? <DescriptionBig shoppingCart={shoppingCart} sume={sume} /> : null}
 
@@ -121,6 +135,7 @@ const ShoppingCart = ({shoppingCart, changeShoppingCart, setOrders, orders }) =>
           orders={orders}
           translate={translate}
           changeTranslate={changeTranslate}
+          setStepsCount={setStepsCount}
         />
         <Cart
           shoppingCart={shoppingCart}
@@ -130,6 +145,7 @@ const ShoppingCart = ({shoppingCart, changeShoppingCart, setOrders, orders }) =>
           setTotal={setTotal}
           total={total}
           setShow={setShow}
+          
         />
 
         {compounent === 1 ? (
@@ -146,6 +162,7 @@ const ShoppingCart = ({shoppingCart, changeShoppingCart, setOrders, orders }) =>
             shoppingCart={shoppingCart}
             sume={sume}
             changeShoppingCart={changeShoppingCart}
+            setStepsCount={setStepsCount}
           />
         ) : compounent === 2 ? (
           <SniperSquareBig />

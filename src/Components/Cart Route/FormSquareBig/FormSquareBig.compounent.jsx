@@ -8,7 +8,7 @@ import './0-500px.style.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faCcVisa, faCcMastercard, faCcDiscover, faCcAmex } from '@fortawesome/free-brands-svg-icons';
 
-const FormSquareBig = ({total, taxes, shipping, purchase, write, setWrite, setCompounent, setOrders, orders, shoppingCart, sume, changeShoppingCart}) => {
+const FormSquareBig = ({total, taxes, shipping, purchase, write, setWrite, setCompounent, setOrders, orders, shoppingCart, sume, changeShoppingCart, setStepsCount}) => {
 
     const handleClick = () => {
       setWrite(true)
@@ -35,6 +35,7 @@ const FormSquareBig = ({total, taxes, shipping, purchase, write, setWrite, setCo
       /////////////////////////
       setTimeout(() => {
         changeShoppingCart([]);
+        setStepsCount(2);
       }, 1500);
     };
     
@@ -211,6 +212,7 @@ FormSquareBig.propTypes = {
   sume: Proptypes.number.isRequired,
   orders: Proptypes.array.isRequired,
   changeShoppingCart: Proptypes.func.isRequired,
+  setStepsCount: Proptypes.number.isRequired,
   };
 
 export default FormSquareBig;

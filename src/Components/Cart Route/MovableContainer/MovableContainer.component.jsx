@@ -30,7 +30,8 @@ const MovableContainer = ({
   setOrders,
   orders,
   translate,
-  changeTranslate
+  changeTranslate,
+  setStepsCount,
 
 }) => {
 
@@ -100,6 +101,7 @@ const MovableContainer = ({
           orders={orders}
           sume={sume}
           changeShoppingCart={changeShoppingCart}
+          setStepsCount={setStepsCount}
         />
       ) : compounent === 2 ? (
         <SniperSquare />
@@ -135,6 +137,7 @@ MovableContainer.propTypes = {
   orders: Proptypes.array.isRequired,
   translate: Proptypes.string.isRequired,
   changeTranslate: Proptypes.func.isRequired,
+  setStepsCount: Proptypes.number.isRequired,
 };
 
 export default MovableContainer;
