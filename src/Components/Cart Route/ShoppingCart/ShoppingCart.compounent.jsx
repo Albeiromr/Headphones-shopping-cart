@@ -80,13 +80,19 @@ const ShoppingCart = ({shoppingCart, changeShoppingCart, setOrders, orders }) =>
     // this state is for making the steps component interactive
     const [stepsCount, setStepsCount] = useState(0)
 
+    ///////////////////////////////////////////////
+
     const handleLoad = () => {
       if(shoppingCart.length > 0){
         setStepsCount(1)
       } 
     }
 
-
+    useEffect(() => {
+      if(total < 2.00){
+        setStepsCount(0)
+      }
+    }, [total])
   
  
 
