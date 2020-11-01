@@ -34,7 +34,7 @@ const ContinueSquare = ({changeShoppingCart}) => {
 
             <Link to='/confirmation' >
             <button onClick={myClick} className='continue-square__button'>
-                Go to my orders
+                Go to my order
             </button>
             </Link>
 

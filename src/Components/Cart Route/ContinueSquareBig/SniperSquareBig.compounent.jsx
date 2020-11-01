@@ -32,7 +32,7 @@ const ContinueSquareBig = ({changeShoppingCart}) => {
 
             <Link to='/confirmation' >
             <button onClick={myClick} className='continue-square-big__button'>
-                Go to my orders
+                Go to my order
             </button>
             </Link>
 

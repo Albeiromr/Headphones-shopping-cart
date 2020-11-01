@@ -19,7 +19,7 @@ const Confirmation = ({orders}) => {
     const [filteredOrder, setFilteredProduct] = useState({});
 
     useEffect(() => {
-      setFilteredProduct(orders[0])
+      setFilteredProduct(orders[orders.length - 1])
     },[orders])
 
     return (
