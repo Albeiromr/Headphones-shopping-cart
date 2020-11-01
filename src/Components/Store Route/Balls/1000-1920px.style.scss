@@ -18,6 +18,14 @@
       width: 1.875vw;
       background: var(--color1);
       border-radius: 50%;
+
+      &:hover {
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -o-transform: scale(1.1);
+        transform: scale(1.1);
+        transition: all 0.2s ease-in;
+      }
     }
 
     &__color2 {
@@ -26,6 +34,14 @@
       width: 1.875vw;
       background: var(--color2);
       border-radius: 50%;
+
+      &:hover {
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -o-transform: scale(1.1);
+        transform: scale(1.1);
+        transition: all 0.2s ease-in;
+      }
     }
 
     &__color3 {
@@ -34,6 +50,14 @@
       width: 1.875vw;
       background: var(--color3);
       border-radius: 50%;
+
+      &:hover {
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -o-transform: scale(1.1);
+        transform: scale(1.1);
+        transition: all 0.2s ease-in;
+      }
     }
   }
 }
