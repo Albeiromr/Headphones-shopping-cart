@@ -58,7 +58,6 @@ function App() {
             <Link to='/shoppingcart'>
             <li className='header__cart'><FontAwesomeIcon icon={faShoppingCart}/></li>
             </Link>
-            <li className='header__search'><FontAwesomeIcon icon={faSearch}/></li>
             <Link to='/'>
             <li className='header__bag'><FontAwesomeIcon icon={faShoppingBag}/></li>
             </Link>
