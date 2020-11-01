@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import Proptypes from "prop-types";
 import './1000-1920px.style.scss';
 import './500-1000px.style.scss';
@@ -8,7 +8,8 @@ import OrderDetailsSquare from '../OrderDetailsSquare/OrderDetailsSquare.compoun
 import OrderContainer from '../OrderContainer/OrderContainer.compounent';
 import ContiniuShopping from '../ContinueShopping/ContinueShopping.compounent';
 import NoOrder from '../NoOrders/NoOrders.compounent';
-import { useEffect } from 'react';
+import OrderScroll from '../OrderScroll/OrderScroll.compounent';
+
 
 
 const Confirmation = ({orders}) => {
@@ -30,6 +31,8 @@ const Confirmation = ({orders}) => {
           <Steps
           conditionalRendering={conditionalRendering}
           />
+
+          <OrderScroll />
 
         {orders.length > 0 ?
           <OrderDetailsSquare 
