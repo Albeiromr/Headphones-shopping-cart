@@ -1,7 +1,7 @@
 import React,{useState, useEffect} from 'react';
 import {BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faShoppingCart, faSearch, faShoppingBag} from '@fortawesome/free-solid-svg-icons'
+import { faShoppingCart, faShoppingBag} from '@fortawesome/free-solid-svg-icons'
 import logo from './Assets/Img/Logo/logosound.png'
 import Products from './Assets/Img/Products';
 import GrayColumn from './Components/Store Route/GrayColumn/GrayColumn.component';

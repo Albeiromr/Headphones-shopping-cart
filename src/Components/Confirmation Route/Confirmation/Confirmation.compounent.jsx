@@ -23,41 +23,48 @@ const Confirmation = ({orders}) => {
       setFilteredProduct(orders[orders.length - 1])
     },[orders])
 
+    //this state is for hidding the scroll indicator when you have not mor than 3 orders
+    const [hide, setHide] = useState(false)
+
+   
+
+    useEffect(() => {
+      if (orders.length > 3){
+        setHide(true)
+      }else {
+        setHide(false)
+      }
+    }, [orders])
+
     return (
-        <section className='confirmation'>
+      <section className="confirmation">
+        <ContiniuShopping />
 
-          <ContiniuShopping />
-          
-          <Steps
-          conditionalRendering={conditionalRendering}
-          />
+        <Steps conditionalRendering={conditionalRendering} />
+        
+        {hide ? <OrderScroll /> : null}
 
-          <OrderScroll />
+        {orders.length > 0 ? (
+          <OrderDetailsSquare filteredOrder={filteredOrder} />
+        ) : (
+          <NoOrder />
+        )}
 
-        {orders.length > 0 ?
-          <OrderDetailsSquare 
-          filteredOrder={filteredOrder}
-          /> 
-          :
-          <NoOrder 
-          />
-        }
-          
-
-          <OrderContainer 
+        <OrderContainer
           orders={orders}
           filteredOrder={filteredOrder}
           setFilteredProduct={setFilteredProduct}
-          />
-          
-        </section>
-    )
+          setHide={setHide}
+        />
+      </section>
+    );
 };
 
 // component documentation
 
 Confirmation.propTypes = {
     orders: Proptypes.array.isRequired,
+    
   };
 
 export default Confirmation;

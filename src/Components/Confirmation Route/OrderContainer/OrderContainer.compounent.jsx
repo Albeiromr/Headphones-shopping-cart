@@ -5,12 +5,14 @@ import "./500-1000px.style.scss";
 import "./0-500px.style.scss";
 import Order from '../Order/Order.compounent';
 
-const OrderContainer = ({orders, filteredOrder, setFilteredProduct}) => {
+const OrderContainer = ({orders, filteredOrder, setFilteredProduct, setHide}) => {
 
-    
+    const handleScroll = () => {
+        setHide(false)
+    }
 
     return (
-        <div className='order-container'>
+        <div onScroll={handleScroll} className='order-container'>
 
             {orders.map(order => (<Order
                 key={order.id} 
@@ -29,7 +31,8 @@ const OrderContainer = ({orders, filteredOrder, setFilteredProduct}) => {
 OrderContainer.propTypes = {
     orders: Proptypes.array.isRequired,
     filteredOrder: Proptypes.object.isRequired,
-    setFilteredProduct: Proptypes.func.isRequired
+    setFilteredProduct: Proptypes.func.isRequired,
+    setHide: Proptypes.func.isRequired,
 };
 
 export default OrderContainer;
