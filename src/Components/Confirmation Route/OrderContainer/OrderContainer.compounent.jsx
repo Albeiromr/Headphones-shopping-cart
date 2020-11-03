@@ -30,7 +30,7 @@ const OrderContainer = ({orders, filteredOrder, setFilteredProduct, setHide}) =>
 
 OrderContainer.propTypes = {
     orders: Proptypes.array.isRequired,
-    filteredOrder: Proptypes.object.isRequired,
+    filteredOrder: Proptypes.object,
     setFilteredProduct: Proptypes.func.isRequired,
     setHide: Proptypes.func.isRequired,
 };

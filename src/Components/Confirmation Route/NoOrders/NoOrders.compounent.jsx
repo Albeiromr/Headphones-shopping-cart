@@ -23,7 +23,7 @@ const NoOrder = ({conditional}) => {
 };
 
 NoOrder.propTypes = {
-   conditional: Proptypes.bool.isRequired,
+   conditional: Proptypes.bool,
 };
 
 export default NoOrder;
