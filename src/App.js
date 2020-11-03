@@ -14,7 +14,7 @@ import './App-1000-1920px.style.scss';
 
 function App() {
 
-  // this state is the user´s shopping cart
+  // this state is the user´s shopping cart //
   const [shoppingCart, changeShoppingCart] = useState([]);
   
   // put a red point over the cart icon if there are items in the shopping cart
