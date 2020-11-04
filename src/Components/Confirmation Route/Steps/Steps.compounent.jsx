@@ -45,7 +45,7 @@ const Steps = ({conditionalRendering, stepsCount}) => {
 // component documentation
 
 Steps.propTypes = {
-    conditionalRendering: Proptypes.bool.isRequired,
+    conditionalRendering: Proptypes.bool,
     stepsCount: Proptypes.number,
 };
 

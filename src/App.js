@@ -32,6 +32,9 @@ function App() {
   // this state is for save the orders
   const [orders, setOrders] = useState([])
 
+  // conditional rendering of the waterMArk
+  let conditionalwater = true
+
   
   
   return (
@@ -75,7 +78,9 @@ function App() {
             changeShoppingCart={changeShoppingCart}
             shoppingCart={shoppingCart}
             />
-          <GrayColumn />
+          <GrayColumn 
+          conditionalwater={conditionalwater}
+          />
         </Route>
 
         <Route  path='/shoppingcart'>

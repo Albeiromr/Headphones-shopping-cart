@@ -42,7 +42,7 @@ Cart.propTypes = {
     sume: Proptypes.number.isRequired,
     setSume: Proptypes.func.isRequired,
     setTotal: Proptypes.func.isRequired,
-    total: Proptypes.number.isRequired,
+    total: Proptypes.string.isRequired,
     setShow: Proptypes.func.isRequired,
     };
 

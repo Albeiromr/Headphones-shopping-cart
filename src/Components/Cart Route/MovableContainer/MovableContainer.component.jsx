@@ -118,13 +118,13 @@ const MovableContainer = ({
 // component documentation
 
 MovableContainer.propTypes = {
-  shoppingCart: Proptypes.object.isRequired,
+  shoppingCart: Proptypes.array.isRequired,
   changeShoppingCart: Proptypes.func.isRequired,
   sume: Proptypes.number.isRequired,
   setSume: Proptypes.func.isRequired,
   setTotal: Proptypes.func.isRequired,
-  total: Proptypes.number.isRequired,
-  taxes: Proptypes.number.isRequired,
+  total: Proptypes.string.isRequired,
+  taxes: Proptypes.number,
   shipping: Proptypes.number.isRequired,
   purchase: Proptypes.number.isRequired,
   write: Proptypes.bool.isRequired,
@@ -132,12 +132,12 @@ MovableContainer.propTypes = {
   setShow: Proptypes.func.isRequired,
   compounent: Proptypes.number.isRequired,
   setCompounent: Proptypes.func.isRequired,
-  show: Proptypes.bool.isRequired,
+  show: Proptypes.bool,
   setOrders: Proptypes.func.isRequired,
   orders: Proptypes.array.isRequired,
   translate: Proptypes.string.isRequired,
   changeTranslate: Proptypes.func.isRequired,
-  setStepsCount: Proptypes.number.isRequired,
+  setStepsCount: Proptypes.func.isRequired,
 };
 
 export default MovableContainer;

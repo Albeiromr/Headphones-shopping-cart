@@ -200,7 +200,7 @@ const FormSquareBig = ({total, taxes, shipping, purchase, write, setWrite, setCo
 // component documentation
 
 FormSquareBig.propTypes = {
-  total: Proptypes.number.isRequired,
+  total: Proptypes.string.isRequired,
   taxes: Proptypes.number.isRequired,
   shipping: Proptypes.number.isRequired,
   purchase: Proptypes.number.isRequired,
@@ -212,7 +212,7 @@ FormSquareBig.propTypes = {
   sume: Proptypes.number.isRequired,
   orders: Proptypes.array.isRequired,
   changeShoppingCart: Proptypes.func.isRequired,
-  setStepsCount: Proptypes.number.isRequired,
+  setStepsCount: Proptypes.func.isRequired,
   };
 
 export default FormSquareBig;

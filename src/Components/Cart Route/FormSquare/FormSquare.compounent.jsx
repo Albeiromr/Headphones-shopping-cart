@@ -211,7 +211,7 @@ const FormSquare = ({changeTranslate, total, taxes, shipping, purchase, setWrite
 
 FormSquare.propTypes = {
   changeTranslate: Proptypes.func.isRequired,
-  total: Proptypes.number.isRequired,
+  total: Proptypes.string.isRequired,
   taxes: Proptypes.number.isRequired,
   shipping: Proptypes.number.isRequired,
   purchase: Proptypes.number.isRequired,
@@ -223,7 +223,7 @@ FormSquare.propTypes = {
   sume: Proptypes.number.isRequired,
   orders: Proptypes.array.isRequired,
   changeShoppingCart: Proptypes.func.isRequired,
-  setStepsCount: Proptypes.number.isRequired,
+  setStepsCount: Proptypes.func.isRequired,
   };
 
 export default FormSquare;
