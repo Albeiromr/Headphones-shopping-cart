@@ -11,7 +11,7 @@ import FormSquareBig from '../FormSquareBig/FormSquareBig.compounent';
 import DescriptionBig from '../DescriptionBig/DescriptionBig.component';
 import Scroll from '../Scroll/Scroll.component';
 import SniperSquareBig from '../SniperSquareBig/SniperSquareBig.compounent';
-import ContinueSquareBig from '../ContinueSquareBig/SniperSquareBig.compounent';
+import ContinueSquareBig from '../ContinueSquareBig/continueSquareBig.compounent';
 import NoOrder from '../../Confirmation Route/NoOrders/NoOrders.compounent';
 
 

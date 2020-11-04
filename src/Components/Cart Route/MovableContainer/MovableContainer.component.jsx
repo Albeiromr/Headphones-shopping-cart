@@ -9,7 +9,7 @@ import Description from "../Description/Description.compounent";
 import Summary from "../Summary/Summary.component";
 import CcDEtails from "../CcDetails/CcDetails.component";
 import SniperSquare from "../SniperSquare/SniperSquare.compounent";
-import ContinueSquare from '../ContinueSquare/SniperSquare.compounent';
+import ContinueSquare from '../ContinueSquare/ContinueSquare.compounent';
 
 
 const MovableContainer = ({
