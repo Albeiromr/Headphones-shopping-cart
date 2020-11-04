@@ -265,7 +265,7 @@
       width: 50%;
       display: flex;
       flex-direction: column;
-      justify-content: space-evenly;
+      justify-content: space-around;
       text-align: right;
     }
 
@@ -276,8 +276,6 @@
       font-size: 1.2vw;
     }
 
-    &__black {
-      font-weight: 600;
-    }
+    
   }
 }
