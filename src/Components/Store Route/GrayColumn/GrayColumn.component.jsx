@@ -14,7 +14,7 @@ const GrayColumn = ({conditionalwater}) => (
 // component documentation
 
 GrayColumn.propTypes = {
-  conditionalwater: Proptypes.bool.isRequired,
+  conditionalwater: Proptypes.bool,
 };
 
 export default GrayColumn;
