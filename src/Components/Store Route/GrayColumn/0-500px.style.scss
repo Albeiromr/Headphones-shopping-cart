@@ -9,5 +9,15 @@
     right: 0;
     top: 0;
     background: $secundary-color;
+
+    &__water-mark {
+      font-family: $ubuntu;
+      color: $brand-color;
+      font-size: 2vw;
+      position: absolute;
+      bottom: .2vw;
+      right: 3vw;
+      
+    }
   }
 }
