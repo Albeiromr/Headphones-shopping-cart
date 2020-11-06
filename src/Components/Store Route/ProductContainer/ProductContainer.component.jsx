@@ -67,7 +67,7 @@ const ProductContainer = ({Products, changePicture, changeProductSelected,change
                     <ProductCard
                     key={Product.reference}
                     name={Product.reference}
-                    mainImg={Product.firstColor[0].img1}
+                    mainImg={Product.thumbnailfirstColor[0].img1}
                     handleRightArrow={handleRightArrow}
                     handleLeftArrow={handleLeftArrow}
                     changePicture={changePicture}
