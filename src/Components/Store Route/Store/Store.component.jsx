@@ -26,10 +26,10 @@ const Store = ({Products, changeShoppingCart, shoppingCart}) => {
     // a new object 
     const [itemToCart, addItemToCart] = useState({
       color: productSelected.colors.color1,
-      image: productSelected.firstColor[0].img1,
+      image: productSelected.thumbnailfirstColor[0].img1,
       name: productSelected.reference,
       price: productSelected.price,
-      
+
     });
     // the itemToCart changes every time there is a change in the following 
     // states picture, productSelected, thumbnail
@@ -39,7 +39,7 @@ const Store = ({Products, changeShoppingCart, shoppingCart}) => {
         case productSelected.firstColor[0].img1:
           addItemToCart({
             color: productSelected.colors.color1,
-            image: productSelected.firstColor[0].img1,
+            image: productSelected.thumbnailfirstColor[0].img1,
             name: productSelected.reference,
             price: productSelected.price,
             id: uuidv4(),
@@ -48,7 +48,7 @@ const Store = ({Products, changeShoppingCart, shoppingCart}) => {
         case productSelected.firstColor[1].img2:
           addItemToCart({
             color: productSelected.colors.color1,
-            image: productSelected.firstColor[0].img1,
+            image: productSelected.thumbnailfirstColor[0].img1,
             name: productSelected.reference,
             price: productSelected.price,
             id: uuidv4(),
@@ -57,7 +57,7 @@ const Store = ({Products, changeShoppingCart, shoppingCart}) => {
         case productSelected.secondColor[0].img1:
           addItemToCart({
             color: productSelected.colors.color2,
-            image: productSelected.secondColor[0].img1,
+            image: productSelected.thumbnailsecondColor[0].img1,
             name: productSelected.reference,
             price: productSelected.price,
             id: uuidv4(),
@@ -66,7 +66,7 @@ const Store = ({Products, changeShoppingCart, shoppingCart}) => {
         case productSelected.secondColor[1].img2:
           addItemToCart({
             color: productSelected.colors.color2,
-            image: productSelected.secondColor[0].img1,
+            image: productSelected.thumbnailsecondColor[0].img1,
             name: productSelected.reference,
             price: productSelected.price,
             id: uuidv4(),
@@ -75,7 +75,7 @@ const Store = ({Products, changeShoppingCart, shoppingCart}) => {
         case productSelected.thirdColor[0].img1:
           addItemToCart({
             color: productSelected.colors.color3,
-            image: productSelected.thirdColor[0].img1,
+            image: productSelected.thumbnailthirdColor[0].img1,
             name: productSelected.reference,
             price: productSelected.price,
             id: uuidv4(),
@@ -84,7 +84,7 @@ const Store = ({Products, changeShoppingCart, shoppingCart}) => {
         case productSelected.thirdColor[1].img2:
           addItemToCart({
             color: productSelected.colors.color3,
-            image: productSelected.thirdColor[0].img1,
+            image: productSelected.thumbnailthirdColor[0].img1,
             name: productSelected.reference,
             price: productSelected.price,
             id: uuidv4(),
