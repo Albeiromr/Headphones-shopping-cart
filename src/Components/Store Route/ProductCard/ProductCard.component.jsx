@@ -17,7 +17,8 @@ const ProductCard = ({ mainImg, clock, changePicture, name, Products,changeProdu
     // then we modify the picture state by the picture of the product we have chosen
     changePicture(filteredProduct[0].firstColor[0].img1)
     // as the last step we change the thumbnail state by the pictures of the filtered product
-    changeThumbnail([filteredProduct[0].firstColor[0].img1, filteredProduct[0].firstColor[1].img2])
+    changeThumbnail([filteredProduct[0].thumbnailfirstColor[0].img1, filteredProduct[0].thumbnailfirstColor[1].img2])
+    
   }
 
   return (

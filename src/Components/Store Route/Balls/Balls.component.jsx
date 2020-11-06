@@ -41,7 +41,7 @@ const Balls = ({changePicture, productSelected, changeThumbnail, picture}) => {
             default:
         }
         // this function change the thumbnail images color as well
-        changeThumbnail([productSelected.firstColor[0].img1, productSelected.firstColor[1].img2 ]) 
+        changeThumbnail([productSelected.thumbnailfirstColor[0].img1, productSelected.thumbnailfirstColor[1].img2 ]) 
     }
 
     const secondColor = () => {
@@ -71,7 +71,7 @@ const Balls = ({changePicture, productSelected, changeThumbnail, picture}) => {
             default:
         }
         // this function change the thumbnail images color as well
-        changeThumbnail([productSelected.secondColor[0].img1, productSelected.secondColor[1].img2 ])
+        changeThumbnail([productSelected.thumbnailsecondColor[0].img1, productSelected.thumbnailsecondColor[1].img2 ])
     }
 
     const thirdColor = () => {
@@ -101,7 +101,7 @@ const Balls = ({changePicture, productSelected, changeThumbnail, picture}) => {
             default:
         }
         // this function change the thumbnail images color as well
-        changeThumbnail([productSelected.thirdColor[0].img1, productSelected.thirdColor[1].img2 ])
+        changeThumbnail([productSelected.thumbnailthirdColor[0].img1, productSelected.thumbnailthirdColor[1].img2 ])
     }
 
     return (

@@ -9,13 +9,13 @@ const Thumbnails = ({productSelected, changePicture,thumbnail,}) => {
     const firstPic = () => {
       // with this switch we change the big picture for the one that we choose from the this thumbnail
       switch (thumbnail[0]) {
-        case productSelected.firstColor[0].img1:
+        case productSelected.thumbnailfirstColor[0].img1:
           changePicture(productSelected.firstColor[0].img1);
           break;
-        case productSelected.secondColor[0].img1:
+        case productSelected.thumbnailsecondColor[0].img1:
           changePicture(productSelected.secondColor[0].img1);
           break;
-        case productSelected.thirdColor[0].img1:
+        case productSelected.thumbnailthirdColor[0].img1:
           changePicture(productSelected.thirdColor[0].img1);
           break;
         default:
@@ -25,13 +25,13 @@ const Thumbnails = ({productSelected, changePicture,thumbnail,}) => {
     const secondPic = () => {
       // with this switch we change the big picture for the one that we choose from the this thumbnail
       switch (thumbnail[1]) {
-        case productSelected.firstColor[1].img2:
+        case productSelected.thumbnailfirstColor[1].img2:
           changePicture(productSelected.firstColor[1].img2);
           break;
-        case productSelected.secondColor[1].img2:
+        case productSelected.thumbnailsecondColor[1].img2:
           changePicture(productSelected.secondColor[1].img2);
           break;
-        case productSelected.thirdColor[1].img2:
+        case productSelected.thumbnailthirdColor[1].img2:
           changePicture(productSelected.thirdColor[1].img2);
           break;
         default:

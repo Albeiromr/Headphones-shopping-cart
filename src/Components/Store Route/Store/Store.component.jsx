@@ -20,7 +20,7 @@ const Store = ({Products, changeShoppingCart, shoppingCart}) => {
     // this state is the product filtered when we click in the cards of the carrousel
     const [productSelected, changeProductSelected] = useState(Products[0])
     // this state is for the page to know the twho images in the two smallest squares
-    const [thumbnail, changeThumbnail] = useState([productSelected.firstColor[0].img1, productSelected.firstColor[1].img2])
+    const [thumbnail, changeThumbnail] = useState([productSelected.thumbnailfirstColor[0].img1, productSelected.thumbnailfirstColor[1].img2])
     // this state is for choosing the right product color to send to the shoppingCart
     // in order to prevent sending wrong colors to the shopping cart is nessesary to create first
     // a new object 
