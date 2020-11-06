@@ -16,8 +16,13 @@
     transform: translateX(calc(-111.35% * var(--clock)));
     transition: all 0.5s ease-out;
 
-    .product-card__img {
+    &__img {
       max-height: 80%;
+    }
+
+    &__img2 {
+      visibility: hidden;
+      max-width: .1%;
     }
   }
 }

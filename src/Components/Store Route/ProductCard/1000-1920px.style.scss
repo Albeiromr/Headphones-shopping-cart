@@ -20,11 +20,18 @@
     &__img {
       max-height: 80%;
       transition: all 0.5s ease-out;
+
+      &:hover {
+        max-height: 95%;
+        transition: all 0.2s ease-out;
+      }
     }
 
-    &__img:hover {
-      max-height: 95%;
-      transition: all 0.2s ease-out;
+    
+
+    &__img2 {
+      visibility: hidden;
+      max-width: .1%;
     }
   }
 }

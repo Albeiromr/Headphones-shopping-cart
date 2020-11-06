@@ -7,8 +7,8 @@ const OrderScroll = () => {
 
     return (
         
-        <div className='scroll'>
-        <div className="mouse"></div>
+        <div className='scroll-b'>
+        <div className="mouse-b"></div>
         </div>
     
     )

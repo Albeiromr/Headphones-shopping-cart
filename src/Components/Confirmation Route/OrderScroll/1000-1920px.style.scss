@@ -27,7 +27,7 @@
       );
   }
 
-  .scroll {
+  .scroll-b {
     width: 7vw;
     height: 7vw;
     position: absolute;
@@ -38,7 +38,7 @@
     align-items: center;
   }
 
-  .mouse {
+  .mouse-b {
     @include bgGradient;
     position: relative;
     width: $widthMouse;
