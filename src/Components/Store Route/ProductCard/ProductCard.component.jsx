@@ -4,7 +4,7 @@ import "./1000-1920px.style.scss";
 import "./500-1000px.style.scss";
 import "./0-500px.style.scss";
 
-const ProductCard = ({ mainImg, clock, changePicture, name, Products,changeProductSelected, changeThumbnail, secondImg}) => {
+const ProductCard = ({ mainImg, clock, changePicture, name, Products,changeProductSelected, changeThumbnail}) => {
 
   
   
@@ -25,7 +25,7 @@ const ProductCard = ({ mainImg, clock, changePicture, name, Products,changeProdu
     <div onClick={() => {selectProduct(name)}} className="product-card" style={{ "--clock": clock }}>
 
       <img className="product-card__img" src={mainImg} alt="product" />
-      <img className="product-card__img2" src={secondImg} alt="product" />
+      
 
 
     </div>
@@ -43,7 +43,6 @@ ProductCard.propTypes = {
   Products: Proptypes.array.isRequired,
   changeProductSelected: Proptypes.func.isRequired,
   changeThumbnail: Proptypes.func.isRequired,
-  secondImg: Proptypes.string.isRequired,
 };
 
 export default ProductCard;
