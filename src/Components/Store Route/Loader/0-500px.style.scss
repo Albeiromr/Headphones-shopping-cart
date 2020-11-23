@@ -1,0 +1,12 @@
+@import "../../../Assets/Sass/variables";
+
+@media only screen and (max-width: 500px) {
+  .loader {
+    width: 100vw;
+    height: calc(100vh - 8vh);
+    min-height: 568px;
+    position: relative;
+    margin: 0 auto;
+    position: relative;
+  }
+}

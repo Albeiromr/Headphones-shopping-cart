@@ -12,6 +12,7 @@ import ButtonBuy from '../ButtonBuy/ButtonBuy.component';
 import Price from '../Price/Price.component';
 import Thumbnails from '../Thumbnails/Thumbnails.component';
 import Balls from '../Balls/Balls.component';
+import Loader from '../Loader/Loader.compounent';
 
 const Store = ({Products, changeShoppingCart, shoppingCart}) => {
 
@@ -97,6 +98,9 @@ const Store = ({Products, changeShoppingCart, shoppingCart}) => {
     return (
         
         <main className='store'>
+
+            <Loader />
+            
             <Text 
             productSelected={productSelected}
             />

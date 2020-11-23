@@ -12,6 +12,7 @@ import './App-0-500px.style.scss';
 import './App-500-1000px.style.scss';
 import './App-1000-1920px.style.scss';
 
+
 function App() {
 
   // this state is the user´s shopping cart //
