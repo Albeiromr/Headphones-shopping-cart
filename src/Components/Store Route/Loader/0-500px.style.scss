@@ -3,10 +3,48 @@
 @media only screen and (max-width: 500px) {
   .loader {
     width: 100vw;
-    height: calc(100vh - 8vh);
+    height: 100vh;
     min-height: 568px;
     position: relative;
     margin: 0 auto;
     position: relative;
+    background-color: white;
+    z-index: 60;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__img {
+      width: 15vw;
+      max-width: 300px;
+      animation-name: logorotate;
+      animation-iteration-count: infinite;
+      animation-duration: 2s;
+      animation-timing-function: ease;
+      animation-delay: .3s;
+      
+    }
+
+    @keyframes logorotate {
+      0%{
+        transform: rotate(45deg);
+       }
+    
+       25%{
+        transform: rotate(0deg);
+       }
+    
+       50%{
+        transform: rotate(-45deg);
+       }
+    
+       75% {
+        transform: rotate(0deg);
+       }
+
+      100% {
+        transform: rotate(45deg);
+      }
+    }
   }
 }
