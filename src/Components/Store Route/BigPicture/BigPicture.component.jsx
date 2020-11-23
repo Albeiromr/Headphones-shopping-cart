@@ -1,16 +1,31 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Proptypes from "prop-types";
 import "./1000-1920px.style.scss";
 import "./500-1000px.style.scss";
 import "./0-500px.style.scss";
 
-const BigPicture = ({ picture }) => {
+const BigPicture = ({ picture, view , setView}) => {
+
+ 
+
+  const handleLoad = () => {
+    setView(true)
+  }
+
+  useEffect(() => {
+      setView(false)
+  },[picture]);
+
+
+
   return (
     <div className="big-picture">
 
-      {/* <img className="big-picture__img" src={picture} alt="Product" /> */}
+      <img className="big-picture__img-signal" src={picture} alt="Product" onLoad={handleLoad} /> 
 
-    <div class="sk-circle">
+      {view ? <img className="big-picture__img" src={picture} alt="Product" /> :
+
+      <div class="sk-circle">
       <div class="sk-circle1 sk-child"></div>
       <div class="sk-circle2 sk-child"></div>
       <div class="sk-circle3 sk-child"></div>
@@ -24,6 +39,11 @@ const BigPicture = ({ picture }) => {
       <div class="sk-circle11 sk-child"></div>
       <div class="sk-circle12 sk-child"></div>
     </div>
+
+      }
+
+
+    
     
     </div>
   );

@@ -13,11 +13,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    &__img-signal{
+      width: 1px;
+      visibility: none;
+    }
   }
 
   &__img {
     width: 100%;
   }
+
+  
 
   .sk-circle {
     margin: 100px auto;

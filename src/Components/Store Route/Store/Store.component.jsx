@@ -94,6 +94,12 @@ const Store = ({Products, changeShoppingCart, shoppingCart, loadAnimation}) => {
         default:
       }
     }, [picture, productSelected, thumbnail]);
+
+    // state for showing image or spiner while it loads
+    const [view, setView] = useState(false)
+
+    
+    
     
     return (
         
@@ -108,11 +114,14 @@ const Store = ({Products, changeShoppingCart, shoppingCart, loadAnimation}) => {
             <BigPicture 
             picture={picture}
             Products={Products}
+            view={view}
+            setView={setView}
             />
             <Thumbnails 
             productSelected={productSelected}
             changePicture={changePicture}
             thumbnail={thumbnail}
+            view={view}
             
             />
             <Balls 
