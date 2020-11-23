@@ -36,6 +36,21 @@ function App() {
   // conditional rendering of the waterMArk
   let conditionalwater = true
 
+  // the following code is for the load animation of the home page
+
+  const [loadAnimation, setLoadAnimation] = useState(true)
+
+  document.onreadystatechange = function () {
+    if (document.readyState === 'complete') {
+      setTimeout(()=>{
+        setLoadAnimation(false)
+      },1000)
+        
+      
+      
+    }
+  }
+
   
   
   return (
@@ -78,6 +93,7 @@ function App() {
             Products={Products}
             changeShoppingCart={changeShoppingCart}
             shoppingCart={shoppingCart}
+            loadAnimation={loadAnimation}
             />
           <GrayColumn 
           conditionalwater={conditionalwater}

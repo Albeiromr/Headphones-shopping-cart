@@ -14,7 +14,7 @@ import Thumbnails from '../Thumbnails/Thumbnails.component';
 import Balls from '../Balls/Balls.component';
 import Loader from '../Loader/Loader.compounent';
 
-const Store = ({Products, changeShoppingCart, shoppingCart}) => {
+const Store = ({Products, changeShoppingCart, shoppingCart, loadAnimation}) => {
 
     // this state is the bigest product image in the page
     const [picture, changePicture] = useState(Products[0].firstColor[0].img1)
@@ -99,7 +99,8 @@ const Store = ({Products, changeShoppingCart, shoppingCart}) => {
         
         <main className='store'>
 
-            <Loader />
+            {loadAnimation ? <Loader /> : null}
+            
             
             <Text 
             productSelected={productSelected}
@@ -151,6 +152,7 @@ Store.propTypes = {
     Products: Proptypes.array.isRequired,
     changeShoppingCart: Proptypes.func.isRequired,
     shoppingCart: Proptypes.array.isRequired,
+    loadAnimation: Proptypes.bool.isRequired,
   };
 
 export default Store;
