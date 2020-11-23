@@ -42,11 +42,45 @@ const Thumbnails = ({productSelected, changePicture,thumbnail,}) => {
         <div className='thumbnail'>
 
             <div onClick={firstPic} className='thumbnail__img1'>
-                <img className='thumbnail__picture' src={thumbnail[0]} alt="Product"/>
+
+                {/* <img className='thumbnail__picture' src={thumbnail[0]} alt="Product"/> */}
+
+                <div class="st-circle">
+                  <div class="st-circle1 sk-child"></div>
+                  <div class="st-circle2 sk-child"></div>
+                  <div class="st-circle3 sk-child"></div>
+                  <div class="st-circle4 sk-child"></div>
+                  <div class="st-circle5 sk-child"></div>
+                  <div class="st-circle6 sk-child"></div>
+                  <div class="st-circle7 sk-child"></div>
+                  <div class="st-circle8 sk-child"></div>
+                  <div class="st-circle9 sk-child"></div>
+                  <div class="st-circle10 sk-child"></div>
+                  <div class="st-circle11 sk-child"></div>
+                  <div class="st-circle12 sk-child"></div>
+                </div>
+
             </div>
 
             <div onClick={secondPic} className='thumbnail__img2'>
-                <img className='thumbnail__picture' src={thumbnail[1]} alt="Product"/>
+
+                {/* <img className='thumbnail__picture' src={thumbnail[1]} alt="Product"/> */}
+
+                <div class="st-circle">
+                  <div class="st-circle1 sk-child"></div>
+                  <div class="st-circle2 sk-child"></div>
+                  <div class="st-circle3 sk-child"></div>
+                  <div class="st-circle4 sk-child"></div>
+                  <div class="st-circle5 sk-child"></div>
+                  <div class="st-circle6 sk-child"></div>
+                  <div class="st-circle7 sk-child"></div>
+                  <div class="st-circle8 sk-child"></div>
+                  <div class="st-circle9 sk-child"></div>
+                  <div class="st-circle10 sk-child"></div>
+                  <div class="st-circle11 sk-child"></div>
+                  <div class="st-circle12 sk-child"></div>
+                </div>
+
             </div>
 
         </div>
