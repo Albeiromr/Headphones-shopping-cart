@@ -16,12 +16,27 @@
       width: 1px;
       visibility: none;
     }
+
+    &__img {
+      width: 100%;
+      animation-name: appears;
+      animation-iteration-count: 1;
+      animation-duration: .2s;
+      animation-timing-function: ease-in;
+      animation-delay: 0;
+    }
+
+    @keyframes appears {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity:1;
+      }
+    }
   }
 
-  &__img {
-    width: 100%;
-  }
-
+  
   .sk-circle {
     margin: 100px auto;
     width: 12vw;
