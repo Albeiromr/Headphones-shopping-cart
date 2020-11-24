@@ -44,7 +44,7 @@ const Thumbnails = ({productSelected, changePicture,thumbnail, view}) => {
     const handleLoad = () => {
       setTimeout(() => {
         setShow(true)
-      }, 500)
+      }, 200)
     }
 
     useEffect(() => {
