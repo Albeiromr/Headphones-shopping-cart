@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Proptypes from "prop-types";
 import "./1000-1920px.style.scss";
 import "./500-1000px.style.scss";

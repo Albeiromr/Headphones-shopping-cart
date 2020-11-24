@@ -5,7 +5,7 @@ import './500-1000px.style.scss';
 import './0-500px.style.scss';
 import { useEffect } from 'react';
 
-const Thumbnails = ({productSelected, changePicture,thumbnail, view}) => {
+const Thumbnails = ({productSelected, changePicture,thumbnail, setView}) => {
 
     const firstPic = () => {
       // with this switch we change the big picture for the one that we choose from the this thumbnail
@@ -21,6 +21,7 @@ const Thumbnails = ({productSelected, changePicture,thumbnail, view}) => {
           break;
         default:
       }
+      setView(false)
     };
 
     const secondPic = () => {
@@ -37,6 +38,7 @@ const Thumbnails = ({productSelected, changePicture,thumbnail, view}) => {
           break;
         default:
       }
+      setView(false)
     };
 
     const [show, setShow] = useState(false)
