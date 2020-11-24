@@ -95,8 +95,10 @@ const Store = ({Products, changeShoppingCart, shoppingCart, loadAnimation}) => {
       }
     }, [picture, productSelected, thumbnail]);
 
-    // state for showing image or spiner while it loads
+    // state for showing image or spiner while it loads in the big picture compounents
     const [view, setView] = useState(false)
+    // state for showing the spiners or the thumbnails images 
+    const [show, setShow] = useState(false)
 
     
     
@@ -124,7 +126,8 @@ const Store = ({Products, changeShoppingCart, shoppingCart, loadAnimation}) => {
             view={view}
             setView={setView}
             picture={picture}
-            
+            show={show}
+            setShow={setShow}
             />
             <Balls 
             productSelected={productSelected}
@@ -132,6 +135,7 @@ const Store = ({Products, changeShoppingCart, shoppingCart, loadAnimation}) => {
             changeThumbnail={changeThumbnail}
             picture={picture}
             setView={setView}
+            setShow={setShow}
             
             />
             <ButtonAdd
@@ -153,6 +157,7 @@ const Store = ({Products, changeShoppingCart, shoppingCart, loadAnimation}) => {
             changeProductSelected={changeProductSelected}
             changeThumbnail={changeThumbnail}
             setView={setView}
+            setShow={setShow}
             />
 
         </main>

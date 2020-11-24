@@ -5,7 +5,7 @@ import './500-1000px.style.scss';
 import './0-500px.style.scss';
 import { useEffect } from 'react';
 
-const Thumbnails = ({productSelected, changePicture,thumbnail, setView, picture}) => {
+const Thumbnails = ({productSelected, changePicture,thumbnail, setView, picture, show, setShow}) => {
 
     const firstPic = () => {
       // with this switch we change the big picture for the one that we choose from the this thumbnail
@@ -59,7 +59,7 @@ const Thumbnails = ({productSelected, changePicture,thumbnail, setView, picture}
         }
     };
 
-    const [show, setShow] = useState(false)
+    
 
     const handleLoad = () => {
       setTimeout(() => {
@@ -67,9 +67,7 @@ const Thumbnails = ({productSelected, changePicture,thumbnail, setView, picture}
       }, 200)
     }
 
-    useEffect(() => {
-      setShow(false)
-    }, [thumbnail])
+    
 
     return (
         <div className='thumbnail'>
@@ -146,6 +144,8 @@ Thumbnails.propTypes = {
   changePicture: Proptypes.func.isRequired,
   thumbnail: Proptypes.array.isRequired,
   picture: Proptypes.string.isRequired,
+  show: Proptypes.bool.isRequired,
+  setShow: Proptypes.func.isRequired,
 };
 
 export default Thumbnails;
