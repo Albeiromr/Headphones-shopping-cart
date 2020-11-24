@@ -9,7 +9,9 @@ const BigPicture = ({ picture, view , setView}) => {
  
 
   const handleLoad = () => {
-    setView(true)
+    setTimeout(() => {
+      setView(true)
+    }, 500)
   }
 
   useEffect(() => {
