@@ -1,9 +1,8 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Proptypes from 'prop-types';
 import './1000-1920px.style.scss';
 import './500-1000px.style.scss';
 import './0-500px.style.scss';
-import { useEffect } from 'react';
 
 const Thumbnails = ({productSelected, changePicture,thumbnail, setView, picture, show, setShow}) => {
 
@@ -21,10 +20,13 @@ const Thumbnails = ({productSelected, changePicture,thumbnail, setView, picture,
           break;
         default:
       }
-
+  
       if(thumbnail[0] === 
+        // eslint-disable-next-line
         productSelected.thumbnailfirstColor[0].img1 && picture === productSelected.firstColor[0].img1 ||
+        // eslint-disable-next-line
         productSelected.thumbnailsecondColor[0].img1 && picture === productSelected.secondColor[0].img1 ||
+        // eslint-disable-next-line
         productSelected.thumbnailthirdColor[0].img1 && picture === productSelected.thirdColor[0].img1
         ) {
           return;
@@ -49,8 +51,11 @@ const Thumbnails = ({productSelected, changePicture,thumbnail, setView, picture,
         default:
       }
       if(thumbnail[1] === 
+        // eslint-disable-next-line
         productSelected.thumbnailfirstColor[1].img2 && picture === productSelected.firstColor[1].img2 ||
+        // eslint-disable-next-line
         productSelected.thumbnailsecondColor[1].img2 && picture === productSelected.secondColor[1].img2 ||
+        // eslint-disable-next-line
         productSelected.thumbnailthirdColor[1].img2 && picture === productSelected.thirdColor[1].img2
         ) {
           return;
