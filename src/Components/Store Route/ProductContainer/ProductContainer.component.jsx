@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 import ProductCard from '../ProductCard/ProductCard.component';
 
-const ProductContainer = ({Products, changePicture, changeProductSelected,changeThumbnail}) => {   
+const ProductContainer = ({Products, changePicture, changeProductSelected,changeThumbnail, setView}) => {   
 
   
    // this state is a counter that increases or decreases to move the carrousel cards
@@ -75,6 +75,7 @@ const ProductContainer = ({Products, changePicture, changeProductSelected,change
                     clock={clock}
                     Products={Products}
                     changeThumbnail={changeThumbnail}
+                    setView={setView}
                     
                     />
                 ))}
@@ -89,6 +90,7 @@ ProductContainer.propTypes = {
   Products: Proptypes.array.isRequired,
   changePicture: Proptypes.func.isRequired,
   changeProductSelected: Proptypes.func.isRequired,
+  setView: Proptypes.func.isRequired,
 };
 
 export default ProductContainer;

@@ -149,6 +149,7 @@ const Store = ({Products, changeShoppingCart, shoppingCart, loadAnimation}) => {
             changePicture={changePicture}
             changeProductSelected={changeProductSelected}
             changeThumbnail={changeThumbnail}
+            setView={setView}
             />
 
         </main>
