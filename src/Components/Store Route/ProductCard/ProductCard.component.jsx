@@ -4,7 +4,7 @@ import "./1000-1920px.style.scss";
 import "./500-1000px.style.scss";
 import "./0-500px.style.scss";
 
-const ProductCard = ({ mainImg, clock, changePicture, name, Products,changeProductSelected, changeThumbnail, setView, setShow}) => {
+const ProductCard = ({ mainImg, clock, changePicture, name, Products,changeProductSelected, changeThumbnail, setView, setShow, productSelected}) => {
 
   
   
@@ -18,9 +18,16 @@ const ProductCard = ({ mainImg, clock, changePicture, name, Products,changeProdu
     changePicture(filteredProduct[0].firstColor[0].img1)
     // as the last step we change the thumbnail state by the pictures of the filtered product
     changeThumbnail([filteredProduct[0].thumbnailfirstColor[0].img1, filteredProduct[0].thumbnailfirstColor[1].img2])
+    
+    
     // these 2 functions are only for showing the spiners in the bigpictures and thumbnails compounent
-    setView(false)
-    setShow(false)
+     if(filteredProduct[0]===  productSelected){
+      return;
+    } else {
+      setView(false)
+      setShow(false)
+    }
+    
     
   }
 
@@ -48,6 +55,7 @@ ProductCard.propTypes = {
   changeThumbnail: Proptypes.func.isRequired,
   setView: Proptypes.func.isRequired,
   setShow: Proptypes.func.isRequired,
+  productSelected: Proptypes.object.isRequired,
 };
 
 export default ProductCard;
