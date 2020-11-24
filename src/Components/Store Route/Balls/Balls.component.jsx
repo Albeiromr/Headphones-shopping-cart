@@ -4,7 +4,7 @@ import './1000-1920px.style.scss';
 import './500-1000px.style.scss';
 import './0-500px.style.scss';
 
-const Balls = ({changePicture, productSelected, changeThumbnail, picture}) => {
+const Balls = ({changePicture, productSelected, changeThumbnail, picture, setView}) => {
     
     // these three variables are the hexadecimal color variables of each product
     let color1 = productSelected.swatches[0].swatch1
@@ -42,6 +42,7 @@ const Balls = ({changePicture, productSelected, changeThumbnail, picture}) => {
         }
         // this function change the thumbnail images color as well
         changeThumbnail([productSelected.thumbnailfirstColor[0].img1, productSelected.thumbnailfirstColor[1].img2 ]) 
+        setView(false)
     }
 
     const secondColor = () => {
@@ -72,6 +73,7 @@ const Balls = ({changePicture, productSelected, changeThumbnail, picture}) => {
         }
         // this function change the thumbnail images color as well
         changeThumbnail([productSelected.thumbnailsecondColor[0].img1, productSelected.thumbnailsecondColor[1].img2 ])
+        setView(false)
     }
 
     const thirdColor = () => {
@@ -102,6 +104,7 @@ const Balls = ({changePicture, productSelected, changeThumbnail, picture}) => {
         }
         // this function change the thumbnail images color as well
         changeThumbnail([productSelected.thumbnailthirdColor[0].img1, productSelected.thumbnailthirdColor[1].img2 ])
+        setView(false)
     }
 
     return (
@@ -123,6 +126,7 @@ Balls.propTypes = {
     productSelected: Proptypes.object.isRequired,
     changeThumbnail: Proptypes.func.isRequired,
     picture: Proptypes.string.isRequired,
+    setview: Proptypes.func.isRequired,
 };
 
 export default Balls;

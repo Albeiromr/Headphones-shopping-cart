@@ -131,6 +131,7 @@ const Store = ({Products, changeShoppingCart, shoppingCart, loadAnimation}) => {
             changePicture={changePicture}
             changeThumbnail={changeThumbnail}
             picture={picture}
+            setView={setView}
             
             />
             <ButtonAdd
