@@ -11,6 +11,11 @@
     display: flex;
     justify-content: space-evenly;
 
+    &__picture-signal {
+      width: 1px;
+      visibility: none;
+    }
+
     &__img1 {
       width: 16.425vw;
       height: 16.425vw;

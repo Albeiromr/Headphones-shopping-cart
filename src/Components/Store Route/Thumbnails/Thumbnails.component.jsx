@@ -1,8 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Proptypes from 'prop-types';
 import './1000-1920px.style.scss';
 import './500-1000px.style.scss';
 import './0-500px.style.scss';
+import { useEffect } from 'react';
 
 const Thumbnails = ({productSelected, changePicture,thumbnail, view}) => {
 
@@ -38,6 +39,16 @@ const Thumbnails = ({productSelected, changePicture,thumbnail, view}) => {
       }
     };
 
+    const [show, setShow] = useState(false)
+
+    const handleLoad = () => {
+      setShow(true)
+    }
+
+    useEffect(() => {
+      setShow(false)
+    }, [thumbnail])
+
     return (
         <div className='thumbnail'>
 
@@ -45,36 +56,36 @@ const Thumbnails = ({productSelected, changePicture,thumbnail, view}) => {
 
             <div onClick={firstPic} className='thumbnail__img1'>
 
-            {view ? 
-             <img className='thumbnail__picture' src={thumbnail[0]} alt="Product"/> :
-             <div class="st-circle">
-             <div class="st-circle1 sk-child"></div>
-             <div class="st-circle2 sk-child"></div>
-             <div class="st-circle3 sk-child"></div>
-             <div class="st-circle4 sk-child"></div>
-             <div class="st-circle5 sk-child"></div>
-             <div class="st-circle6 sk-child"></div>
-             <div class="st-circle7 sk-child"></div>
-             <div class="st-circle8 sk-child"></div>
-             <div class="st-circle9 sk-child"></div>
-             <div class="st-circle10 sk-child"></div>
-             <div class="st-circle11 sk-child"></div>
-             <div class="st-circle12 sk-child"></div>
-           </div>
-          }
-
-                
-
-               
+              {show ? 
+              <img className='thumbnail__picture' src={thumbnail[0]} alt="Product"/> :
+              
+              <div class="st-circle">
+                <div class="st-circle1 sk-child"></div>
+                <div class="st-circle2 sk-child"></div>
+                <div class="st-circle3 sk-child"></div>
+                <div class="st-circle4 sk-child"></div>
+                <div class="st-circle5 sk-child"></div>
+                <div class="st-circle6 sk-child"></div>
+                <div class="st-circle7 sk-child"></div>
+                <div class="st-circle8 sk-child"></div>
+                <div class="st-circle9 sk-child"></div>
+                <div class="st-circle10 sk-child"></div>
+                <div class="st-circle11 sk-child"></div>
+                <div class="st-circle12 sk-child"></div>
+              </div>
+            }
+   
 
             </div>
 
             <div onClick={secondPic} className='thumbnail__img2'>
 
+            <img  className='thumbnail__picture-signal' src={thumbnail[1]} alt="Product" onLoad={handleLoad}/> 
 
-            {view ? 
-             <img  className='thumbnail__picture' src={thumbnail[1]} alt="Product"/> :
-             <div class="st-circle">
+            {show ? 
+            <img  className='thumbnail__picture' src={thumbnail[1]} alt="Product"/> :
+            
+            <div class="st-circle">
              <div class="st-circle1 sk-child"></div>
              <div class="st-circle2 sk-child"></div>
              <div class="st-circle3 sk-child"></div>
@@ -88,7 +99,13 @@ const Thumbnails = ({productSelected, changePicture,thumbnail, view}) => {
              <div class="st-circle11 sk-child"></div>
              <div class="st-circle12 sk-child"></div>
            </div>
+
           }
+            
+             
+
+             
+          
 
              
 
