@@ -43,7 +43,7 @@ const Balls = ({changePicture, productSelected, changeThumbnail, picture, setVie
         // this function change the thumbnail images color as well
         changeThumbnail([productSelected.thumbnailfirstColor[0].img1, productSelected.thumbnailfirstColor[1].img2 ]) 
         
-        if(picture === productSelected.firstColor[0].img1 || picture === productSelected.firstColor[0].img1)
+        if(picture === productSelected.firstColor[0].img1 || picture === productSelected.firstColor[1].img2)
         {return;} else {setView(false)};    
 
         setShow(false)
@@ -80,7 +80,7 @@ const Balls = ({changePicture, productSelected, changeThumbnail, picture, setVie
         // this function change the thumbnail images color as well
         changeThumbnail([productSelected.thumbnailsecondColor[0].img1, productSelected.thumbnailsecondColor[1].img2 ])
         
-        if(picture === productSelected.secondColor[0].img1 || picture === productSelected.secondColor[0].img1)
+        if(picture === productSelected.secondColor[0].img1 || picture === productSelected.secondColor[1].img2)
         {return;} else {setView(false)}; 
 
         setShow(false)
@@ -116,7 +116,7 @@ const Balls = ({changePicture, productSelected, changeThumbnail, picture, setVie
         // this function change the thumbnail images color as well
         changeThumbnail([productSelected.thumbnailthirdColor[0].img1, productSelected.thumbnailthirdColor[1].img2 ])
 
-        if(picture === productSelected.thirdColor[0].img1 || picture === productSelected.thirdColor[0].img1)
+        if(picture === productSelected.thirdColor[0].img1 || picture === productSelected.thirdColor[1].img2)
         {return;} else {setView(false)}; 
 
         setShow(false)
