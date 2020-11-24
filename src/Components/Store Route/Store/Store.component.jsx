@@ -123,6 +123,7 @@ const Store = ({Products, changeShoppingCart, shoppingCart, loadAnimation}) => {
             thumbnail={thumbnail}
             view={view}
             setView={setView}
+            picture={picture}
             
             />
             <Balls 

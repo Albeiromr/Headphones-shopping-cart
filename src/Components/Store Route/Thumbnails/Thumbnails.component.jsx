@@ -5,7 +5,7 @@ import './500-1000px.style.scss';
 import './0-500px.style.scss';
 import { useEffect } from 'react';
 
-const Thumbnails = ({productSelected, changePicture,thumbnail, setView}) => {
+const Thumbnails = ({productSelected, changePicture,thumbnail, setView, picture}) => {
 
     const firstPic = () => {
       // with this switch we change the big picture for the one that we choose from the this thumbnail
@@ -21,7 +21,17 @@ const Thumbnails = ({productSelected, changePicture,thumbnail, setView}) => {
           break;
         default:
       }
-      setView(false)
+
+      if(thumbnail[0] === 
+        productSelected.thumbnailfirstColor[0].img1 && picture === productSelected.firstColor[0].img1 ||
+        productSelected.thumbnailsecondColor[0].img1 && picture === productSelected.secondColor[0].img1 ||
+        productSelected.thumbnailthirdColor[0].img1 && picture === productSelected.thirdColor[0].img1
+        ) {
+          return;
+        } else {
+          setView(false)
+        }
+      
     };
 
     const secondPic = () => {
@@ -38,7 +48,15 @@ const Thumbnails = ({productSelected, changePicture,thumbnail, setView}) => {
           break;
         default:
       }
-      setView(false)
+      if(thumbnail[1] === 
+        productSelected.thumbnailfirstColor[1].img2 && picture === productSelected.firstColor[1].img2 ||
+        productSelected.thumbnailsecondColor[1].img2 && picture === productSelected.secondColor[1].img2 ||
+        productSelected.thumbnailthirdColor[1].img2 && picture === productSelected.thirdColor[1].img2
+        ) {
+          return;
+        } else {
+          setView(false)
+        }
     };
 
     const [show, setShow] = useState(false)
@@ -127,6 +145,7 @@ Thumbnails.propTypes = {
   productSelected: Proptypes.object.isRequired,
   changePicture: Proptypes.func.isRequired,
   thumbnail: Proptypes.array.isRequired,
+  picture: Proptypes.string.isRequired,
 };
 
 export default Thumbnails;
