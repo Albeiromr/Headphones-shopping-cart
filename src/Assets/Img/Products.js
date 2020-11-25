@@ -150,6 +150,19 @@ import thumbnaileverest300btSecondPink from './jbl everest 300/thumbnaileverest3
 export default [
     
     {
+        reference: 'JBL Everest 300BT',
+        price: 199.99,
+        swatches: [{swatch1:'#c02b2f', swatch2:'#de3e9c', swatch3: '#7fdc2b'}],
+        colors: {color1: 'Red', color2: 'Pink', color3: 'Green'},
+        firstColor: [{img1: everest300btMain}, {img2: everest300btSecond}],
+        secondColor: [{img1: everest300btMainPink}, {img2: everest300btSecondPink}],
+        thirdColor: [{img1: everest300btMainGreen}, {img2: everest300btSecondGreen}],
+        description: 'Enables wireless connectivity while combines active noise-cancelling with the ability to control the amount of outside noise to let in',
+        thumbnailfirstColor: [{img1: thumbnaileverest300btMain}, {img2: thumbnaileverest300btSecond}],
+        thumbnailsecondColor: [{img1: thumbnaileverest300btMainPink}, {img2: thumbnaileverest300btSecondPink}],
+        thumbnailthirdColor: [{img1: thumbnaileverest300btMainGreen}, {img2: thumbnaileverest300btSecondGreen}],
+    },
+    {
         reference: 'HOM LIBERATE XL',
         price: 78.99,
         swatches: [{swatch1:'#7f5644', swatch2:'#5c9764', swatch3: '#7c416f'}],
@@ -175,6 +188,48 @@ export default [
         thumbnailfirstColor: [{img1: thumbnailn90Main}, {img2: thumbnailn90Second}],
         thumbnailsecondColor: [{img1: thumbnailn90MainBlue}, {img2: thumbnailn90SecondBlue}],
         thumbnailthirdColor: [{img1: thumbnailn90MainGreen}, {img2: thumbnailn90SecondGreen}],
+    },
+
+    {
+        reference: 'JBL DUET',
+        price: 58.85,
+        swatches: [{swatch1:'#b29470', swatch2:'#c85d74', swatch3: '#58c38b'}],
+        colors: {color1: 'Brown', color2: 'Pink', color3: 'Green'},
+        firstColor: [{img1: duetMain}, {img2: duetSecond}],
+        secondColor: [{img1: duetMainPink}, {img2: duetSecondpink}],
+        thirdColor: [{img1: duetMainGreen}, {img2: duetSecondGreen}],
+        description: 'These headphones bring you the signature sound of JBL in one of our most versatile packages ever. They feature up to 16 hours of battery life',
+        thumbnailfirstColor: [{img1: thumbnailduetMain}, {img2: thumbnailduetSecond}],
+        thumbnailsecondColor: [{img1: thumbnailduetMainPink}, {img2: thumbnailduetSecondpink}],
+        thumbnailthirdColor: [{img1: thumbnailduetMainGreen}, {img2: thumbnailduetSecondGreen}],
+    },
+
+    {
+        reference: 'JBL E40BT',
+        price: 56.99,
+        swatches: [{swatch1:'#9ba5d3', swatch2:'#77c47d', swatch3: '#c57883'}],
+        colors: {color1: 'Blue', color2: 'Green', color3: 'Red'},
+        firstColor: [{img1: e40btMain}, {img2: e40btSecond}],
+        secondColor: [{img1: e40btMainGreen}, {img2: e40btSecondGreen}],
+        thirdColor: [{img1: e40btMainRed}, {img2: e40btSecondRed}],
+        description: 'JBL signature sound with PureBass performance and premium 40mm drivers deliver full spectrum sound with uninhibited clarity and powerful bass',
+        thumbnailfirstColor: [{img1: thumbnaile40btMain}, {img2: thumbnaile40btSecond}],
+        thumbnailsecondColor: [{img1: thumbnaile40btMainGreen}, {img2: thumbnaile40btSecondGreen}],
+        thumbnailthirdColor: [{img1: thumbnaile40btMainRed}, {img2: thumbnaile40btSecondRed}],
+    },
+
+    {
+        reference: 'JBL E-Peak',
+        price: 120.85,
+        swatches: [{swatch1:'#c91728', swatch2:'#2ac8da', swatch3: '#7fdc2b'}],
+        colors: {color1: 'Red', color2: 'Cyan', color3: 'Green'},
+        firstColor: [{img1: endurancepeakMain}, {img2: endurancepeakSecond}],
+        secondColor: [{img1: endurancepeakMainBlue}, {img2: endurancepeakSecondBlue}],
+        thirdColor: [{img1: endurancepeakMainGreen}, {img2: endurancepeakSecondGreen}],
+        description: 'Bluetooth sport headphones with microphone, Waterproof, up to 28 hours battery, charging case and quick charge, works with Android and IOS',
+        thumbnailfirstColor: [{img1: thumbnailendurancepeakMain}, {img2: thumbnailendurancepeakSecond}],
+        thumbnailsecondColor: [{img1: thumbnailendurancepeakMainBlue}, {img2: thumbnailendurancepeakSecondBlue}],
+        thumbnailthirdColor: [{img1: thumbnailendurancepeakMainGreen}, {img2: thumbnailendurancepeakSecondGreen}],
     },
      
     
@@ -209,34 +264,6 @@ export default [
     
 
     {
-        reference: 'JBL DUET',
-        price: 58.85,
-        swatches: [{swatch1:'#b29470', swatch2:'#c85d74', swatch3: '#58c38b'}],
-        colors: {color1: 'Brown', color2: 'Pink', color3: 'Green'},
-        firstColor: [{img1: duetMain}, {img2: duetSecond}],
-        secondColor: [{img1: duetMainPink}, {img2: duetSecondpink}],
-        thirdColor: [{img1: duetMainGreen}, {img2: duetSecondGreen}],
-        description: 'These headphones bring you the signature sound of JBL in one of our most versatile packages ever. They feature up to 16 hours of battery life',
-        thumbnailfirstColor: [{img1: thumbnailduetMain}, {img2: thumbnailduetSecond}],
-        thumbnailsecondColor: [{img1: thumbnailduetMainPink}, {img2: thumbnailduetSecondpink}],
-        thumbnailthirdColor: [{img1: thumbnailduetMainGreen}, {img2: thumbnailduetSecondGreen}],
-    },
-
-    {
-        reference: 'JBL E40BT',
-        price: 56.99,
-        swatches: [{swatch1:'#9ba5d3', swatch2:'#77c47d', swatch3: '#c57883'}],
-        colors: {color1: 'Blue', color2: 'Green', color3: 'Red'},
-        firstColor: [{img1: e40btMain}, {img2: e40btSecond}],
-        secondColor: [{img1: e40btMainGreen}, {img2: e40btSecondGreen}],
-        thirdColor: [{img1: e40btMainRed}, {img2: e40btSecondRed}],
-        description: 'JBL signature sound with PureBass performance and premium 40mm drivers deliver full spectrum sound with uninhibited clarity and powerful bass',
-        thumbnailfirstColor: [{img1: thumbnaile40btMain}, {img2: thumbnaile40btSecond}],
-        thumbnailsecondColor: [{img1: thumbnaile40btMainGreen}, {img2: thumbnaile40btSecondGreen}],
-        thumbnailthirdColor: [{img1: thumbnaile40btMainRed}, {img2: thumbnaile40btSecondRed}],
-    },
-
-    {
         reference: 'JBL E-Dive',
         price: 90.55,
         swatches: [{swatch1:'#e5e323', swatch2:'#da011f', swatch3: '#db02ae'}],
@@ -250,33 +277,9 @@ export default [
         thumbnailthirdColor: [{img1: thumbnailendurancediveMainPink}, {img2: thumbnailendurancediveSecondPink}],
     },
 
-    {
-        reference: 'JBL E-Peak',
-        price: 120.85,
-        swatches: [{swatch1:'#c91728', swatch2:'#2ac8da', swatch3: '#7fdc2b'}],
-        colors: {color1: 'Red', color2: 'Cyan', color3: 'Green'},
-        firstColor: [{img1: endurancepeakMain}, {img2: endurancepeakSecond}],
-        secondColor: [{img1: endurancepeakMainBlue}, {img2: endurancepeakSecondBlue}],
-        thirdColor: [{img1: endurancepeakMainGreen}, {img2: endurancepeakSecondGreen}],
-        description: 'Bluetooth sport headphones with microphone, Waterproof, up to 28 hours battery, charging case and quick charge, works with Android and IOS',
-        thumbnailfirstColor: [{img1: thumbnailendurancepeakMain}, {img2: thumbnailendurancepeakSecond}],
-        thumbnailsecondColor: [{img1: thumbnailendurancepeakMainBlue}, {img2: thumbnailendurancepeakSecondBlue}],
-        thumbnailthirdColor: [{img1: thumbnailendurancepeakMainGreen}, {img2: thumbnailendurancepeakSecondGreen}],
-    },
+   
 
-    {
-        reference: 'JBL Everest 300BT',
-        price: 199.99,
-        swatches: [{swatch1:'#c02b2f', swatch2:'#de3e9c', swatch3: '#7fdc2b'}],
-        colors: {color1: 'Red', color2: 'Pink', color3: 'Green'},
-        firstColor: [{img1: everest300btMain}, {img2: everest300btSecond}],
-        secondColor: [{img1: everest300btMainPink}, {img2: everest300btSecondPink}],
-        thirdColor: [{img1: everest300btMainGreen}, {img2: everest300btSecondGreen}],
-        description: 'Enables wireless connectivity while combines active noise-cancelling with the ability to control the amount of outside noise to let in',
-        thumbnailfirstColor: [{img1: thumbnaileverest300btMain}, {img2: thumbnaileverest300btSecond}],
-        thumbnailsecondColor: [{img1: thumbnaileverest300btMainPink}, {img2: thumbnaileverest300btSecondPink}],
-        thumbnailthirdColor: [{img1: thumbnaileverest300btMainGreen}, {img2: thumbnaileverest300btSecondGreen}],
-    },
+    
 
     
     
