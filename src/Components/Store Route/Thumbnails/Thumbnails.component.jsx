@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Proptypes from 'prop-types';
 import './1000-1920px.style.scss';
 import './500-1000px.style.scss';
@@ -64,7 +64,9 @@ const Thumbnails = ({productSelected, changePicture,thumbnail, setView, picture,
         }
     };
 
-    
+    // we use the following state and function to show the spiner or the thumbnail image, depending
+    // of is it is loaded or not
+    const [ showImage2, setShowImage2] = useState(false)
 
     const handleLoad = () => {
       setTimeout(() => {
@@ -81,7 +83,9 @@ const Thumbnails = ({productSelected, changePicture,thumbnail, setView, picture,
 
             <div onClick={firstPic} className='thumbnail__img1'>
 
-              {show ? 
+            <img  className='thumbnail__picture-signal' src={thumbnail[0]} alt="Product" onLoad={() => {setShowImage2(true)}}/> 
+
+              {show === true && showImage2 === true ?
               <img className='thumbnail__picture' src={thumbnail[0]} alt="Product"/> :
               
               <div class="st-circle">
@@ -107,7 +111,7 @@ const Thumbnails = ({productSelected, changePicture,thumbnail, setView, picture,
 
             <img  className='thumbnail__picture-signal' src={thumbnail[1]} alt="Product" onLoad={handleLoad}/> 
 
-            {show ? 
+            {show === true && showImage2 === true? 
             <img  className='thumbnail__picture' src={thumbnail[1]} alt="Product"/> :
             
             <div class="st-circle">

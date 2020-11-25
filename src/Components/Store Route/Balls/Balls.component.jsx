@@ -142,7 +142,7 @@ Balls.propTypes = {
     productSelected: Proptypes.object.isRequired,
     changeThumbnail: Proptypes.func.isRequired,
     picture: Proptypes.string.isRequired,
-    setview: Proptypes.func.isRequired,
+    setview: Proptypes.func,
     setShow: Proptypes.func.isRequired,
 };
 
