@@ -6,7 +6,7 @@ import "./0-500px.style.scss";
 
 const GrayColumn = ({conditionalwater}) => (
   <div className="Gray-Column">
-    {conditionalwater ? <p className="Gray-Column__water-mark">Albeiro Marín GitHub @Albeiromr</p> : null }
+    {conditionalwater ? <p className="Gray-Column__water-mark">Albeiro Marín. GitHub @Albeiromr</p> : null }
     
   </div>
 );
