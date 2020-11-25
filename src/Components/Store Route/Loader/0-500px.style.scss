@@ -27,24 +27,22 @@
 
     @keyframes logorotate {
       0%{
-        transform: rotate(45deg);
+        transform: translate(0vw) rotate(0deg) translateY(0vw);
+        
        }
-    
        25%{
-        transform: rotate(0deg);
+        transform: translate(17vw) rotate(45deg) translateY(4vw) scale(1.1);
+        
        }
-    
        50%{
-        transform: rotate(-45deg);
+        transform: translate(0vw) rotate(0deg) translateY(0vw);
        }
-    
-       75% {
-        transform: rotate(0deg);
+       75%{
+        transform: translate(-17vw) rotate(-45deg) translateY(4vw) scale(1.1);
        }
-
-      100% {
-        transform: rotate(45deg);
-      }
+       100%{
+        transform: translate(0vw) rotate(0deg) translateY(0vw);
+       }
     }
   }
 }

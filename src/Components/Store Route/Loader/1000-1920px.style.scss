@@ -18,40 +18,32 @@
       max-width: 300px;
       animation-name: logorotate;
       animation-iteration-count: infinite;
-      animation-duration: 2s;
-      animation-timing-function: ease-in;
+      animation-duration: 2s ;
+      animation-timing-function: ease;
       animation-delay: .3s;
+      
+      
       
     }
 
     @keyframes logorotate {
-      0%{
-        transform: rotate(45deg);
-
-        
-       }
-    
-       25%{
-        transform: rotate(0deg);
-        
-        
-       }
-    
-       50%{
-        transform: rotate(-45deg);
-        
-        
-       }
-       
-       75% {
-        transform: rotate(0deg);
-        
-       }
-
-      100% {
-        transform: rotate(45deg);
-        
-      }
+     0%{
+      transform: translate(0vw) rotate(0deg) translateY(0vw);
+      
+     }
+     25%{
+      transform: translate(10vw) rotate(45deg) translateY(4vw) scale(1.1);
+      
+     }
+     50%{
+      transform: translate(0vw) rotate(0deg) translateY(0vw);
+     }
+     75%{
+      transform: translate(-10vw) rotate(-45deg) translateY(4vw) scale(1.1);
+     }
+     100%{
+      transform: translate(0vw) rotate(0deg) translateY(0vw);
+     }
     }
 
     
