@@ -32,14 +32,14 @@
       
      }
      25%{
-      transform: translate(10vw) rotate(45deg) translateY(4vw) scale(1.1);
+      transform: translate(8vw) rotate(45deg) translateY(4vw);
       
      }
      50%{
       transform: translate(0vw) rotate(0deg) translateY(0vw);
      }
      75%{
-      transform: translate(-10vw) rotate(-45deg) translateY(4vw) scale(1.1);
+      transform: translate(-8vw) rotate(-45deg) translateY(4vw);
      }
      100%{
       transform: translate(0vw) rotate(0deg) translateY(0vw);
