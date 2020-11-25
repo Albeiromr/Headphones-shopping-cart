@@ -44,7 +44,7 @@ function App() {
     if (document.readyState === 'complete') {
       setTimeout(()=>{
         setLoadAnimation(false)
-      },1000)
+      },2000)
         
       
       
